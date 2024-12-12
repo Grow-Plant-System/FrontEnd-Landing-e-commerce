@@ -931,7 +931,7 @@ main .againPopUpEmailFinal {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 10vh;
+  margin-block: 10vh;
 }
 main .againPopUpEmailFinal p {
   text-align: center;
@@ -948,6 +948,77 @@ main .againPopUpEmailFinal button {
   border: solid 1px #1C3325;
   border-radius: 15px;
   height: 3.5rem;
+}
+
+.steps {
+  width: 80%;
+}
+.steps h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #565348;
+  margin-bottom: 20px;
+}
+.steps .step-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.steps .step {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.steps .step .step-number-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+.steps .step .step-number-title p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 100%;
+  text-align: center;
+  background-color: #2C503A;
+  color: #FCF5DB;
+  height: 15vw;
+  width: 15vw;
+}
+.steps .step .step-number-title h3 {
+  width: 80%;
+}
+.steps .step .step-content {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.steps .step .step-content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+}
+.steps .step .step-content div span {
+  height: 100%;
+  width: 4px;
+  background-color: #2C503A;
+}
+.steps .step .step-content p {
+  width: 80%;
+  color: #565348;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.steps .step:last-child::before {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

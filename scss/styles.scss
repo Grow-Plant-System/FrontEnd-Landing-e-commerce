@@ -432,7 +432,7 @@ main{
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 10vh;
+        margin-block: 10vh;
         p{
             text-align: center;
             font-size: 14px;
@@ -452,4 +452,92 @@ main{
 
         }
     }
+}
+
+
+.steps {
+width: 80%;
+
+
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: $font-color;
+    margin-bottom: 20px;
+  }
+
+  .step-container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative; 
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    .step-number-title {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    
+    z-index: 2;
+      p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        height: 100%;
+        text-align: center;
+        background-color: #2C503A;
+        color: $creamy-color;
+        height: 15vw;
+        width: 15vw;
+      }
+      h3{
+        width: 80%;
+      }
+    }
+
+    .step-content {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        span{
+            height: 100%;
+            width: 4px;
+            background-color: #2C503A;
+        }
+    }
+    p {
+
+        width: 80%;
+        color: $font-color;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+    // Líneas de conexión entre los pasos
+
+
+    &:last-child::before {
+      display: none;  // El último paso no tiene línea hacia abajo
+    }
+  }
 }
