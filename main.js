@@ -45,6 +45,7 @@ buttonBurgerMenu.addEventListener("click", () => {
 
 const popup = document.querySelector('.popupHomeEmailBackground');
 const popupModal = document.querySelector('.popupHomeEmail');
+const majorButtonHero = document.querySelector('.majorButtonHero');
 const buttonOpenPopupEmail = document.querySelector('.buttonOpenPopupEmail');
 const closePopup = document.querySelector('.btnCloseEmail');
 const form = document.getElementById('emailSignupForm');
@@ -69,8 +70,14 @@ function showPopUpEmail(){
 }
 
 // Mostrar el pop-up si toca el botón
+
+majorButtonHero.addEventListener("click", () => {
+    showPopUpEmail();
+    
+});
 buttonOpenPopupEmail.addEventListener("click", () => {
     showPopUpEmail();
+    
 });
 
 // Cerrar el pop-up (botón "Cerrar")
@@ -85,79 +92,6 @@ closePopup.addEventListener('click', () => {
         hasShownPopup = false;  // Permite que el popup se muestre de nuevo
     }, { once: true });  // Solo ejecutamos una vez el evento para evitar múltiples disparos
 });
-
-
-
-
-
-// const popup = document.querySelector('.popupHomeEmailBackground');
-// const popupModal = document.querySelector('.popupHomeEmail');
-
-
-// const buttonOpenPopupEmail = document.querySelector('.buttonOpenPopupEmail');
-
-
-// const closePopup = document.querySelector('.btnCloseEmail');
-// const form = document.getElementById('emailSignupForm');
-// const emailInput = form.querySelector('input[name="email"]'); // Campo de email
-// const responseMessage = document.createElement('p'); // Mensaje de respuesta
-// form.appendChild(responseMessage); // Añadir el mensaje al formulario
-// let hasShownPopup = false; // Evita mostrar el pop-up varias veces
-
-// // Verificar si el pop-up debe aparecer
-// // function shouldShowPopup() {
-// //     const localStorageFlag = localStorage.getItem('popupDismissed');
-// //     const sessionStorageFlag = sessionStorage.getItem('popupDismissed');
-// //     return !localStorageFlag && !sessionStorageFlag;
-// // }
-
-
-// function showPopUpEmail(){
-//     popup.style.display = "flex";
-//     setTimeout(() => {
-//         popup.classList.add('show');
-//         popupModal.classList.add('showModalTranslate')
-//         document.body.style.overflow = "hidden";
-//     }, 0);
-// }
-// // Mostrar el pop-up al llegar al 75% del scroll
-// // window.addEventListener('scroll', () => {
-// //     // if (!shouldShowPopup() || hasShownPopup) return;
-
-// //     const scrollPosition = window.scrollY + window.innerHeight;
-// //     const pageHeight = document.documentElement.scrollHeight;
-// //     console.log("SP: " + scrollPosition);
-// //     console.log("PH: " + pageHeight);
-    
-// //     if (scrollPosition == parseInt(pageHeight * 0.5)) {
-// //         showPopUpEmail()
-// //         hasShownPopup = true;
-
-// //     }
-// // });
-
-// //Mostrar el pop up si toca el boton al final de la pagina
-// buttonOpenPopupEmail.addEventListener("click", ()=>{
-//     showPopUpEmail()
-//     hasShownPopup = true;
-
-// })
-
-// // Cerrar el pop-up (botón "Cerrar")
-// closePopup.addEventListener('click', () => {
-//     popup.classList.remove('show');
-//     popupModal.classList.remove('showModalTranslate')
-//     document.body.style.overflow = "auto";
-
-//     popup.addEventListener("transitionend", () => {
-//         popup.style.display = "none";
-//         hasShownPopup = false;
-
-//     });
-
-
-//     // sessionStorage.setItem('popupDismissed', true);
-// });
 
 
 
