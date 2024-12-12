@@ -1,0 +1,89 @@
+
+footer{
+    background-color: #E3DCC5;
+    border-top: 2px solid #C1BBA7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-block: 4vh;
+        width: 80%;
+        gap: 4vh;
+        h3{
+            font-weight: 700;
+        }
+        a{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .logoFooter{
+            height: 2.5rem;
+            object-fit: contain;
+        }
+        .socialMediaFooter{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            ul{
+                display: flex;
+                gap: 1rem;
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #EBE5C9;
+                    border: 2px solid #BCB7A1;
+                    border-radius: 30px;
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    a{  
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    img{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+        .exploreFooter{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+    }
+    .footerEndPage{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        width: 100vw;
+        background-color: #CCC6B1;
+        padding-block: 2rem;
+        gap: 10px;
+        p{
+            width: 90%;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .rightsReservedText{
+
+        }
+        .developedByText{
+            color: #84827C;
+        }
+    }
+}
