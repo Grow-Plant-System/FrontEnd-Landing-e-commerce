@@ -925,5 +925,29 @@ main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardPara
   font-weight: 500;
   color: #FCF5DB;
 }
+main .againPopUpEmailFinal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 10vh;
+}
+main .againPopUpEmailFinal p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80%;
+}
+main .againPopUpEmailFinal button {
+  background-color: #2C503A;
+  color: #FCF5DB;
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  font-size: 14px;
+  border: solid 1px #1C3325;
+  border-radius: 15px;
+  height: 3.5rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

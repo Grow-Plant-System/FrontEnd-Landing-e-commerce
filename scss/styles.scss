@@ -426,4 +426,30 @@ main{
             }
         }
     }
+    .againPopUpEmailFinal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 10vh;
+        p{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            width: 80%;
+
+        }
+        button{
+            background-color: $green-color;
+            color: $creamy-color;
+            font-family: $font-family;
+            width: 80%;
+            font-size: 14px;
+            border: solid 1px $green-border-color;
+            border-radius: 15px;
+            height: 3.5rem;
+
+        }
+    }
 }
