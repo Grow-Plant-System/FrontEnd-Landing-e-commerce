@@ -98,32 +98,38 @@ closePopup.addEventListener('click', () => {
 
 
 
-
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); 
 
     const email = emailInput.value;
 
+    // Validar el email
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('ingresa algo valido down')
+        alert('DALE MEDIA PILA CULIA TANTO E CUESTA PONER @GMAIL.COM.');
         return;
     }
 
-
     try {
+        // Hacer una solicitud al backend
+        const response = await fetch("http://localhost:3000/api/emails", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email }),
+        });
 
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        // await fetch("/api/send-email", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify({ email }),
-        // });
+        if (!response.ok) {
+            throw new Error('Error en la solicitud');
+        }
 
-        // si todo sale bien
-        alert('recibimos tu email, pronto recibiras novedades')
+        const result = await response.json();
+
+        // Mostrar un mensaje al usuario
+        alert(result.message || 'Recibimos tu email, pronto recibirás novedades.');
+
+        // Resetear el campo de entrada
         emailInput.value = ""; 
 
-
+        // Ocultar el pop-up
         popup.classList.remove('show');
         document.body.style.overflow = "auto";
 
@@ -133,8 +139,8 @@ form.addEventListener('submit', async (e) => {
 
         localStorage.setItem('popupDismissed', true);
     } catch (error) {
-
-        // si todo sale mal
+        console.error('Error:', error);
         alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
     }
 });
+
