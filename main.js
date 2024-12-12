@@ -111,7 +111,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Hacer una solicitud al backend
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/emails`, {
+        const response = await fetch("https://backend-landing-e-commerce-production.up.railway.app/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email }),
