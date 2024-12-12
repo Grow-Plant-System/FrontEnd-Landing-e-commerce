@@ -111,11 +111,11 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Hacer una solicitud al backend
-        const response = await fetch("https://backend-landing-e-commerce-production.up.railway.app/", {
+        const response = await fetch("https://backend-landing-e-commerce-production.up.railway.app/api/emails", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email }),
-        });
+        });        
 
         if (!response.ok) {
             throw new Error('Error en la solicitud');
