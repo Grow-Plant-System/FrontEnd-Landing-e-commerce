@@ -501,6 +501,7 @@ main{
 
     z-index: 1;
     gap: 1rem;
+    overflow: hidden;
       p{
         // z-index: 1;
         display: flex;
@@ -518,6 +519,7 @@ main{
         font-size: 14px;
       }
       h3{
+
         font-size: 16px;
         width: 70%;
       }
