@@ -462,13 +462,17 @@ main{
 
 
 
-  h2 {
+.steps-title{
+    margin-bottom: 2.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+        width: 80%;
+        font-size: 18px;
 
-    font-size: 18px;
-    color: $font-color;
-    margin-bottom: 5vh;
-    width: 80%;
-  }
+    }
+}
 
   .step-container {
     display: flex;
@@ -494,9 +498,10 @@ main{
     font-weight: bold;
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
     gap: 1rem;
       p{
+        // z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;

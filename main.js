@@ -1,3 +1,18 @@
+//scroll del ver mas
+document.querySelector(".secondaryButtonHero").addEventListener("click", () => {
+    const section = document.querySelector(".listenGrowContainer");
+    const headerHeight = (document.querySelector("header").offsetHeight) + (document.querySelector("header").offsetHeight /2); 
+    console.log(headerHeight);
+    // Altura del header
+  
+    // Desplazamiento personalizado
+    window.scrollTo({
+      top: section.offsetTop - headerHeight, // Ajusta según el header
+      behavior: "smooth"
+    });
+  });
+  
+
 const header = document.querySelector('header');
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');

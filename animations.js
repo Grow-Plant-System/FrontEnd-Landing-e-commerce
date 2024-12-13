@@ -145,3 +145,51 @@ ScrollReveal().reveal('.cardParameter', {
         el.style.animationDelay = '100ms';
     }
 });
+
+//step section
+ScrollReveal().reveal('.step-content-span', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('scaleInVerTop'); // Clase que activa la animación de entrada
+        el.classList.remove('scaleOutVerTop'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('scaleOutVerTop'); // Clase que activa la animación de salida
+        el.classList.remove('scaleInVerTop'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '100ms';
+    }
+});
+
+ScrollReveal().reveal('.step-number', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('showIn'); // Clase que activa la animación de entrada
+        el.classList.remove('showOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('showOut'); // Clase que activa la animación de salida
+        el.classList.remove('showIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '100ms';
+    }
+});
+ScrollReveal().reveal('.step-title', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('scaleInSeparator'); // Clase que activa la animación de entrada
+        el.classList.remove('scaleOutSeparator'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('scaleInSeparator'); // Clase que activa la animación de salida
+        el.classList.remove('scaleOutSeparator'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '100ms';
+    }
+});
