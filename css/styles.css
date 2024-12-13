@@ -714,6 +714,7 @@ body {
   background-color: #FCF5DB;
   font-family: "Poppins", sans-serif;
   color: #565348;
+  overflow-x: hidden;
 }
 
 header {
