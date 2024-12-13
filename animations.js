@@ -48,6 +48,7 @@ ScrollReveal().reveal('.subtitleHero', {
     }
 });
 
+
 ScrollReveal().reveal('.separatorHero', {
     reset: true, // Hace que se reinicie al salir del viewport
     beforeReveal: (el) => {
@@ -181,15 +182,61 @@ ScrollReveal().reveal('.step-number', {
 ScrollReveal().reveal('.step-title', {
     reset: true, // Hace que se reinicie al salir del viewport
     beforeReveal: (el) => {
-        el.classList.add('scaleInSeparator'); // Clase que activa la animación de entrada
-        el.classList.remove('scaleOutSeparator'); // Quita la animación de salida si existía
+        el.classList.add('slideInRight'); // Clase que activa la animación de entrada
+        el.classList.remove('slideOutRight'); // Quita la animación de salida si existía
     },
     beforeReset: (el) => {
-        el.classList.add('scaleInSeparator'); // Clase que activa la animación de salida
-        el.classList.remove('scaleOutSeparator'); // Quita la animación de entrada si existía
+        el.classList.add('slideOutRight'); // Clase que activa la animación de salida
+        el.classList.remove('slideInRight'); // Quita la animación de entrada si existía
 
     },
     afterReset:(el)=>{
         el.style.animationDelay = '100ms';
+    }
+});
+
+ScrollReveal().reveal('.subtitleHero', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('swingIn'); // Clase que activa la animación de entrada
+        el.classList.remove('swingOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('swingOut'); // Clase que activa la animación de salida
+        el.classList.remove('swingIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});
+ScrollReveal().reveal('.step-text', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('swingIn'); // Clase que activa la animación de entrada
+        el.classList.remove('swingOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('swingOut'); // Clase que activa la animación de salida
+        el.classList.remove('swingIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});
+ScrollReveal().reveal('.steps-title', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('focusIn'); // Clase que activa la animación de entrada
+        el.classList.remove('focusOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('focusOut'); // Clase que activa la animación de salida
+        el.classList.remove('focusIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
     }
 });
