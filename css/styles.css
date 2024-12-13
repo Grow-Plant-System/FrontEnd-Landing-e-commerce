@@ -969,7 +969,6 @@ main .againPopUpEmailFinal button {
 }
 .steps .step {
   display: flex;
-  align-items: center;
   flex-direction: column;
   position: relative;
 }
