@@ -877,7 +877,8 @@ header .navbar .buttonBurgerMenu img {
   width: 90%;
   transition: all 0.5s;
   transform: translateY(-25%);
-  padding-block: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

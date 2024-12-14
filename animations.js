@@ -240,3 +240,35 @@ ScrollReveal().reveal('.steps-title', {
         el.style.animationDelay = '400ms';
     }
 });
+
+//boton abrir popup de nuevo
+ScrollReveal().reveal('.againPopUpEmailFinal-text', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('focusIn'); // Clase que activa la animación de entrada
+        el.classList.remove('focusOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('focusOut'); // Clase que activa la animación de salida
+        el.classList.remove('focusIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});
+ScrollReveal().reveal('.buttonOpenPopupEmail', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('showIn'); // Clase que activa la animación de entrada
+        el.classList.remove('showOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('showOut'); // Clase que activa la animación de salida
+        el.classList.remove('showIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});

@@ -66,7 +66,6 @@ const closePopup = document.querySelector('.btnCloseEmail');
 const form = document.getElementById('emailSignupForm');
 const emailInput = form.querySelector('input[name="email"]'); // Campo de email
 const responseMessage = document.createElement('p'); // Mensaje de respuesta
-form.appendChild(responseMessage); // Añadir el mensaje al formulario
 let hasShownPopup = false; // Evita mostrar el pop-up varias veces
 
 // Mostrar el pop-up
