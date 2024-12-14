@@ -104,6 +104,7 @@ closePopup.addEventListener('click', () => {
     popup.addEventListener("transitionend", () => {
         popup.style.display = "none";  // Oculta el popup al finalizar la animación
         hasShownPopup = false;  // Permite que el popup se muestre de nuevo
+        emailInput.value = ""
     }, { once: true });  // Solo ejecutamos una vez el evento para evitar múltiples disparos
 });
 
@@ -157,4 +158,37 @@ form.addEventListener('submit', async (e) => {
         alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+  
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+  
+        // Cerrar otros acordeones abiertos
+        document.querySelectorAll(".accordion-item").forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("open");
+            otherItem.querySelector(".accordion-header").classList.remove("accordion-header-active");
+          }
+        });
+  
+        // Alternar la clase 'open' y 'accordion-header-active' del acordeón actual
+        item.classList.toggle("open");
+        header.classList.toggle("accordion-header-active");
+      });
+    });
+  });
+  
+
+  
+  
+  
+
+
+
+
+
+  
 

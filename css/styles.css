@@ -877,8 +877,7 @@ header .navbar .buttonBurgerMenu img {
   width: 90%;
   transition: all 0.5s;
   transform: translateY(-25%);
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-block: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1088,6 +1087,7 @@ main .againPopUpEmailFinal button {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 5vh;
 }
 .steps .steps-title {
   margin-bottom: 2.5vh;
@@ -1157,15 +1157,84 @@ main .againPopUpEmailFinal button {
   width: 4px;
   background-color: #2C503A;
 }
+.steps .step .step-content .step-text-paddingBottom {
+  padding-bottom: 2rem;
+}
 .steps .step .step-content p {
-  padding-bototm: 1rem;
   width: 70%;
   color: #565348;
   font-size: 14px;
-  line-height: 1.5;
 }
 .steps .step:last-child::before {
   display: none;
+}
+
+.FAQSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.FAQSection h2 {
+  width: 80%;
+  font-size: 18px;
+  margin-bottom: 2.5vh;
+}
+.FAQSection .accordion {
+  width: 85%;
+  margin: 0 auto;
+}
+.FAQSection .accordion .accordion-item {
+  border: 1px solid #999483;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.FAQSection .accordion .accordion-item .accordion-header {
+  background: transparent;
+  color: #999483;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+.FAQSection .accordion .accordion-item .accordion-header .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+.FAQSection .accordion .accordion-item .accordion-header.accordion-header-active {
+  color: #565348 !important;
+}
+.FAQSection .accordion .accordion-item .accordion-content {
+  max-height: 0vh;
+  overflow: hidden;
+  padding: 0 20px;
+  color: #999483;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+.FAQSection .accordion .accordion-item.open .accordion-header {
+  color: #000000;
+}
+.FAQSection .accordion .accordion-item.open .accordion-header .icon {
+  transform: rotate(-180deg);
+}
+.FAQSection .accordion .accordion-item.open .accordion-content {
+  max-height: 80vh;
+  padding-bottom: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */

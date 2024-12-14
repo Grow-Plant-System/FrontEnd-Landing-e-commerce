@@ -218,8 +218,7 @@ header{
             width: 90%;
             transition: all .5s;
             transform: translateY(-25%);
-            padding-top: 2rem;
-            padding-bottom: 1rem;
+            padding-block: 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -460,7 +459,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 5vh;
 
 
 .steps-title{
@@ -541,21 +540,111 @@ main{
             background-color: #2C503A;
         }
     }
+    .step-text-paddingBottom{
+        padding-bottom: 2rem;
+      }
     p {
-        
-        padding-bototm: 1rem;
+    
         width: 70%;
         color: $font-color;
         font-size: 14px;
-        line-height: 1.5;
+
       }
+
     }
 
-    // Líneas de conexión entre los pasos
+
 
 
     &:last-child::before {
-      display: none;  // El último paso no tiene línea hacia abajo
+      display: none;  
     }
   }
 }
+
+
+
+// Acordeón
+.FAQSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        width: 80%;
+        font-size: 18px;
+        margin-bottom: 2.5vh;
+    }
+.accordion {
+    width: 85%;
+    margin: 0 auto;
+  
+    .accordion-item {
+      border: 1px solid #999483;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+  
+      .accordion-header {
+        background: transparent;
+        color: #999483;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font-family;
+        transition: all 0.5s ease;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+  
+        .icon {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+
+
+
+          transition: transform 0.3s ease;
+        }
+  
+        &.accordion-header-active {
+          color: #565348 !important;
+        }
+      }
+  
+      .accordion-content {
+        max-height: 0vh; 
+        overflow: hidden;
+        padding: 0 20px;
+        color: #999483;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font-family;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+      }
+  
+      &.open {
+        .accordion-header {
+          color: #000000; 
+        }
+  
+        .accordion-header .icon {
+          transform: rotate(-180deg);
+        }
+  
+        .accordion-content {
+          max-height: 80vh; 
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+  

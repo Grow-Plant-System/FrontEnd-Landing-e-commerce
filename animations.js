@@ -272,3 +272,33 @@ ScrollReveal().reveal('.buttonOpenPopupEmail', {
         el.style.animationDelay = '400ms';
     }
 });
+ScrollReveal().reveal('.FAQSection-title', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('swingIn'); // Clase que activa la animación de entrada
+        el.classList.remove('swingOut'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('swingOut'); // Clase que activa la animación de salida
+        el.classList.remove('swingIn'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});
+ScrollReveal().reveal('.accordion', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    beforeReveal: (el) => {
+        el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
+        el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('slideOutNotBlur'); // Clase que activa la animación de salida
+        el.classList.remove('slideInNotBlur'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '400ms';
+    }
+});
