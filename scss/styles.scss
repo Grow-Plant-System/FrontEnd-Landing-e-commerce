@@ -288,6 +288,7 @@ header{
 
 
 main{
+    position: relative;
     z-index: 1;
     .heroContainer{
         display: flex;
@@ -581,18 +582,21 @@ main{
   
     .accordion-item {
       border: 1px solid #999483;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 15px;
+      margin-bottom: 15px;
       overflow: hidden;
   
       .accordion-header {
         background: transparent;
         color: #999483;
+        gap: 10px;
         font-size: 14px;
         font-weight: 500;
         font-family: $font-family;
         transition: all 0.5s ease;
-        padding: 15px 20px;
+        // padding: 15px 20px;
+        padding-block: 1.25rem;
+        padding-inline: 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
