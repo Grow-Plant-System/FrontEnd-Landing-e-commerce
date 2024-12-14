@@ -1,4 +1,6 @@
 const navbar = document.querySelector('header');
+let navbarHeight = navbar.offsetHeight
+console.log(navbarHeight);
 
 // Función que maneja la visibilidad de la `navbar`
 function handleScroll() {
@@ -16,24 +18,49 @@ window.addEventListener('scroll', handleScroll);
 
 
 
+// ScrollReveal().reveal('.titleHero', {
+//     distance: '150px',  
+//     // duration: 800,
+//     // delay: 100,
+//     origin: 'bottom',
+//     offset: navbarHeight,
+//     reset: true, // Ajusta el valor según el tamaño del viewport
+//     // Hace que se reinicie al salir del viewport
+//     beforeReveal: (el) => {
+//         el.classList.add('focusIn'); // Clase que activa la animación de entrada
+//         el.classList.remove('focusOut'); // Quita la animación de salida si existía
+//     },
+//     beforeReset: (el) => {
+//         el.classList.add('focusOut'); // Clase que activa la animación de salida
+//         el.classList.remove('focusIn'); // Quita la animación de entrada si existía
+//     },
+//     afterReset:(el)=>{
+//         el.style.animationDelay = '100ms';
+//     }
+// });
 ScrollReveal().reveal('.titleHero', {
-    reset: true, // Ajusta el valor según el tamaño del viewport
-    // Hace que se reinicie al salir del viewport
+    reset: true,  // Asegura que la animación se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
-        el.classList.add('focusIn'); // Clase que activa la animación de entrada
-        el.classList.remove('focusOut'); // Quita la animación de salida si existía
+        el.classList.add('focusIn');
+        el.classList.remove('focusOut');
     },
     beforeReset: (el) => {
-        el.classList.add('focusOut'); // Clase que activa la animación de salida
-        el.classList.remove('focusIn'); // Quita la animación de entrada si existía
+        el.classList.add('focusOut');
+        el.classList.remove('focusIn');
     },
-    afterReset:(el)=>{
-        el.style.animationDelay = '100ms';
+    afterReset: (el) => {
+        el.style.animationDelay = '100ms';  // Ajustamos el delay si es necesario
     }
 });
 
 ScrollReveal().reveal('.subtitleHero', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
         el.classList.remove('swingOut'); // Quita la animación de salida si existía
@@ -51,6 +78,9 @@ ScrollReveal().reveal('.subtitleHero', {
 
 ScrollReveal().reveal('.separatorHero', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('scaleInSeparator'); // Clase que activa la animación de entrada
         el.classList.remove('scaleOutSeparator'); // Quita la animación de salida si existía
@@ -67,6 +97,9 @@ ScrollReveal().reveal('.separatorHero', {
 
 ScrollReveal().reveal('.majorButtonHero', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('fadeIn'); // Clase que activa la animación de entrada
         el.classList.remove('fadeOut'); // Quita la animación de salida si existía
@@ -82,6 +115,9 @@ ScrollReveal().reveal('.majorButtonHero', {
 });
 ScrollReveal().reveal('.secondaryButtonHero', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('fadeIn'); // Clase que activa la animación de entrada
         el.classList.remove('fadeOut'); // Quita la animación de salida si existía
@@ -100,6 +136,9 @@ ScrollReveal().reveal('.secondaryButtonHero', {
 //--Title and Subtitle
 ScrollReveal().reveal('.title-listenGrowContent', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
         el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
@@ -116,6 +155,9 @@ ScrollReveal().reveal('.title-listenGrowContent', {
 
 ScrollReveal().reveal('.subtitle-listenGrowContent', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
         el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
@@ -133,6 +175,9 @@ ScrollReveal().reveal('.subtitle-listenGrowContent', {
 //----cardParameter
 ScrollReveal().reveal('.cardParameter', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
         el.classList.remove('showOut'); // Quita la animación de salida si existía
@@ -150,6 +195,9 @@ ScrollReveal().reveal('.cardParameter', {
 //step section
 ScrollReveal().reveal('.step-content-span', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('scaleInVerTop'); // Clase que activa la animación de entrada
         el.classList.remove('scaleOutVerTop'); // Quita la animación de salida si existía
@@ -166,6 +214,9 @@ ScrollReveal().reveal('.step-content-span', {
 
 ScrollReveal().reveal('.step-number', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
         el.classList.remove('showOut'); // Quita la animación de salida si existía
@@ -181,6 +232,9 @@ ScrollReveal().reveal('.step-number', {
 });
 ScrollReveal().reveal('.step-title', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('slideInRight'); // Clase que activa la animación de entrada
         el.classList.remove('slideOutRight'); // Quita la animación de salida si existía
@@ -197,6 +251,9 @@ ScrollReveal().reveal('.step-title', {
 
 ScrollReveal().reveal('.subtitleHero', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
         el.classList.remove('swingOut'); // Quita la animación de salida si existía
@@ -212,6 +269,9 @@ ScrollReveal().reveal('.subtitleHero', {
 });
 ScrollReveal().reveal('.step-text', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
         el.classList.remove('swingOut'); // Quita la animación de salida si existía
@@ -227,6 +287,9 @@ ScrollReveal().reveal('.step-text', {
 });
 ScrollReveal().reveal('.steps-title', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('focusIn'); // Clase que activa la animación de entrada
         el.classList.remove('focusOut'); // Quita la animación de salida si existía
@@ -244,6 +307,9 @@ ScrollReveal().reveal('.steps-title', {
 //boton abrir popup de nuevo
 ScrollReveal().reveal('.againPopUpEmailFinal-text', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('focusIn'); // Clase que activa la animación de entrada
         el.classList.remove('focusOut'); // Quita la animación de salida si existía
@@ -259,6 +325,9 @@ ScrollReveal().reveal('.againPopUpEmailFinal-text', {
 });
 ScrollReveal().reveal('.buttonOpenPopupEmail', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
         el.classList.remove('showOut'); // Quita la animación de salida si existía
@@ -274,6 +343,9 @@ ScrollReveal().reveal('.buttonOpenPopupEmail', {
 });
 ScrollReveal().reveal('.FAQSection-title', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
         el.classList.remove('swingOut'); // Quita la animación de salida si existía
@@ -289,6 +361,9 @@ ScrollReveal().reveal('.FAQSection-title', {
 });
 ScrollReveal().reveal('.accordion', {
     reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
         el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
