@@ -377,3 +377,39 @@ ScrollReveal().reveal('.accordion', {
         el.style.animationDelay = '400ms';
     }
 });
+ScrollReveal().reveal('.plantHero1', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
+    beforeReveal: (el) => {
+        el.classList.add('fadeInLeft'); // Clase que activa la animación de entrada
+        el.classList.remove('fadeInRight'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('fadeInRight'); // Clase que activa la animación de salida
+        el.classList.remove('fadeInLeft'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '0ms';
+    }
+});
+ScrollReveal().reveal('.plantHero2', {
+    reset: true, // Hace que se reinicie al salir del viewport
+    viewOffset: {
+        top: navbarHeight // Ajusta el límite superior por la altura del header
+    },
+    beforeReveal: (el) => {
+        el.classList.add('fadeInRight'); // Clase que activa la animación de entrada
+        el.classList.remove('fadeInLeft'); // Quita la animación de salida si existía
+    },
+    beforeReset: (el) => {
+        el.classList.add('fadeInLeft'); // Clase que activa la animación de salida
+        el.classList.remove('fadeInRight'); // Quita la animación de entrada si existía
+
+    },
+    afterReset:(el)=>{
+        el.style.animationDelay = '0ms';
+    }
+});

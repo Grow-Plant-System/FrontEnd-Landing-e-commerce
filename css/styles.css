@@ -610,6 +610,64 @@
   animation: slide-out-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fadeInRight {
+  -webkit-animation: fade-in-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fadeInLeft {
+  -webkit-animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 footer {
   background-color: #E3DCC5;
   border-top: 2px solid #C1BBA7;
@@ -950,7 +1008,28 @@ main .heroContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 7.5vh;
   height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+main .heroContainer .plantHero1 {
+  height: 15vh;
+  width: 100%;
+  background-image: url(../assets/svg/hero/laurelHero.svg);
+  background-repeat: no-repeat;
+  background-position-x: -25vw;
+  background-size: contain;
+  opacity: 0.5;
+}
+main .heroContainer .plantHero2 {
+  height: 15vh;
+  opacity: 0.5;
+  width: 100%;
+  background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
+  background-repeat: no-repeat;
+  background-position-x: 25vw;
+  background-size: contain;
 }
 main .heroContainer .heroContent {
   width: 80%;

@@ -294,10 +294,32 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        gap: 7.5vh;
 
+        height: 100vh;
+        flex-direction: column;
+        width: 100%;
+        .plantHero1{
+            height: 15vh;
+            width: 100%;
+            background-image: url(../assets/svg/hero/laurelHero.svg);
+            background-repeat: no-repeat;
+            background-position-x: -25vw ;
+            background-size: contain;
+            opacity: 0.5;
+        }
+        .plantHero2{
+            height: 15vh;
+            opacity: 0.5;
+            width: 100%;
+            background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
+            background-repeat: no-repeat;
+            background-position-x: 25vw ;
+            background-size: contain;
+        }
         .heroContent{
             width: 80%;
+
             h1{
                 font-weight: 800;
                 font-size: 36px;
