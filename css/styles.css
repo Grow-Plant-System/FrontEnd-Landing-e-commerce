@@ -278,6 +278,16 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes show-in {
+  0% {
+    opacity: 0;
+    scale: 10%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 @keyframes show-in {
   0% {
     opacity: 0;
@@ -289,9 +299,20 @@
   }
 }
 .showIn {
+  -webkit-animation: show-in 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
   animation: show-in 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
 }
 
+@-webkit-keyframes show-out {
+  0% {
+    opacity: 1;
+    scale: 100%;
+  }
+  100% {
+    opacity: 0;
+    scale: 10%;
+  }
+}
 @keyframes show-out {
   0% {
     opacity: 1;
@@ -303,6 +324,7 @@
   }
 }
 .showOut {
+  -webkit-animation: show-out 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
   animation: show-out 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
 }
 
@@ -1018,7 +1040,9 @@ main .heroContainer .plantHero1 {
   width: 100%;
   background-image: url(../assets/svg/hero/laurelHero.svg);
   background-repeat: no-repeat;
-  background-position-x: -25vw;
+  background-position: left;
+  left: -25%;
+  position: relative;
   background-size: contain;
   animation-delay: 1s;
 }
@@ -1028,7 +1052,9 @@ main .heroContainer .plantHero2 {
   width: 100%;
   background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
   background-repeat: no-repeat;
-  background-position-x: 25vw;
+  background-position: right;
+  left: 25%;
+  position: relative;
   background-size: contain;
   animation-delay: 0s;
 }

@@ -302,6 +302,14 @@
   }
 
 // listenGrowSection
+@-webkit-keyframes show-in {
+    0% {
+        opacity: 0; scale: 10%;
+    }
+    100%{
+        opacity: 1; scale: 100%;
+    }
+}
 @keyframes show-in {
     0% {
         opacity: 0; scale: 10%;
@@ -312,9 +320,18 @@
 }
 
 .showIn{
+        -webkit-animation: show-in 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
         animation: show-in 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
 }
 
+@-webkit-keyframes show-out {
+        0% {
+            opacity: 1; scale: 100%;
+        }
+        100%{
+            opacity: 0; scale: 10%;
+        }
+    }
 @keyframes show-out {
         0% {
             opacity: 1; scale: 100%;
@@ -325,6 +342,7 @@
     }
   
 .showOut{
+        -webkit-animation: show-out 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
         animation: show-out 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
 }
 

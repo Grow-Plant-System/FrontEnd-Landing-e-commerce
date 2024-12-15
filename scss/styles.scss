@@ -304,8 +304,9 @@ main{
             width: 100%;
             background-image: url(../assets/svg/hero/laurelHero.svg);
             background-repeat: no-repeat;
-
-            background-position-x: -25vw ;
+            background-position: left;
+            left: -25%;
+            position: relative;
             background-size: contain;
             // opacity: 0.5;
             animation-delay: 1s;
@@ -315,8 +316,12 @@ main{
             opacity: 0;
             width: 100%;
             background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
+
             background-repeat: no-repeat;
-            background-position-x: 25vw ;
+            background-position: right;
+            left: 25%;
+            position: relative;
+            // transform: translate(100px);
             background-size: contain;
             animation-delay: 0s;
         }

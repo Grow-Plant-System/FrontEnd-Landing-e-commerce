@@ -1,6 +1,6 @@
 const navbar = document.querySelector('header');
 let navbarHeight = navbar.offsetHeight
-console.log(navbarHeight);
+
 
 // Función que maneja la visibilidad de la `navbar`
 function handleScroll() {
@@ -9,9 +9,6 @@ function handleScroll() {
         navbar.style.transform = 'translateY(0)';
         ScrollReveal().reveal('.plantHero2', {
             reset: false, // Hace que se reinicie al salir del viewport
-            viewOffset: {
-                top: navbarHeight // Ajusta el límite superior por la altura del header
-            },
             beforeReveal: (el) => {
                 el.classList.add('fadeIn'); // Clase que activa la animación de entrada
                 el.classList.remove('fadeOut'); // Quita la animación de salida si existía
