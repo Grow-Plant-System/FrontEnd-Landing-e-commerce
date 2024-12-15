@@ -11,7 +11,6 @@ function handleScroll() {
             reset: false, // Hace que se reinicie al salir del viewport
             beforeReveal: (el) => {
                 el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-                el.classList.remove('fadeOut'); // Quita la animación de salida si existía
             }
         });
     } else {
@@ -29,7 +28,6 @@ ScrollReveal().reveal('.titleHero', {
 
     beforeReveal: (el) => {
         el.classList.add('focusIn');
-        el.classList.remove('focusOut');
     }
 });
 
@@ -38,7 +36,6 @@ ScrollReveal().reveal('.subtitleHero', {
 
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
-        el.classList.remove('swingOut'); // Quita la animación de salida si existía
     }
 });
 
@@ -48,7 +45,6 @@ ScrollReveal().reveal('.separatorHero', {
 
     beforeReveal: (el) => {
         el.classList.add('scaleInSeparator'); // Clase que activa la animación de entrada
-        el.classList.remove('scaleOutSeparator'); // Quita la animación de salida si existía
     }
 });
 
@@ -57,7 +53,6 @@ ScrollReveal().reveal('.majorButtonHero', {
 
     beforeReveal: (el) => {
         el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.secondaryButtonHero', {
@@ -65,7 +60,6 @@ ScrollReveal().reveal('.secondaryButtonHero', {
 
     beforeReveal: (el) => {
         el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
     }
 });
 
@@ -76,7 +70,6 @@ ScrollReveal().reveal('.title-listenGrowContent', {
 
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-        el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
     }
 });
 
@@ -85,7 +78,6 @@ ScrollReveal().reveal('.subtitle-listenGrowContent', {
 
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-        el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
     }
 });
 
@@ -95,7 +87,6 @@ ScrollReveal().reveal('.cardParameter', {
 
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
-        el.classList.remove('showOut'); // Quita la animación de salida si existía
     }
 });
 
@@ -105,7 +96,6 @@ ScrollReveal().reveal('.step-content-span', {
 
     beforeReveal: (el) => {
         el.classList.add('scaleInVerTop'); // Clase que activa la animación de entrada
-        el.classList.remove('scaleOutVerTop'); // Quita la animación de salida si existía
     }
 });
 
@@ -114,7 +104,6 @@ ScrollReveal().reveal('.step-number', {
 
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
-        el.classList.remove('showOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.step-title', {
@@ -122,7 +111,6 @@ ScrollReveal().reveal('.step-title', {
 
     beforeReveal: (el) => {
         el.classList.add('slideInRight'); // Clase que activa la animación de entrada
-        el.classList.remove('slideOutRight'); // Quita la animación de salida si existía
     }
 });
 
@@ -131,7 +119,6 @@ ScrollReveal().reveal('.subtitleHero', {
 
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
-        el.classList.remove('swingOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.step-text', {
@@ -139,7 +126,6 @@ ScrollReveal().reveal('.step-text', {
 
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
-        el.classList.remove('swingOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.steps-title', {
@@ -147,7 +133,6 @@ ScrollReveal().reveal('.steps-title', {
 
     beforeReveal: (el) => {
         el.classList.add('focusIn'); // Clase que activa la animación de entrada
-        el.classList.remove('focusOut'); // Quita la animación de salida si existía
     }
 });
 
@@ -165,7 +150,6 @@ ScrollReveal().reveal('.buttonOpenPopupEmail', {
 
     beforeReveal: (el) => {
         el.classList.add('showIn'); // Clase que activa la animación de entrada
-        el.classList.remove('showOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.FAQSection-title', {
@@ -173,7 +157,6 @@ ScrollReveal().reveal('.FAQSection-title', {
 
     beforeReveal: (el) => {
         el.classList.add('swingIn'); // Clase que activa la animación de entrada
-        el.classList.remove('swingOut'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.accordion', {
@@ -181,7 +164,6 @@ ScrollReveal().reveal('.accordion', {
 
     beforeReveal: (el) => {
         el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-        el.classList.remove('slideOutNotBlur'); // Quita la animación de salida si existía
     }
 });
 ScrollReveal().reveal('.plantHero1', {
@@ -189,6 +171,5 @@ ScrollReveal().reveal('.plantHero1', {
 
     beforeReveal: (el) => {
         el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
     }
 });
