@@ -693,6 +693,7 @@ main .heroContainer {
   justify-content: center;
   align-items: center;
   gap: 7.5%;
+  overflow-x: hidden;
   height: 100vh;
   flex-direction: column;
   width: 100%;
@@ -718,7 +719,7 @@ main .heroContainer .plantHero2 {
   left: 25%;
   position: relative;
   background-size: contain;
-  animation-delay: 0s;
+  animation-delay: 2s;
 }
 main .heroContainer .heroContent {
   width: 80%;

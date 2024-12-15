@@ -1,20 +1,11 @@
 const navbar = document.querySelector('header');
-let navbarHeight = navbar.offsetHeight
-
+let navbarHeight = navbar.offsetHeight;
 
 // Función que maneja la visibilidad de la `navbar`
 function handleScroll() {
     if (window.scrollY > 0) {
-        // Muestra la `navbar` cuando se ha desplazado hacia abajo
         navbar.style.transform = 'translateY(0)';
-        ScrollReveal().reveal('.plantHero2', {
-            reset: false, // Hace que se reinicie al salir del viewport
-            beforeReveal: (el) => {
-                el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-            }
-        });
     } else {
-        // Oculta la `navbar` cuando está en la parte superior de la página
         navbar.style.transform = 'translateY(-100%)';
     }
 }
@@ -22,154 +13,35 @@ function handleScroll() {
 // Escuchar el evento `scroll` para manejar la visibilidad de la `navbar`
 window.addEventListener('scroll', handleScroll);
 
+const commonRevealOptions = {
+    reset: false, // Asegura que la animación se reinicie al salir del viewport
+};
 
-ScrollReveal().reveal('.titleHero', {
-    reset: false,  // Asegura que la animación se reinicie al salir del viewport
+// Animaciones agrupadas por tipo
+const animations = [
+    { selector: '.subtitleHero, .step-text, .FAQSection-title', className: 'swingIn' },
+    { selector: '.separatorHero', className: 'scaleInSeparator' },
+    { selector: '.majorButtonHero, .secondaryButtonHero', className: 'fadeIn' },
+    { selector: '.title-listenGrowContent, .subtitle-listenGrowContent, .accordion', className: 'slideInNotBlur' },
+    { selector: '.step-number, .cardParameter, .buttonOpenPopupEmail', className: 'showIn' },
+    { selector: '.step-content-span', className: 'scaleInVerTop' },
+    { selector: '.step-title, .steps-title, .againPopUpEmailFinal-text, .titleHero', className: 'focusIn' },
+    { selector: '.step-title', className: 'slideInRight' },  // Asegurado que el step-title tenga la animación correcta
+    { selector: '.plantHero1, .plantHero2', className: 'fadeIn' }, // Animación para los héroes de planta
+];
 
-    beforeReveal: (el) => {
-        el.classList.add('focusIn');
-    }
-});
-
-ScrollReveal().reveal('.subtitleHero', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('swingIn'); // Clase que activa la animación de entrada
-    }
-});
-
-
-ScrollReveal().reveal('.separatorHero', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('scaleInSeparator'); // Clase que activa la animación de entrada
-    }
-});
-
-ScrollReveal().reveal('.majorButtonHero', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.secondaryButtonHero', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-    }
-});
-
-// listenGrow section
-//--Title and Subtitle
-ScrollReveal().reveal('.title-listenGrowContent', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-    }
-});
-
-ScrollReveal().reveal('.subtitle-listenGrowContent', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-    }
-});
-
-//----cardParameter
-ScrollReveal().reveal('.cardParameter', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('showIn'); // Clase que activa la animación de entrada
-    }
-});
-
-//step section
-ScrollReveal().reveal('.step-content-span', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('scaleInVerTop'); // Clase que activa la animación de entrada
-    }
-});
-
-ScrollReveal().reveal('.step-number', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('showIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.step-title', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('slideInRight'); // Clase que activa la animación de entrada
-    }
-});
-
-ScrollReveal().reveal('.subtitleHero', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('swingIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.step-text', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('swingIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.steps-title', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('focusIn'); // Clase que activa la animación de entrada
-    }
-});
-
-//boton abrir popup de nuevo
-ScrollReveal().reveal('.againPopUpEmailFinal-text', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('focusIn'); // Clase que activa la animación de entrada
-        el.classList.remove('focusOut'); // Quita la animación de salida si existía
-    }
-});
-ScrollReveal().reveal('.buttonOpenPopupEmail', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('showIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.FAQSection-title', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('swingIn'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.accordion', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('slideInNotBlur'); // Clase que activa la animación de entrada
-    }
-});
-ScrollReveal().reveal('.plantHero1', {
-    reset: false, // Hace que se reinicie al salir del viewport
-
-    beforeReveal: (el) => {
-        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-    }
+// Aplicar las animaciones a todos los elementos seleccionados
+animations.forEach(animation => {
+    ScrollReveal().reveal(animation.selector, {
+        ...commonRevealOptions,
+        beforeReveal: (el) => {
+            el.classList.add(animation.className);
+        },
+        beforeReset: (el) => {
+            // Para el popup y algunos botones, quitamos las animaciones de salida si existían
+            if (animation.selector.includes('againPopUpEmailFinal-text')) {
+                el.classList.remove('focusOut');
+            }
+        }
+    });
 });
