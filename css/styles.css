@@ -719,7 +719,6 @@ main .heroContainer .plantHero2 {
   left: 25%;
   position: relative;
   background-size: contain;
-  animation-delay: 2s;
 }
 main .heroContainer .heroContent {
   width: 80%;
