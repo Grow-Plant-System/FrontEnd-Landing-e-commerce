@@ -1024,12 +1024,13 @@ main .heroContainer .plantHero1 {
 }
 main .heroContainer .plantHero2 {
   height: 15vh;
+  opacity: 0;
   width: 100%;
   background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
   background-repeat: no-repeat;
   background-position-x: 25vw;
   background-size: contain;
-  animation-delay: 2s;
+  animation-delay: 0s;
 }
 main .heroContainer .heroContent {
   width: 80%;

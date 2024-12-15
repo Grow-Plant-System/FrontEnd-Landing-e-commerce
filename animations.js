@@ -7,6 +7,24 @@ function handleScroll() {
     if (window.scrollY > 0) {
         // Muestra la `navbar` cuando se ha desplazado hacia abajo
         navbar.style.transform = 'translateY(0)';
+        ScrollReveal().reveal('.plantHero2', {
+            reset: true, // Hace que se reinicie al salir del viewport
+            viewOffset: {
+                top: navbarHeight // Ajusta el límite superior por la altura del header
+            },
+            beforeReveal: (el) => {
+                el.classList.add('fadeIn'); // Clase que activa la animación de entrada
+                el.classList.remove('fadeOut'); // Quita la animación de salida si existía
+            },
+            beforeReset: (el) => {
+                el.classList.add('fadeOut'); // Clase que activa la animación de salida
+                el.classList.remove('fadeIn'); // Quita la animación de entrada si existía
+        
+            },
+            afterReset:(el)=>{
+                el.style.animationDelay = '0ms';
+            }
+        });
     } else {
         // Oculta la `navbar` cuando está en la parte superior de la página
         navbar.style.transform = 'translateY(-100%)';
@@ -378,24 +396,6 @@ ScrollReveal().reveal('.accordion', {
     }
 });
 ScrollReveal().reveal('.plantHero1', {
-    reset: true, // Hace que se reinicie al salir del viewport
-    viewOffset: {
-        top: navbarHeight // Ajusta el límite superior por la altura del header
-    },
-    beforeReveal: (el) => {
-        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
-    },
-    beforeReset: (el) => {
-        el.classList.add('fadeOut'); // Clase que activa la animación de salida
-        el.classList.remove('fadeIn'); // Quita la animación de entrada si existía
-
-    },
-    afterReset:(el)=>{
-        el.style.animationDelay = '0ms';
-    }
-});
-ScrollReveal().reveal('.plantHero2', {
     reset: true, // Hace que se reinicie al salir del viewport
     viewOffset: {
         top: navbarHeight // Ajusta el límite superior por la altura del header
