@@ -294,7 +294,7 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 7.5vh;
+        gap: 7.5%;
 
         height: 100vh;
         flex-direction: column;
@@ -304,18 +304,21 @@ main{
             width: 100%;
             background-image: url(../assets/svg/hero/laurelHero.svg);
             background-repeat: no-repeat;
+
             background-position-x: -25vw ;
             background-size: contain;
-            opacity: 0.5;
+            // opacity: 0.5;
+            animation-delay: 1s;
         }
         .plantHero2{
             height: 15vh;
-            opacity: 0.5;
+            // opacity: 0.5;
             width: 100%;
             background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
             background-repeat: no-repeat;
             background-position-x: 25vw ;
             background-size: contain;
+            animation-delay: 2s;
         }
         .heroContent{
             width: 80%;

@@ -223,8 +223,8 @@
   }
 }
 .fadeIn {
-  -webkit-animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-fwd 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes fade-out-fwd {
@@ -612,25 +612,25 @@
 
 @-webkit-keyframes fade-in-right {
   0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
     opacity: 1;
   }
 }
 @keyframes fade-in-right {
   0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
     opacity: 1;
   }
 }
@@ -641,25 +641,25 @@
 
 @-webkit-keyframes fade-in-left {
   0% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
     opacity: 1;
   }
 }
 @keyframes fade-in-left {
   0% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
     opacity: 1;
   }
 }
@@ -1008,7 +1008,7 @@ main .heroContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7.5vh;
+  gap: 7.5%;
   height: 100vh;
   flex-direction: column;
   width: 100%;
@@ -1020,16 +1020,16 @@ main .heroContainer .plantHero1 {
   background-repeat: no-repeat;
   background-position-x: -25vw;
   background-size: contain;
-  opacity: 0.5;
+  animation-delay: 1s;
 }
 main .heroContainer .plantHero2 {
   height: 15vh;
-  opacity: 0.5;
   width: 100%;
   background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
   background-repeat: no-repeat;
   background-position-x: 25vw;
   background-size: contain;
+  animation-delay: 2s;
 }
 main .heroContainer .heroContent {
   width: 80%;

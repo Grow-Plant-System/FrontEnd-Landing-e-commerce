@@ -383,12 +383,12 @@ ScrollReveal().reveal('.plantHero1', {
         top: navbarHeight // Ajusta el límite superior por la altura del header
     },
     beforeReveal: (el) => {
-        el.classList.add('fadeInLeft'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeInRight'); // Quita la animación de salida si existía
+        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
+        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
     },
     beforeReset: (el) => {
-        el.classList.add('fadeInRight'); // Clase que activa la animación de salida
-        el.classList.remove('fadeInLeft'); // Quita la animación de entrada si existía
+        el.classList.add('fadeOut'); // Clase que activa la animación de salida
+        el.classList.remove('fadeIn'); // Quita la animación de entrada si existía
 
     },
     afterReset:(el)=>{
@@ -401,12 +401,12 @@ ScrollReveal().reveal('.plantHero2', {
         top: navbarHeight // Ajusta el límite superior por la altura del header
     },
     beforeReveal: (el) => {
-        el.classList.add('fadeInRight'); // Clase que activa la animación de entrada
-        el.classList.remove('fadeInLeft'); // Quita la animación de salida si existía
+        el.classList.add('fadeIn'); // Clase que activa la animación de entrada
+        el.classList.remove('fadeOut'); // Quita la animación de salida si existía
     },
     beforeReset: (el) => {
-        el.classList.add('fadeInLeft'); // Clase que activa la animación de salida
-        el.classList.remove('fadeInRight'); // Quita la animación de entrada si existía
+        el.classList.add('fadeOut'); // Clase que activa la animación de salida
+        el.classList.remove('fadeIn'); // Quita la animación de entrada si existía
 
     },
     afterReset:(el)=>{
