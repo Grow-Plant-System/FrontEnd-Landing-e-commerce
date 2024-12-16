@@ -18,6 +18,7 @@ const main = document.querySelector('main');
 const footer = document.querySelector('footer');
 
 const buttonBurgerMenu = document.querySelector('.buttonBurgerMenu');
+const buttonBurgerMenuIcon = document.querySelector('.buttonBurgerMenu-icon');
 const fullMenuHamburguerWithOverlay = document.querySelector('.fullMenuHamburguerWithOverlay');
 const optionsNavbar = document.querySelector('.optionsNavbar');
 const body = document.body;
@@ -36,7 +37,9 @@ buttonBurgerMenu.addEventListener("click", () => {
 
     if (!menuOnOff) {
         // Abrir el menú
-        buttonBurgerMenu.style.backgroundImage = "url(../assets/svg/xIconMenu.svg)"; // Cambia al ícono de "cerrar"
+        buttonBurgerMenuIcon.style.transform = "rotate(180deg)"
+        // buttonBurgerMenuIcon.style.animation = "rotate-menu-hamburger 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;"
+        buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/xIconMenu.svg)"; // Cambia al ícono de "cerrar"
         fullMenuHamburguerWithOverlay.style.opacity = "1";
         fullMenuHamburguerWithOverlay.style.visibility = "visible";
         optionsNavbar.style.transform = "translateY(0%)";
@@ -45,7 +48,9 @@ buttonBurgerMenu.addEventListener("click", () => {
         menuOnOff = true;
     } else {
         // Cerrar el menú
-        buttonBurgerMenu.style.backgroundImage = "url(../assets/svg/burgerMenu.svg)"; // Cambia al ícono de "hamburguesa"
+        // buttonBurgerMenu.classList.remove('rotateMenu')
+        buttonBurgerMenuIcon.style.transform = "rotate(0deg)"
+        buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/burgerMenu.svg)"; // Cambia al ícono de "hamburguesa"
         optionsNavbar.style.transform = "translateY(-100%)";
         fullMenuHamburguerWithOverlay.style.opacity = "0";
         fullMenuHamburguerWithOverlay.style.visibility = "hidden";

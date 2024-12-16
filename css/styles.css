@@ -352,6 +352,39 @@
   animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+@-webkit-keyframes rotate-menu-hamburger {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.rotateMenu {
+  -webkit-animation: rotate-menu-hamburger 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: rotate-menu-hamburger 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 footer {
   background-color: #E3DCC5;
   border-top: 2px solid #C1BBA7;
@@ -459,6 +492,10 @@ body {
   overflow-x: hidden;
 }
 
+.rotateTransition {
+  -webkit-animation: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -490,13 +527,17 @@ header .navbar .buttonBurgerMenu {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
   width: 2rem;
+  display: flex;
+  justify-content: right;
+}
+header .navbar .buttonBurgerMenu .buttonBurgerMenu-icon {
+  height: 100%;
+  width: 70%;
+  transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
   background-image: url(../assets/svg/burgerMenu.svg);
   background-repeat: no-repeat;
-  object-fit: contain;
+  background-size: contain;
   background-position: center;
-}
-header .navbar .buttonBurgerMenu img {
-  height: 100%;
 }
 
 .fullMenuHamburguerWithOverlay-opacity {
@@ -536,7 +577,7 @@ header .navbar .buttonBurgerMenu img {
   justify-content: center;
   align-items: center;
   margin-block: 1.7rem;
-  width: 75%;
+  width: 80%;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul li {
   font-size: 14px;
@@ -569,12 +610,23 @@ header .navbar .buttonBurgerMenu img {
   height: 100%;
   width: 100%;
   padding-inline: 8vw;
-  color: #FCF5DB;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
   background-color: #2C503A;
   border-radius: 15px;
   border: solid 2px #1C3325;
+}
+.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FCF5DB;
+  font-family: "Poppins", sans-serif;
+}
+.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button div {
+  height: 100%;
+  width: 1rem;
+  background-image: url(../assets/svg/purchaseIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .fullMenuHamburguerWithOverlay .overlayMenuHamburguer-opacity {
   opacity: 1 !important;
