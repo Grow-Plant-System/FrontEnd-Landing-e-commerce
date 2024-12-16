@@ -61,7 +61,7 @@ header{
     transform: translateY(-100%); /* Oculta la `navbar` por defecto */
     transition: all 0.5s ease;
     border-bottom: solid 1px #DDDCC3 ;
-    z-index: 999;
+    z-index: 3;
     // -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
     // animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
 
@@ -475,6 +475,34 @@ main{
             }
         }
     }
+    .welcomeSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5vh;
+        width: 100%;
+        h3{
+            width: 80%;
+            margin-bottom: 2.5vh;
+        }
+
+            p{
+                width: 80%;
+                font-size: 14px;
+                color: #888474;   
+                font-weight: 400; 
+                strong{
+                    font-weight: 600;
+
+                }
+            }
+            img{
+                width: 50%;
+                margin-top: 2.5vh;
+            }
+        
+    }
     .listenGrowContainer{
         display: flex;
         flex-direction: column;
@@ -488,24 +516,23 @@ main{
             width: 80%;
             // gap: 20px;
             .title-listenGrowContent{
-                width: 70%;
+                width: 80%;
                 font-size: 18px;    
-                margin-bottom: 15px;
+                margin-bottom: 2.5vh;
 
             }
             .subtitle-listenGrowContent{
                 font-size: 14px;
-               font-weight: 500; 
                color: #888474;
-               margin-bottom: 25px;
-
+               margin-bottom: 3vh;
+               font-weight: 400; 
             }
             .cardsParametersContainer{
                 display: flex;
                 flex-direction: column;
                 // max-width: 600px;
                 align-items: center;
-                gap: 25px;
+                gap: 2vh;
                 .cardParameter{
                     // view-timeline-name: --reveal;
                     // animation-name: show;

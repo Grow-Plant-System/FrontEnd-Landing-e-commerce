@@ -19,7 +19,7 @@ window.addEventListener('scroll', handleScroll);
 const observerOptions = {
     root: null, // Observa el viewport
     rootMargin: '0px',
-    threshold: 0.1 // Activa cuando el 10% del elemento es visible
+    threshold: 0.2 // Activa cuando el 10% del elemento es visible
 };
 
 // Manejo de intersección

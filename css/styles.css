@@ -385,6 +385,88 @@
   animation: rotate-menu-hamburger 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+@-webkit-keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+.slide-in-elliptic-left-fwd {
+  -webkit-animation: slide-in-elliptic-left-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-left-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slide-in-blurred-left {
+  -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
 footer {
   background-color: #E3DCC5;
   border-top: 1px solid #C1BBA7;
@@ -509,7 +591,7 @@ header {
   transform: translateY(-100%); /* Oculta la `navbar` por defecto */
   transition: all 0.5s ease;
   border-bottom: solid 1px #DDDCC3;
-  z-index: 999;
+  z-index: 3;
 }
 header .navbar {
   height: 50%;
@@ -864,6 +946,31 @@ main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero {
   border: solid 1px #6C695E;
   animation-delay: 2s;
 }
+main .welcomeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+  width: 100%;
+}
+main .welcomeSection h3 {
+  width: 80%;
+  margin-bottom: 2.5vh;
+}
+main .welcomeSection p {
+  width: 80%;
+  font-size: 14px;
+  color: #888474;
+  font-weight: 400;
+}
+main .welcomeSection p strong {
+  font-weight: 600;
+}
+main .welcomeSection img {
+  width: 50%;
+  margin-top: 2.5vh;
+}
 main .listenGrowContainer {
   display: flex;
   flex-direction: column;
@@ -878,21 +985,21 @@ main .listenGrowContainer .listenGrowContent {
   width: 80%;
 }
 main .listenGrowContainer .listenGrowContent .title-listenGrowContent {
-  width: 70%;
+  width: 80%;
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 2.5vh;
 }
 main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
   font-size: 14px;
-  font-weight: 500;
   color: #888474;
-  margin-bottom: 25px;
+  margin-bottom: 3vh;
+  font-weight: 400;
 }
 main .listenGrowContainer .listenGrowContent .cardsParametersContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 2vh;
 }
 main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardParameter {
   display: grid;
