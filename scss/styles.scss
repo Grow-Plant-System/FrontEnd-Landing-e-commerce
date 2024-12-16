@@ -7,6 +7,15 @@ $font-color: #565348 ;
 $btn-primary-color: #fff;
 $btn-secondary-color: $font-color;
 
+//burger menu
+$burger-color: #565348; // Color de las líneas
+$background-color: #f8f2dd; // Color de fondo
+$line-height: 3px; // Grosor de las líneas
+$line-width: 100%; // Ancho de las líneas superior e inferior
+$middle-line-width: 80%; // Ancho de la línea del medio
+$line-spacing: 6px; // Espaciado entre líneas
+$transition-speed: 0.3s; // Velocidad de la animación
+
 //imports
 
 @use 'animations';
@@ -74,18 +83,64 @@ header{
             border: none;
             cursor: pointer;
             transition: all .3s cubic-bezier(0.65, 0, 0.35, 1);
-            width: 2rem;
+            width: 1.5rem;
             display: flex;
             justify-content: right;
+            align-items: center;
+            .burger {
+                width: 100%;
+                height: 80%;
+                position: relative;
+                cursor: pointer;
+                display: flex;
+                justify-content: right;
+                align-items: center;
             
-            .buttonBurgerMenu-icon{
-                height: 100%;
-                width: 70%;
-                transition: all .3s cubic-bezier(0.65, 0, 0.35, 1);
-                background-image: url(../assets/svg/burgerMenu.svg);
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
+                span {
+                    display: block;
+                    position: absolute;
+                    height: $line-height;
+                    background-color: $burger-color;
+                    border-radius: 4px;
+                    transition: all $transition-speed ease-in-out;
+            
+                    &:nth-child(1), &:nth-child(3) {
+                        width: 100%; // Las líneas superior e inferior tienen el mismo ancho
+                    }
+            
+                    &:nth-child(2) {
+                        width: $middle-line-width; // La línea del medio es más corta
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+            
+                    &:nth-child(1) {
+                        top: $line-spacing;
+                    }
+            
+                    &:nth-child(3) {
+                        bottom: $line-spacing;
+                    }
+                }
+            
+                // Estado abierto (Cruz)
+                &.open {
+                    span {
+                        &:nth-child(1) {
+                            top: 50%;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+            
+                        &:nth-child(2) {
+                            opacity: 0; // Ocultar línea del medio
+                        }
+            
+                        &:nth-child(3) {
+                            bottom: 50%;
+                            transform: translateY(50%) rotate(-45deg);
+                        }
+                    }
+                }
             }
         }
 
@@ -704,5 +759,12 @@ main{
   }
 }
 
+// Variables
 
-  
+
+// Estilos Generales
+
+// Botón Hamburguesa
+
+
+
