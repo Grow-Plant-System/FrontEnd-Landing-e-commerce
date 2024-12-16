@@ -387,7 +387,7 @@
 
 footer {
   background-color: #E3DCC5;
-  border-top: 2px solid #C1BBA7;
+  border-top: 1px solid #C1BBA7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,7 +426,7 @@ footer .footerContent .socialMediaFooter ul li {
   justify-content: center;
   align-items: center;
   background-color: #EBE5C9;
-  border: 2px solid #BCB7A1;
+  border: 1px solid #BCB7A1;
   border-radius: 30px;
   height: 3.5rem;
   width: 3.5rem;
@@ -508,7 +508,7 @@ header {
   position: fixed;
   transform: translateY(-100%); /* Oculta la `navbar` por defecto */
   transition: all 0.5s ease;
-  border-bottom: solid 2px #DDDCC3;
+  border-bottom: solid 1px #DDDCC3;
   z-index: 999;
 }
 header .navbar {
@@ -545,7 +545,7 @@ header .navbar .buttonBurgerMenu .burger span {
   display: block;
   position: absolute;
   height: 3px;
-  background-color: #565348;
+  background-color: #828078;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
@@ -604,7 +604,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   justify-content: center;
   transition: all 0.2s;
   align-items: center;
-  border-bottom: solid 2px #BEC3AB;
+  border-bottom: solid 1px #BEC3AB;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul {
   display: flex;
@@ -632,8 +632,8 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   font-weight: 500;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul .separatorMenuNavbar {
-  border-bottom: solid 1.5px #B3AF9E;
-  border-top: solid 1.5px #B3AF9E;
+  border-bottom: solid 1px #B3AF9E;
+  border-top: solid 1px #B3AF9E;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu {
   margin-top: 1.7rem;
@@ -647,7 +647,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   padding-inline: 8vw;
   background-color: #2C503A;
   border-radius: 15px;
-  border: solid 2px #1C3325;
+  border: solid 1px #1C3325;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button p {
   font-size: 14px;
@@ -701,7 +701,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 }
 .popupHomeEmailBackground .popupHomeEmail {
   background-color: #FCF5DB;
-  border: 2px solid #CAC4AF;
+  border: 1px solid #CAC4AF;
   border-radius: 30px;
   width: 90%;
   transition: all 0.5s;
@@ -714,8 +714,9 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   align-items: center;
 }
 .popupHomeEmailBackground .popupHomeEmail h3 {
-  font-size: 18px;
+  font-size: 16px;
   width: 80%;
+  font-weight: 700;
 }
 .popupHomeEmailBackground .popupHomeEmail p {
   font-size: 14px;
@@ -732,7 +733,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 .popupHomeEmailBackground .popupHomeEmail form input {
   font-family: "Poppins", sans-serif;
   border-radius: 13px;
-  border: solid 1.5px #C3C1B8;
+  border: solid 1px #C3C1B8;
   padding-block: 1rem;
   font-size: 14px;
   width: 80%;
@@ -750,17 +751,19 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   gap: 1rem;
 }
 .popupHomeEmailBackground .popupHomeEmail form div .btnSubmitEmail {
-  font-weight: 500;
+  font-weight: 400;
   color: #FCF5DB;
   width: 60%;
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   border-radius: 13px;
   background-color: #2C503A;
-  border: 1.5px solid #1C3325;
+  border: 1px solid #1C3325;
   padding-block: 1rem;
 }
 .popupHomeEmailBackground .popupHomeEmail form div .btnCloseEmail {
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   color: #838071;
   background-color: transparent;
   border: 1px solid #838071;
@@ -839,26 +842,26 @@ main .heroContainer .heroContent .buttonsContainerHero {
   gap: 10px;
 }
 main .heroContainer .heroContent .buttonsContainerHero button {
-  height: 3.5rem;
   width: 11.5rem;
   border: none;
   background: none;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   border-radius: 18px;
+  padding-block: 1rem;
   cursor: pointer;
 }
 main .heroContainer .heroContent .buttonsContainerHero .majorButtonHero {
   font-weight: 500;
   color: #FCF5DB;
   background-color: #2C503A;
-  border: solid 2px #1C3325;
+  border: solid 1px #2C503A;
   animation-delay: 1.5s;
 }
 main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero {
-  font-weight: 500;
+  font-weight: 400;
   color: #6C695E;
-  border: solid 2px #6C695E;
+  border: solid 1px #6C695E;
   animation-delay: 2s;
 }
 main .listenGrowContainer {
@@ -932,11 +935,11 @@ main .againPopUpEmailFinal button {
   background-color: #2C503A;
   color: #FCF5DB;
   font-family: "Poppins", sans-serif;
-  width: 80%;
+  width: 85%;
   font-size: 14px;
   border: solid 1px #1C3325;
   border-radius: 15px;
-  height: 3.5rem;
+  padding-block: 1.25rem;
 }
 
 .steps {
@@ -1013,7 +1016,7 @@ main .againPopUpEmailFinal button {
 .steps .step .step-content div span {
   height: 100%;
   width: 4px;
-  background-color: #2C503A;
+  background-color: #1C3325;
 }
 .steps .step .step-content .step-text-paddingBottom {
   padding-bottom: 2rem;

@@ -8,7 +8,7 @@ $btn-primary-color: #fff;
 $btn-secondary-color: $font-color;
 
 //burger menu
-$burger-color: #565348; // Color de las líneas
+$burger-color: #828078; // Color de las líneas
 $background-color: #f8f2dd; // Color de fondo
 $line-height: 3px; // Grosor de las líneas
 $line-width: 100%; // Ancho de las líneas superior e inferior
@@ -60,7 +60,7 @@ header{
     position: fixed;
     transform: translateY(-100%); /* Oculta la `navbar` por defecto */
     transition: all 0.5s ease;
-    border-bottom: solid 2px #DDDCC3 ;
+    border-bottom: solid 1px #DDDCC3 ;
     z-index: 999;
     // -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
     // animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
@@ -178,7 +178,7 @@ header{
         transition: all .2s;
 
         align-items: center;
-        border-bottom: solid 2px #BEC3AB ;
+        border-bottom: solid 1px #BEC3AB ;
         ul{
             display: flex;
             flex-direction: column;
@@ -210,8 +210,8 @@ header{
             }
             }
             .separatorMenuNavbar{
-                border-bottom: solid 1.5px #B3AF9E ;
-                border-top: solid 1.5px #B3AF9E ;
+                border-bottom: solid 1px #B3AF9E ;
+                border-top: solid 1px #B3AF9E ;
     
             }
             .buyButtonMenu{
@@ -227,7 +227,7 @@ header{
 
                     background-color: $green-color;
                     border-radius: 15px;
-                    border: solid 2px $green-border-color;
+                    border: solid 1px $green-border-color;
                     p{
                         font-size: 14px;
                         font-weight: 500;
@@ -291,7 +291,7 @@ header{
     opacity: 0;
         .popupHomeEmail{
             background-color: $creamy-color;
-            border: 2px solid #CAC4AF;
+            border: 1px solid #CAC4AF;
             border-radius: 30px;
             width: 90%;
             transition: all .5s;
@@ -303,8 +303,10 @@ header{
             gap: 1rem;
             align-items:center ;
             h3{
-                font-size: 18px;
+                font-size: 16px;
                 width: 80%;
+
+                font-weight: 700;
             }
             p{
                 font-size: 14px;
@@ -321,7 +323,7 @@ header{
                 input{
                     font-family: $font-family;
                     border-radius: 13px;
-                    border: solid 1.5px #C3C1B8;
+                    border: solid 1px #C3C1B8;
                     padding-block: 1rem;
                     font-size: 14px;
                     width: 80%;
@@ -338,17 +340,19 @@ header{
                     width: 80%;
                     gap: 1rem;
                     .btnSubmitEmail{
-                        font-weight: 500;
+                        font-weight: 400;
                         color: $creamy-color;
                         width: 60%;
+                        font-size: 14px;
                         font-family: $font-family;
                         border-radius: 13px;
                         background-color: $green-color;
-                        border: 1.5px solid $green-border-color;
+                        border: 1px solid $green-border-color;
                         padding-block: 1rem;
                     }
                     .btnCloseEmail{
-                        font-weight: 500;
+                        font-size: 14px;
+                        font-weight: 400;
                         color: #838071;
                         background-color: transparent;
                         border: 1px solid #838071;
@@ -440,28 +444,30 @@ main{
                 align-items: start;
                 gap: 10px;
                 button{
-                    height: 3.5rem;
+
                     width: 11.5rem;
                     border: none;
                     background: none;
                     font-family: $font-family;
                     font-size: 16px;
                     border-radius: 18px;
+                    padding-block: 1rem;
                     cursor: pointer;
                 }
                 .majorButtonHero{
                     font-weight: 500;
                     color: $creamy-color;
                     background-color: $green-color;
-                    border: solid 2px $green-border-color;
+                    border: solid 1px $green-color;
+
                     // -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	                // animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
                     animation-delay: 1.5s;
                 }
                 .secondaryButtonHero{
-                    font-weight: 500;
+                    font-weight: 400;
                     color:  #6C695E;
-                    border: solid 2px #6C695E;
+                    border: solid 1px #6C695E;
                     animation-delay: 2s;
 
 
@@ -553,11 +559,11 @@ main{
             background-color: $green-color;
             color: $creamy-color;
             font-family: $font-family;
-            width: 80%;
+            width: 85%;
             font-size: 14px;
             border: solid 1px $green-border-color;
             border-radius: 15px;
-            height: 3.5rem;
+            padding-block: 1.25rem;
 
         }
     }
@@ -618,14 +624,17 @@ main{
         align-items: center;
         border-radius: 50%;
         height: 100%;
+
         text-align: center;
         background-color: #2C503A;
+
         color: $creamy-color;
         // height: 5vh;
         width: 8%;
         aspect-ratio: 1;
         font-weight: 500;
         font-size: 14px;
+
       }
       h3{
 
@@ -647,7 +656,7 @@ main{
         span{
             height: 100%;
             width: 4px;
-            background-color: #2C503A;
+            background-color: $green-border-color;
         }
     }
     .step-text-paddingBottom{
