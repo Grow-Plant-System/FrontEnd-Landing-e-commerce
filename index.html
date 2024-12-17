@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
     <!-- header y navbar -->
     <header>
         <nav class="navbar">
@@ -183,16 +183,19 @@
                     Con nuestra app móvil, puedes chatear directamente con tus plantas (sí, literalmente).
                     <br>
                     La inteligencia artificial de Grow interpreta los datos en tiempo real y te da respuestas claras y personalizadas para su perfecto cuidado.                    </p>
-                    <img src="assets/mockupiphone-chat.webp" data-animation="slide-in-blurred-left" alt="">
-        </section>
+                        <div class="image-container">
+                            <img src="assets/mockupiphone-chat.webp" class="floating-image" alt="">
+
+                        </div>
+                </section>
         <section class="welcomeSection">
             <h3 class="welcomeSectionTitle">También podes enviar imágenes y audios</h3>
                 <p>
                     ¿Tu planta tiene manchas extrañas o simplemente necesitas un consejo rápido? Con nuestra app, puedes enviar imágenes para un diagnóstico visual o grabar audios con tus preguntas.
                 </p>
-                    <img src="assets/mockupiphone-chat.webp" data-animation="slide-in-blurred-left" alt="">
-
-        </section>
+                    <!-- <img src="assets/mockupiphone-chat.webp" data-animation="slide-in-blurred-left" alt=""> -->
+                    <img id="audioAnimation" src="assets/audioAnimationSVGs/audioAnimation0001.svg" alt="Animación de Audio" >
+                </section>
         <section class="steps">
             <div class="steps-title" data-animation="focusIn">
                 <h2>Cuidar tus plantas nunca fue tan simple</h2>
@@ -412,7 +415,6 @@
         </div>
     </footer>
     <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- animations -->
      <script src="animations.js"></script>
     <!-- main js -->

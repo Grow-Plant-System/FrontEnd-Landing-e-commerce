@@ -497,10 +497,23 @@ main{
 
                 }
             }
-            img{
-                width: 50%;
-                margin-top: 2.5vh;
+            // img{
+            //     width: 50%;
+            //     margin-top: 2.5vh;
+            // }
+            .image-container {
+                position: relative;
+                height: 100vh;
             }
+            
+            .floating-image {
+                position: absolute;
+                transition: transform 0.1s ease-out;
+                width: 200px;
+                height: auto;
+                pointer-events: none; /* Para evitar que la imagen bloquee interacciones con otros elementos */
+            }
+            
         
     }
     .listenGrowContainer{

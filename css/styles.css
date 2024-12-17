@@ -967,9 +967,16 @@ main .welcomeSection p {
 main .welcomeSection p strong {
   font-weight: 600;
 }
-main .welcomeSection img {
-  width: 50%;
-  margin-top: 2.5vh;
+main .welcomeSection .image-container {
+  position: relative;
+  height: 100vh;
+}
+main .welcomeSection .floating-image {
+  position: absolute;
+  transition: transform 0.1s ease-out;
+  width: 200px;
+  height: auto;
+  pointer-events: none; /* Para evitar que la imagen bloquee interacciones con otros elementos */
 }
 main .listenGrowContainer {
   display: flex;

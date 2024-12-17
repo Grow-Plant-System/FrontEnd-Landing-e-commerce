@@ -1,3 +1,45 @@
+//audioAnimation
+const totalFrames = 55;  // Número total de frames
+const path = "assets/audioAnimationSVGs/audioAnimation";  // Ruta base
+let currentFrame = 1;    // Frame actual
+let isReversing = false; // Dirección de la animación
+const img = document.getElementById("audioAnimation");
+
+function animateBoomerang() {
+    // Actualizar el src del SVG actual
+    img.src = `${path}${String(currentFrame).padStart(4, '0')}.svg`;
+
+    // Cambiar la dirección en los extremos
+    if (!isReversing) {
+        currentFrame++;
+        if (currentFrame === totalFrames) isReversing = true;
+    } else {
+        currentFrame--;
+        if (currentFrame === 1) isReversing = false;
+    }
+
+    // Llamar de nuevo a la función
+    setTimeout(animateBoomerang, 100);  // Velocidad de animación
+}
+
+// Iniciar la animación
+animateBoomerang();
+
+
+
+const floatingImage = document.querySelector('.floating-image');
+
+window.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const deltaX = (mouseX - centerX) / 10;  // Ajusta la velocidad
+    const deltaY = (mouseY - centerY) / 10;  // Ajusta la velocidad
+
+    floatingImage.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+});
+
 //scroll del ver mas
 document.querySelector(".secondaryButtonHero").addEventListener("click", () => {
     const section = document.querySelector(".listenGrowContainer");
