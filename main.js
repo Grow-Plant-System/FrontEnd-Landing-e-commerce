@@ -27,19 +27,6 @@ animateBoomerang();
 
 
 
-const floatingImage = document.querySelector('.floating-image');
-
-window.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const deltaX = (mouseX - centerX) / 10;  // Ajusta la velocidad
-    const deltaY = (mouseY - centerY) / 10;  // Ajusta la velocidad
-
-    floatingImage.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-});
-
 //scroll del ver mas
 document.querySelector(".secondaryButtonHero").addEventListener("click", () => {
     const section = document.querySelector(".listenGrowContainer");

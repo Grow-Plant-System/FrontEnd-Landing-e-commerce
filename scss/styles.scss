@@ -497,22 +497,106 @@ main{
 
                 }
             }
-            // img{
-            //     width: 50%;
-            //     margin-top: 2.5vh;
-            // }
-            .image-container {
-                position: relative;
-                height: 100vh;
-            }
-            
-            .floating-image {
-                position: absolute;
-                transition: transform 0.1s ease-out;
-                width: 200px;
-                height: auto;
-                pointer-events: none; /* Para evitar que la imagen bloquee interacciones con otros elementos */
-            }
+            .chatBotPresentation{
+                width: 80%;
+                margin-top: 2.5vh;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                .chatBotPresentation-message1{
+                    display: flex;
+                    justify-content: end;
+
+                    div{
+
+                        width: 85%;
+                        display: flex;
+                        justify-content: start;
+                        flex-direction: column;
+                        gap: 2vh;
+                        align-items: center;
+                        background-color: #E0DBC6;
+                        border: 1px solid #CAC4AF;
+                        border-radius: 15px 0px 15px 15px;
+                        -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+                        -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+                        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+
+                        padding: 1.25rem;
+                        p{
+                            font-size: 12px;
+                            width: auto;
+                            color: #565348;
+                            width: 100%;
+                        }
+                        img{
+                            width: 100%;
+                            aspect-ratio: 1;
+                        }
+                        div{
+                            background-color: transparent;
+
+
+                            background-image: url(../assets/svg/plantPhotoChat.webp);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 30vh;
+                        }
+                    }
+                }
+                .chatBotPresentation-message2{
+                    display: flex;
+                    justify-content: start;
+                    div{
+                        width: 85%;
+                        -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+                        -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+                        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        background-color: $green-color;
+                        border: 1px solid $green-border-color;
+                        border-radius: 0px 15px 15px 15px;
+                        padding: 1.25rem;
+                        p{
+                            font-size: 12px;
+                            color: $creamy-color;
+                            width: auto;
+                        }
+                    }
+                }
+                .chatBotPresentation-message3{
+                    display: flex;
+                    justify-content: end;
+                    img{
+                        width: 85%;
+                        filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.16));
+
+
+                    }
+                    div{
+                        width: 85%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        background-color: $green-color;
+                        border: 1px solid $green-border-color;
+                        border-radius: 0px 15px 15px 15px;
+                        padding: 1.25rem;
+
+                        p{
+                            font-size: 12px;
+                            color: $creamy-color;
+                            width: auto;
+                        }
+                    }
+                }
+            }               
+
             
         
     }

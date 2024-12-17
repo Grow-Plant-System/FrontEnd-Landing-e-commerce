@@ -204,8 +204,8 @@
   }
 }
 .swingIn {
-  -webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  -webkit-animation: swing-in-top-fwd 1s 0.5s both;
+  animation: swing-in-top-fwd 1s 0.5s both;
 }
 
 @-webkit-keyframes slide-out-blurred-left {
@@ -465,6 +465,51 @@
 .slide-in-blurred-left {
   -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slide-in-blurred-right {
+  -webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 footer {
@@ -967,16 +1012,95 @@ main .welcomeSection p {
 main .welcomeSection p strong {
   font-weight: 600;
 }
-main .welcomeSection .image-container {
-  position: relative;
-  height: 100vh;
+main .welcomeSection .chatBotPresentation {
+  width: 80%;
+  margin-top: 2.5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
-main .welcomeSection .floating-image {
-  position: absolute;
-  transition: transform 0.1s ease-out;
-  width: 200px;
-  height: auto;
-  pointer-events: none; /* Para evitar que la imagen bloquee interacciones con otros elementos */
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 {
+  display: flex;
+  justify-content: end;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div {
+  width: 85%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  background-color: #E0DBC6;
+  border: 1px solid #CAC4AF;
+  border-radius: 15px 0px 15px 15px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  padding: 1.25rem;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div p {
+  font-size: 12px;
+  width: auto;
+  color: #565348;
+  width: 100%;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div div {
+  background-color: transparent;
+  background-image: url(../assets/svg/plantPhotoChat.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message2 {
+  display: flex;
+  justify-content: start;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message2 div {
+  width: 85%;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #2C503A;
+  border: 1px solid #1C3325;
+  border-radius: 0px 15px 15px 15px;
+  padding: 1.25rem;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message2 div p {
+  font-size: 12px;
+  color: #FCF5DB;
+  width: auto;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message3 {
+  display: flex;
+  justify-content: end;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message3 img {
+  width: 85%;
+  filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.16));
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message3 div {
+  width: 85%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #2C503A;
+  border: 1px solid #1C3325;
+  border-radius: 0px 15px 15px 15px;
+  padding: 1.25rem;
+}
+main .welcomeSection .chatBotPresentation .chatBotPresentation-message3 div p {
+  font-size: 12px;
+  color: #FCF5DB;
+  width: auto;
 }
 main .listenGrowContainer {
   display: flex;
