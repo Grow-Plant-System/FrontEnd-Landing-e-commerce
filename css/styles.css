@@ -738,6 +738,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1vh;
   margin-block: 1.7rem;
   width: 80%;
 }
@@ -748,41 +749,40 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   align-items: center;
   width: 100%;
   height: 4rem;
+  cursor: pointer;
+  border: 1px #BEC3AB solid;
+  border-radius: 15px;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul li a {
   display: flex;
   width: 100%;
+  height: 100%;
+  align-items: center;
   justify-content: space-between;
   padding-inline: 8vw;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar ul li a p {
   font-weight: 500;
 }
-.fullMenuHamburguerWithOverlay .optionsNavbar ul .separatorMenuNavbar {
-  border-bottom: solid 1px #B3AF9E;
-  border-top: solid 1px #B3AF9E;
-}
-.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu {
-  margin-top: 1.7rem;
-}
-.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button {
+.fullMenuHamburguerWithOverlay .optionsNavbar ul #buyButtonMenu button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
   padding-inline: 8vw;
+  cursor: pointer;
   background-color: #2C503A;
   border-radius: 15px;
   border: solid 1px #1C3325;
 }
-.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button p {
+.fullMenuHamburguerWithOverlay .optionsNavbar ul #buyButtonMenu button p {
   font-size: 14px;
   font-weight: 500;
   color: #FCF5DB;
   font-family: "Poppins", sans-serif;
 }
-.fullMenuHamburguerWithOverlay .optionsNavbar ul .buyButtonMenu button div {
+.fullMenuHamburguerWithOverlay .optionsNavbar ul #buyButtonMenu button div {
   height: 100%;
   width: 1rem;
   background-image: url(../assets/svg/purchaseIcon.svg);

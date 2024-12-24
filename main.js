@@ -60,9 +60,26 @@ let menuOnOff = false; // Estado del menú
 let isAnimating = false; // Prevención de clics múltiples
 const COOLDOWN_TIME = 500; // Tiempo de cooldown reducido a 500 ms
 
+function openBurgerMenu(){
+    burgerButton.classList.add('open');
+    fullMenuHamburguerWithOverlay.style.opacity = "1";
+    fullMenuHamburguerWithOverlay.style.visibility = "visible";
+    optionsNavbar.style.transform = "translateY(0%)";
 
+    body.style.overflow = "hidden"; // Bloquea el scroll
+    menuOnOff = true;
+}
+function closeBurgerMenu(){
+    burgerButton.classList.remove('open');
+    optionsNavbar.style.transform = "translateY(-100%)";
+    fullMenuHamburguerWithOverlay.style.opacity = "0";
+    fullMenuHamburguerWithOverlay.style.visibility = "hidden";
 
-buttonBurgerMenu.addEventListener("click", () => {
+    body.style.overflow = "hidden auto"; // Restaura el scroll
+    menuOnOff = false;
+}
+
+function controlShowBurgerMenu(){
     if (isAnimating) return; // Bloquea clics durante la animación
 
     isAnimating = true; // Bloquea hasta que termine la animación
@@ -71,22 +88,14 @@ buttonBurgerMenu.addEventListener("click", () => {
     }, COOLDOWN_TIME);
 
     if (!menuOnOff) {
-        burgerButton.classList.add('open');
-        fullMenuHamburguerWithOverlay.style.opacity = "1";
-        fullMenuHamburguerWithOverlay.style.visibility = "visible";
-        optionsNavbar.style.transform = "translateY(0%)";
-
-        body.style.overflow = "hidden"; // Bloquea el scroll
-        menuOnOff = true;
+        openBurgerMenu()
     } else {
-        burgerButton.classList.remove('open');
-        optionsNavbar.style.transform = "translateY(-100%)";
-        fullMenuHamburguerWithOverlay.style.opacity = "0";
-        fullMenuHamburguerWithOverlay.style.visibility = "hidden";
-
-        body.style.overflow = "hidden auto"; // Restaura el scroll
-        menuOnOff = false;
+        closeBurgerMenu()
     }
+}
+
+buttonBurgerMenu.addEventListener("click", () => {
+    controlShowBurgerMenu()
 });
 
 
