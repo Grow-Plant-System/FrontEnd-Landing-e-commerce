@@ -62,6 +62,7 @@ const burgerButton = document.getElementById('burgerButton');
 const buyButtonMenu = document.getElementById('buyButtonMenu');
 const buttonPrecios = document.getElementById('buttonPrecios');
 const buttonPorQueGrow = document.getElementById('buttonPorQueGrow');
+const buttonFAQ = document.getElementById('buttonFAQ');
 
 // Función de Toggle para abrir/cerrar el menú hamburguesa
 
@@ -160,6 +161,11 @@ buttonPorQueGrow.addEventListener("click", ()=>{
     scrollFromTo(".listenGrowContainer")
 
 })
+buttonFAQ.addEventListener("click", ()=>{
+    controlShowBurgerMenu()
+    scrollFromTo(".FAQSection")
+
+})
 
 buttonBurgerMenu.addEventListener("click", () => {
     controlShowBurgerMenu()
@@ -237,7 +243,8 @@ form.addEventListener('submit', async (e) => {
 
     // Validar el email
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('DALE MEDIA PILA CULIA TANTO E CUESTA PONER @GMAIL.COM.');
+        alertCustomize("Por favor, ingresa un email valido.", "bottom","#601A1A" )
+
         return;
     }
 
@@ -256,7 +263,7 @@ form.addEventListener('submit', async (e) => {
         const result = await response.json();
 
         // Mostrar un mensaje al usuario
-        alert(result.message || 'Recibimos tu email, pronto recibirás novedades.');
+        alertCustomize("Recibido! Pronto tendras novedades.", "bottom","#2C503A" )
 
         // Resetear el campo de entrada
         emailInput.value = ""; 
@@ -272,7 +279,9 @@ form.addEventListener('submit', async (e) => {
         localStorage.setItem('popupDismissed', true);
     } catch (error) {
         console.error('Error:', error);
-        alert("Hubo un problema al enviar el correo. Intenta nuevamente.");
+        // alertCustomize("Recibimos tu email exitosamentre.", "bottom","#2C503A" )
+
+       alertCustomize("Algo salio mal, intenta nuevamente.", "bottom","#601A1A" )
     }
 });
 
