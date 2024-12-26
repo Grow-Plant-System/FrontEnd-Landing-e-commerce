@@ -307,7 +307,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  const messages = document.querySelectorAll('.chatBotPresentation div');
+  let lastScrollY = 0;
+  let velocity = 0;
+  let damping = 0.9; // Reduce la velocidad gradualmente
 
+  function updatePositions() {
+    messages.forEach((message, index) => {
+      const speed = (index + 1) * 0.03; // Diferente velocidad por mensaje
+      const offset = velocity * speed;
+      message.style.transform = `translateY(${offset}px)`;
+    });
+    velocity *= damping;
+    requestAnimationFrame(updatePositions);
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    velocity += scrollY - lastScrollY;
+    lastScrollY = scrollY;
+  });
+
+  updatePositions();
   
   
   
