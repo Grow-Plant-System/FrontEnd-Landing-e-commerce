@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +52,10 @@ header .navbar {
 }
 header .navbar .logoHeader {
   height: 100%;
+  cursor: pointer;
+}
+header .navbar .navbarItems {
+  display: none;
 }
 header .navbar .buttonBurgerMenu {
   height: 100%;
@@ -59,6 +67,9 @@ header .navbar .buttonBurgerMenu {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+header .navbar .buttonBurgerMenu:focus {
+  outline: none;
 }
 header .navbar .buttonBurgerMenu .burger {
   width: 100%;
@@ -353,6 +364,10 @@ main .heroContainer .heroContent span {
   height: 0.3rem;
   width: 5.5rem;
   animation-delay: 0.5s;
+  transition: all 0.5s;
+}
+main .heroContainer .heroContent span:hover {
+  width: 6.5rem;
 }
 main .heroContainer .heroContent h3 {
   font-weight: 500;
@@ -385,12 +400,20 @@ main .heroContainer .heroContent .buttonsContainerHero .majorButtonHero {
   background-color: #2C503A;
   border: solid 1px #2C503A;
   animation-delay: 1.5s;
+  transition: 0.5s;
+}
+main .heroContainer .heroContent .buttonsContainerHero .majorButtonHero:hover {
+  background-color: #213c2b;
 }
 main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero {
   font-weight: 400;
   color: #6C695E;
   border: solid 1px #6C695E;
   animation-delay: 2s;
+  transition: 0.5s;
+}
+main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero:hover {
+  background-color: rgba(234, 227, 202, 0.8235294118);
 }
 main .welcomeSection {
   display: flex;
@@ -527,32 +550,40 @@ main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
   margin-bottom: 3vh;
   font-weight: 400;
 }
-main .listenGrowContainer .listenGrowContent .cardsParametersContainer {
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer #responsiveImageCardParameter {
+  display: none;
+}
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
 }
-main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardParameter {
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter {
   display: grid;
   width: 115%;
   grid-template-columns: 25% 75%;
   background-color: #2C503A;
   height: 8rem;
   border-radius: 20px;
+  transition: 0.5s;
 }
-main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardParameter img {
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter:hover {
+  background-color: #213c2b;
+  transform: translateX(5%);
+}
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter img {
   align-self: center;
   justify-self: center;
 }
-main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardParameter p {
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter p {
   font-weight: 400;
   width: 90%;
   align-self: center;
   font-size: 14px;
   color: #BEC3AB;
 }
-main .listenGrowContainer .listenGrowContent .cardsParametersContainer .cardParameter p strong {
+main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter p strong {
   font-weight: 500;
   color: #FCF5DB;
 }
@@ -589,13 +620,16 @@ main .againPopUpEmailFinal button {
   position: relative;
   z-index: 1;
 }
+.steps .allStepsAndImage img {
+  display: none;
+}
 .steps .steps-title {
   margin-bottom: 2.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.steps .steps-title h2 {
+.steps .steps-title h3 {
   width: 80%;
   font-size: 18px;
 }
@@ -665,6 +699,9 @@ main .againPopUpEmailFinal button {
   color: #565348;
   font-size: 14px;
 }
+.steps .step #last-step-content {
+  min-height: auto;
+}
 .steps .step:last-child::before {
   display: none;
 }
@@ -727,6 +764,9 @@ main .againPopUpEmailFinal button {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   transition: max-height 0.5s ease, padding 0.5s ease;
+}
+.FAQSection .accordion .accordion-item .accordion-content p {
+  font-weight: 400;
 }
 .FAQSection .accordion .accordion-item.open .accordion-header {
   color: #000000;
@@ -1339,13 +1379,212 @@ footer .footerEndPage .developedByText {
 }
 
 @media (min-width: 768px) {
+  h3 {
+    font-size: 18px !important;
+  }
+  p, button, li, a, input {
+    font-size: 16px !important;
+  }
   /* Tabletas */
+  body .popupHomeEmailBackground .popupHomeEmail {
+    width: 55%;
+  }
+  body main .welcomeSection h3 {
+    width: 70%;
+  }
+  body main .welcomeSection p {
+    width: 70%;
+  }
+  body main .welcomeSection .chatBotPresentation {
+    width: 50%;
+  }
+  body main .againPopUpEmailFinal button {
+    width: 70%;
+  }
+  body main .listenGrowContainer .listenGrowContent {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  body main .listenGrowContainer .listenGrowContent .title-listenGrowContent {
+    width: 100%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer {
+    width: 100%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter {
+    width: 100%;
+  }
+  header {
+    height: 7vh;
+  }
+  header .navbar {
+    width: 90%;
+  }
+  .buttonBurgerMenu .burger span:nth-child(2) {
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .buttonBurgerMenu .burger span:nth-child(1) {
+    top: 6px;
+  }
+  .buttonBurgerMenu .burger span:nth-child(3) {
+    bottom: 6px;
+  }
+  .buttonBurgerMenu .burger.open span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .buttonBurgerMenu .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .buttonBurgerMenu .burger.open span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  .fullMenuHamburguerWithOverlay .optionsNavbar {
+    padding-top: 7vh;
+  }
+  .fullMenuHamburguerWithOverlay .optionsNavbar ul {
+    width: 70%;
+  }
+  .steps .steps-title h3 {
+    width: 70%;
+  }
+  .steps .step .step-number-title h3 {
+    width: 65%;
+  }
+  .steps .step .step-number-title p {
+    width: 4%;
+  }
+  .steps .step .step-content div {
+    width: 4%;
+  }
+  .steps .step .step-content p {
+    width: 65%;
+  }
+  .FAQSection h2 {
+    width: 70%;
+  }
+  .FAQSection .accordion {
+    width: 70%;
+  }
+  footer .footerContent {
+    width: 70%;
+  }
 }
 @media (min-width: 1024px) {
   /* Laptops */
+  body .popupHomeEmailBackground .popupHomeEmail {
+    width: 40%;
+  }
+  header .navbar .navbarItems {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-weight: 400;
+  }
+  header .navbar .navbarItems .navbarButtonComoFunciona {
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  header .navbar .navbarItems .navbarButtonComoFunciona:hover {
+    opacity: 1;
+  }
+  header .navbar .navbarItems .navbarButtonFAQ {
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  header .navbar .navbarItems .navbarButtonFAQ:hover {
+    opacity: 1;
+  }
+  header .navbar .navbarItems li {
+    font-size: 14px;
+    width: auto;
+    cursor: pointer;
+  }
+  header .navbar .navbarItems li button {
+    cursor: pointer;
+    background-color: #2C503A;
+    color: #FCF5DB;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 15px;
+    padding-block: 1vh;
+    padding-inline: 1.5rem;
+    border: 1px solid #1C3325;
+    transition: 0.5s;
+  }
+  header .navbar .navbarItems li button:hover {
+    background-color: #213c2b;
+    border: 1px solid #16281d;
+  }
+  header .navbar .buttonBurgerMenu {
+    display: none;
+  }
+  main .heroContainer .plantHero1 {
+    left: -5%;
+  }
+  main .heroContainer .plantHero2 {
+    left: 5%;
+  }
+  main .heroContainer .heroContent .buttonsContainerHero {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 @media (min-width: 1440px) {
   /* Monitores grandes */
+  body .popupHomeEmailBackground .popupHomeEmail {
+    width: 30%;
+  }
+  body main .welcomeSection .chatBotPresentation {
+    width: 25%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer {
+    width: 50%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer #responsiveImageCardParameter {
+    display: block;
+    mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
+    max-width: 40%;
+  }
+  body main .steps {
+    align-items: center;
+  }
+  body main .steps .steps-title {
+    width: 70%;
+    justify-content: start;
+  }
+  body main .steps .allStepsAndImage {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body main .steps .allStepsAndImage .allSteps .step-container .step .step-number-title {
+    justify-content: start;
+  }
+  body main .steps .allStepsAndImage .allSteps .step-container .step .step-content {
+    justify-content: start;
+  }
+  body main .steps .allStepsAndImage .allSteps .step-container .step .step-content p {
+    width: 80%;
+  }
+  body main .steps .allStepsAndImage img {
+    display: block;
+    mask-image: linear-gradient(to right, transparent 10%, black 30%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 10%, black 30%, black 100%);
+    max-width: 40%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

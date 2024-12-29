@@ -1,14 +1,369 @@
+$font-family: 'Poppins', sans-serif;
+$creamy-color: #FCF5DB ; 
+$green-color: #2C503A; 
+$green-border-color: #1C3325;
+$font-color: #565348 ; 
+$btn-primary-color: #fff;
+$btn-secondary-color: $font-color;
+
+$burger-color: #828078; // Color de las líneas
+$background-color: #f8f2dd; // Color de fondo
+$line-height: 6px; // Grosor de las líneas
+$line-width: 100%; // Ancho de las líneas superior e inferior
+$middle-line-width: 80%; // Ancho de la línea del medio
+$line-spacing: 12px; // Espaciado entre líneas
+$transition-speed: 0.3s; // Velocidad de la animación
+
+// Definir una lista de elementos de texto comunes
+$texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
+
+
+
+
 @media (min-width: 768px) {
+    h3{
+      font-size: 18px !important;
+    }
+    p,button,li,a,input{
+      font-size: 16px !important;
+    }
     /* Tabletas */
     body{
-        // background-color: aqua;
+      .popupHomeEmailBackground{
+        .popupHomeEmail{
+            width: 55%;
+        }
     }
+      main{
+        .welcomeSection{
+          h3{
+            width: 70%;
+          }
+          p{
+            width: 70%;
+          }
+          .chatBotPresentation{
+            width: 50%;
+          }
+        }
+        .againPopUpEmailFinal{
+          // width: 70%;
+          button{
+            width: 70%;
+          }
+        } 
+        .listenGrowContainer {
+          .listenGrowContent {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            .title-listenGrowContent{
+              width: 100%;
+            }
+            .parametersAndImageContainer{
+              width: 100%;
+
+              .cardsParametersContainer {
+                .cardParameter {
+                  width: 100%;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+
+    
+
+
+    header{
+      height: 7vh;
+      .navbar{  
+          width: 90%;
+      }
+    }
+    .buttonBurgerMenu{
+    .burger {
+
+
+      span {
+  
+          &:nth-child(2) {
+              width: $middle-line-width; // La línea del medio es más corta
+              top: 50%;
+              transform: translateY(-50%);
+          }
+  
+          &:nth-child(1) {
+              top: 6px ;
+          }
+  
+          &:nth-child(3) {
+              bottom: 6px ;
+          }
+      }
+      &.open {
+        span {
+            &:nth-child(1) {
+                top: 50%  ;
+                transform: translateY(-50%) rotate(45deg) ;
+            }
+
+            &:nth-child(2) {
+                opacity: 0; // Ocultar línea del medio
+            }
+
+            &:nth-child(3) {
+                bottom: 50% ;
+                transform: translateY(50%) rotate(-45deg) ;
+            }
+        }
+    }
+  
+
+  }
+  }
+  .fullMenuHamburguerWithOverlay{
+    .optionsNavbar{
+      padding-top: 7vh;
+      ul{
+        width: 70%;
+      }
+    }
+  }
+  .steps{
+    .steps-title{
+      h3{
+        width: 70%;
+      }
+    }
+    .step{
+      .step-number-title{
+        h3{
+          width: 65%;
+        }
+        p{
+          width: 4%;
+        }
+      }
+      .step-content{
+        div{
+          width: 4%;
+        }
+        p{
+          width: 65%;
+        }
+      }
+    }
+  }
+  .FAQSection{
+    h2{
+      width: 70%;
+    }
+    .accordion{
+      width: 70%;
+    }
+  }
+
+  footer{
+    .footerContent{
+      width: 70%;
+    }
+  }
   }
   
   @media (min-width: 1024px) {
     /* Laptops */
+    body{
+      .popupHomeEmailBackground{
+        .popupHomeEmail{
+            width: 40%;
+        }
+    }
+  }
+    header{
+
+      .navbar{
+        .navbarItems{
+          display: flex;
+          align-items: center;
+          gap: 4rem;
+          font-weight: 400;
+
+
+          .navbarButtonComoFunciona{
+            opacity: 0.7;
+            transition: .5s;
+            &:hover{
+              opacity: 1;
+            }
+          }
+          .navbarButtonFAQ{
+            opacity: 0.7;
+            transition: .5s;
+            &:hover{
+              opacity: 1;
+            }
+          }
+          .navbarButtonPreventa{
+            
+
+          }
+          li{
+            font-size: 14px;
+            width: auto;
+            cursor: pointer;
+            button{
+              cursor: pointer;
+              background-color: $green-color;
+              color: $creamy-color;
+              font-family: $font-family;
+              font-size: 14px;
+
+              border-radius: 15px;
+              padding-block: 1vh;
+              padding-inline: 1.5rem;
+              border: 1px solid $green-border-color;
+              transition: .5s;
+              &:hover{
+                background-color: #213c2b;
+                border: 1px solid #16281d;
+
+              }
+            }
+          }
+
+
+          
+      }
+      .buttonBurgerMenu{
+        display: none;
+      }
+      }
+    }
+    main{
+
+      .heroContainer{
+        .plantHero1{
+          left: -5%;
+        }
+        .plantHero2{
+          left: 5%;
+        }
+        .heroContent{
+          .buttonsContainerHero{
+            flex-direction: row;
+            gap: 20px;
+          }
+        }
+      }
+
+
+
+
+    }
   }
   
   @media (min-width: 1440px) {
     /* Monitores grandes */
+    
+    body{
+      
+        .popupHomeEmailBackground{
+          .popupHomeEmail{
+              width: 30%;
+          }
+      }
+    
+    
+    main{
+      .welcomeSection{
+        .chatBotPresentation{
+          width: 25%;
+        }}
+    .listenGrowContainer{
+      .listenGrowContent{
+        .parametersAndImageContainer{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .cardsParametersContainer{
+            width: 50%;
+          }
+          #responsiveImageCardParameter{
+            display: block;
+            mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
+    
+            max-width: 40%;
+          }
+        }
+      }
+    }
+    
+
+    .steps{
+      align-items: center;
+      .steps-title{
+        width: 70%;
+        justify-content: start;
+      }
+      .allStepsAndImage{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .allSteps{
+          .step-container{
+            .step{
+              .step-number-title{
+                justify-content: start;
+              }
+              .step-content{
+                justify-content: start;
+                p{
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+        img{
+          display: block;
+          mask-image: linear-gradient(to right, transparent 10%, black 30%, black 100%);
+          -webkit-mask-image: linear-gradient(to right, transparent 10%, black 30%, black 100%);
+          max-width: 40%;
+    
+        }
+      }
+    }
+    }
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

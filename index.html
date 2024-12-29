@@ -17,10 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body >
+
     <!-- header y navbar -->
     <header>
         <nav class="navbar">
             <img src="./assets/svg/logoHeader.svg" alt="" href="javascript:void(0);" onclick="scrollFromTo('.heroContainer')" class="logoHeader">
+            <ul class="navbarItems">
+                <li class="navbarButtonComoFunciona">
+                    ¿Cómo funciona?
+                </li>
+                <li class="navbarButtonFAQ">
+                    Preguntas frecuentes
+                </li>
+                <li class="navbarButtonPreventa">
+                    <button>
+                        Preventa
+                    </button>
+                </li>
+            </ul>
             <button class="buttonBurgerMenu" >
                 <!-- boton con un background image -->
                  <!-- <div class="buttonBurgerMenu-icon">
@@ -146,34 +160,37 @@
                 <p class="subtitle-listenGrowContent" data-animation="slideInNotBlur">
                     Gracias a nuestros sensores inteligentes, Grou mide los parámetros esenciales para la salud de tus plantas.
                 </p>
-                <div class="cardsParametersContainer ">
-                    <div class="cardParameter " data-animation="showIn">
-                        <img src="assets/svg/tempIcon.svg" alt="">
-                        <p>
-                            <strong>
-                                ️Temperatura ambiente: 
-                            </strong><br>
-                            Porque a tus plantas también les gusta estar cómodas.
-                        </p>
+                <div class="parametersAndImageContainer">
+                    <div class="cardsParametersContainer ">
+                        <div class="cardParameter " data-animation="showIn">
+                            <img src="assets/svg/tempIcon.svg" alt="">
+                            <p>
+                                <strong>
+                                    ️Temperatura ambiente: 
+                                </strong><br>
+                                Porque a tus plantas también les gusta estar cómodas.
+                            </p>
+                        </div>
+                        <div class="cardParameter" data-animation="showIn">
+                            <img src="assets/svg/shapeIcon.svg" alt="">
+                            <p>
+                                <strong>
+                                    Humedad del suelo:
+                                </strong><br>
+                                Nunca más riegues de más o de menos.
+                            </p>
+                        </div>
+                        <div class="cardParameter" data-animation="showIn">
+                            <img src="assets/svg/sunIcon.svg" alt="">
+                            <p>
+                                <strong>
+                                    Luz solar: 
+                                </strong><br>
+                                Tu planta necesita sol? o está sufriendo un bronceado extremo?
+                            </p>
+                        </div>
                     </div>
-                    <div class="cardParameter" data-animation="showIn">
-                        <img src="assets/svg/shapeIcon.svg" alt="">
-                        <p>
-                            <strong>
-                                Humedad del suelo:
-                            </strong><br>
-                            Nunca más riegues de más o de menos.
-                        </p>
-                    </div>
-                    <div class="cardParameter" data-animation="showIn">
-                        <img src="assets/svg/sunIcon.svg" alt="">
-                        <p>
-                            <strong>
-                                Luz solar: 
-                            </strong><br>
-                            Tu planta necesita sol? o está sufriendo un bronceado extremo?
-                        </p>
-                    </div>
+                    <img id="responsiveImageCardParameter" src="assets/svg/macetaPCresponsive.svg" alt="">
                 </div>
             </div>
 
@@ -234,72 +251,77 @@
                 </section>
         <section class="steps">
             <div class="steps-title" data-animation="focusIn">
-                <h2>Cuidar tus plantas nunca fue tan simple</h2>
+                <h3>Cuidar tus plantas nunca fue tan simple</h3>
             </div>
-            <div class="step-container">
-              <div class="step">
-                <div class="step-number-title">
-                    <p class="step-number" data-animation="showIn">1</p>
-                    <h3 class="step-title" data-animation="slideInRight">Coloca el dispositivo</h3>
+            <div class="allStepsAndImage">
+                <div class="allSteps">
+                    <div class="step-container">
+                        <div class="step">
+                          <div class="step-number-title">
+                              <p class="step-number" data-animation="showIn">1</p>
+                              <h3 class="step-title" data-animation="slideInRight">Coloca el dispositivo</h3>
+                          </div>
+                          <div class="step-content">
+                              <div class="step-content-span" data-animation="scaleInVerTop">
+                                  <span></span>
+                              </div>
+                            <p class="step-text step-text-paddingBottom" data-animation="swingIn"
+                            >Coloca el dispositivo Grou en la tierra cerca de la base de la planta, asegurándote de que el sensor esté bien sumergido para una medición precisa.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="step-container">
+                        <div class="step">
+                          <div class="step-number-title">
+                              <p class="step-number" data-animation="showIn">2</p>
+                              <h3 class="step-title" data-animation="slideInRight">Conéctalo a tu red Wi-Fi</h3>
+                          </div>
+                          <div class="step-content">
+                              <div class="step-content-span" data-animation="scaleInVerTop">
+                                  <span></span>
+                              </div>
+                            <p class="step-text step-text-paddingBottom" data-animation="swingIn"
+                            >Abre la app Grou, sigue las instrucciones para conectar el dispositivo a tu Wi-Fi y en pocos minutos comenzará a enviar datos en tiempo real sobre tu planta.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="step-container">
+                        <div class="step">
+                          <div class="step-number-title">
+                              <p class="step-number" data-animation="showIn">3</p>
+                              <h3 class="step-title" data-animation="slideInRight">Interactua con tu planta</h3>
+                          </div>
+                          <div class="step-content">
+                              <div class="step-content-span" data-animation="scaleInVerTop">
+                                  <span></span>
+                              </div>
+                            <p class="step-text step-text-paddingBottom" data-animation="swingIn"
+                            >Chatear con tu planta. Consulta información en tiempo real sobre su temperatura, humedad, luz y más. </p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="step-container">
+                        <div class="step">
+                          <div class="step-number-title">
+                              <p class="step-number" data-animation="showIn">4</p>
+                              <h3 class="step-title" data-animation="slideInRight">Recibe notificaciones</h3>
+                          </div>
+                          <div class="step-content" id="last-step-content">
+                              <div>
+          
+          
+                              </div>
+                            <p class="step-text" data-animation="swingIn"
+                            >Mantente al tanto del bienestar de tu planta con alertas y recomendaciones de riego, luz y más.</p>
+                          </div>
+                        </div>
+                      </div>  
                 </div>
-                <div class="step-content">
-                    <div class="step-content-span" data-animation="scaleInVerTop">
-                        <span></span>
-                    </div>
-                  <p class="step-text step-text-paddingBottom" data-animation="swingIn"
-                  >Coloca el dispositivo Grou en la tierra cerca de la base de la planta, asegurándote de que el sensor esté bien sumergido para una medición precisa.</p>
-                </div>
-              </div>
+                <img src="assets/svg/macetaPCresponsive2.svg" alt="">
             </div>
-
-            <div class="step-container">
-              <div class="step">
-                <div class="step-number-title">
-                    <p class="step-number" data-animation="showIn">2</p>
-                    <h3 class="step-title" data-animation="slideInRight">Conéctalo a tu red Wi-Fi</h3>
-                </div>
-                <div class="step-content">
-                    <div class="step-content-span" data-animation="scaleInVerTop">
-                        <span></span>
-                    </div>
-                  <p class="step-text step-text-paddingBottom" data-animation="swingIn"
-                  >Abre la app Grou, sigue las instrucciones para conectar el dispositivo a tu Wi-Fi y en pocos minutos comenzará a enviar datos en tiempo real sobre tu planta.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="step-container">
-              <div class="step">
-                <div class="step-number-title">
-                    <p class="step-number" data-animation="showIn">3</p>
-                    <h3 class="step-title" data-animation="slideInRight">Interactua con tu planta</h3>
-                </div>
-                <div class="step-content">
-                    <div class="step-content-span" data-animation="scaleInVerTop">
-                        <span></span>
-                    </div>
-                  <p class="step-text step-text-paddingBottom" data-animation="swingIn"
-                  >Chatear con tu planta. Consulta información en tiempo real sobre su temperatura, humedad, luz y más. </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="step-container">
-              <div class="step">
-                <div class="step-number-title">
-                    <p class="step-number" data-animation="showIn">4</p>
-                    <h3 class="step-title" data-animation="slideInRight">Recibe notificaciones</h3>
-                </div>
-                <div class="step-content">
-                    <div>
-
-
-                    </div>
-                  <p class="step-text" data-animation="swingIn"
-                  >Mantente al tanto del bienestar de tu planta con alertas y recomendaciones de riego, luz y más.</p>
-                </div>
-              </div>
-            </div>  
           </section>
           
           

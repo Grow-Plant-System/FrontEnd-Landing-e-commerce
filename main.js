@@ -63,6 +63,9 @@ const buyButtonMenu = document.getElementById('buyButtonMenu');
 const buttonPrecios = document.getElementById('buttonPrecios');
 const buttonPorQueGrow = document.getElementById('buttonPorQueGrow');
 const buttonFAQ = document.getElementById('buttonFAQ');
+const navbarButtonComoFunciona = document.querySelector('.navbarButtonComoFunciona');
+const navbarButtonFAQ = document.querySelector('.navbarButtonFAQ');
+
 
 // Función de Toggle para abrir/cerrar el menú hamburguesa
 
@@ -161,11 +164,22 @@ buttonPorQueGrow.addEventListener("click", ()=>{
     scrollFromTo(".listenGrowContainer")
 
 })
+navbarButtonComoFunciona.addEventListener("click", ()=>{
+
+    scrollFromTo(".listenGrowContainer")
+
+})
 buttonFAQ.addEventListener("click", ()=>{
     controlShowBurgerMenu()
     scrollFromTo(".FAQSection")
 
 })
+navbarButtonFAQ.addEventListener("click", ()=>{
+
+    scrollFromTo(".FAQSection")
+
+})
+navbarButtonComoFunciona
 
 buttonBurgerMenu.addEventListener("click", () => {
     controlShowBurgerMenu()
@@ -177,6 +191,7 @@ buttonBurgerMenu.addEventListener("click", () => {
 const popup = document.querySelector('.popupHomeEmailBackground');
 const popupModal = document.querySelector('.popupHomeEmail');
 const majorButtonHero = document.querySelector('.majorButtonHero');
+const navbarButtonPreventa = document.querySelector('.navbarButtonPreventa');
 const buttonOpenPopupEmail = document.querySelector('.buttonOpenPopupEmail');
 const closePopup = document.querySelector('.btnCloseEmail');
 const form = document.getElementById('emailSignupForm');
@@ -209,19 +224,24 @@ buttonOpenPopupEmail.addEventListener("click", () => {
     showPopUpEmail();
     
 });
+navbarButtonPreventa.addEventListener("click", () => {
+    showPopUpEmail();
+    
+});
 
 buyButtonMenu.addEventListener("click",()=>{
     controlShowBurgerMenu()
     showPopUpEmail();
-
-
 })
+
+
 
 // Cerrar el pop-up (botón "Cerrar")
 closePopup.addEventListener('click', () => {
     popup.classList.remove('show');
     popupModal.classList.remove('showModalTranslate');
     document.body.style.overflow = "auto";  // Restaura el scroll
+    document.body.style.overflowX = "hidden";  // Restaura el scroll
 
     // Usar transitionend para asegurar que el display: none se aplique después de la animación
     popup.addEventListener("transitionend", () => {
@@ -307,45 +327,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
-// Función para aplicar la animación de desplazamiento a los elementos seleccionados
-function applyScrollAnimation(selector) {
-    const messages = document.querySelectorAll(selector); 
-    console.log(messages);
-    
-    // Selecciona los elementos usando el selector proporcionado
-    let lastScrollY = 0;
-    let velocity = 0;
-    let damping = 0.9; // Reducción de velocidad gradual
-  
-    function updatePositions() {
-      messages.forEach((message, index) => {
-        // Calcula la velocidad para cada elemento, aumentando el desplazamiento para los elementos posteriores
-        const speed = (index + 1) * -0.04; // Movimiento opuesto y leve (más leve con números pequeños)
-        const offset = velocity * speed;
-        message.style.transform = `translateY(-${offset}px)`; // Aplica el desplazamiento
-      });
-      velocity *= damping; // Aplica el factor de amortiguamiento
-      requestAnimationFrame(updatePositions); // Llama nuevamente a la función para crear la animación continua
-    }
-  
-    // Evento de desplazamiento para capturar el movimiento del usuario
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY; // Obtiene la posición actual del scroll
-      velocity += scrollY - lastScrollY; // Ajusta la velocidad según la diferencia del scroll
-      lastScrollY = scrollY; // Actualiza la última posición del scroll
-    });
-  
-    // Inicia la animación
-    updatePositions();
-  }
-  
-  // Llamamos a la función pasando el selector de los elementos que quieres animar
-
-  applyScrollAnimation('.chatBotPresentation-message1 div');
-  applyScrollAnimation('.chatBotPresentation-message1 p');
-  applyScrollAnimation('.chatBotPresentation-message2 p');
-  applyScrollAnimation('.chatBotPresentation-message3 img');
   
   
 

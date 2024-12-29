@@ -16,7 +16,9 @@ $middle-line-width: 80%; // Ancho de la línea del medio
 $line-spacing: 6px; // Espaciado entre líneas
 $transition-speed: 0.3s; // Velocidad de la animación
 
-
+button{
+    cursor: pointer;
+}
 
 
 //reset styles
@@ -42,6 +44,7 @@ body {
   color: $font-color;
   transition: all 1s;
   overflow: hidden auto;
+
 }
 .rotateTransition{
     -webkit-animation:none ;
@@ -72,8 +75,12 @@ header{
 
         .logoHeader{
             height: 100%;
+            cursor: pointer;
         }
+        .navbarItems{
+            display: none;
 
+        }
         .buttonBurgerMenu{
             height: 100%;
             background: none;
@@ -84,6 +91,9 @@ header{
             display: flex;
             justify-content: right;
             align-items: center;
+            &:focus{
+                outline: none;
+            } 
             .burger {
                 width: 100%;
                 height: 80%;
@@ -92,7 +102,7 @@ header{
                 display: flex;
                 justify-content: right;
                 align-items: center;
-            
+ 
                 span {
                     display: block;
                     position: absolute;
@@ -184,6 +194,7 @@ header{
             gap: 1vh;
             margin-block: 1.7rem;
             width: 80%;
+
             li{
                 font-size: 14px;
                 display: flex;
@@ -427,6 +438,10 @@ main{
                 height: 0.3rem;
                 width: 5.5rem;
                 animation-delay: .5s;
+                transition: all .5s;
+                &:hover{
+                    width: 6.5rem;
+                }
             }
             h3{
                 font-weight: 500;
@@ -464,18 +479,26 @@ main{
                     // -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	                // animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
                     animation-delay: 1.5s;
+                    transition: .5s;
+                    &:hover{
+                      background-color: #213c2b;
+                    }
                 }
                 .secondaryButtonHero{
                     font-weight: 400;
                     color:  #6C695E;
                     border: solid 1px #6C695E;
                     animation-delay: 2s;
-
+                    transition: .5s;
+                    &:hover{
+                      background-color: #eae3cad2;
+                    }
 
                 }
             }
         }
     }
+
     .welcomeSection{
         display: flex;
         flex-direction: column;
@@ -620,49 +643,65 @@ main{
 
             }
             .subtitle-listenGrowContent{
-                font-size: 14px;
+               font-size: 14px;
                color: #888474;
                margin-bottom: 3vh;
                font-weight: 400; 
             }
-            .cardsParametersContainer{
-                display: flex;
-                flex-direction: column;
-                // max-width: 600px;
-                align-items: center;
-                gap: 2vh;
-                .cardParameter{
-                    // view-timeline-name: --reveal;
-                    // animation-name: show;
-                    // animation-fill-mode: both;
-                    // animation-timeline: --reveal;
-                    // animation-range: entry 1% cover 20%;
-
-                    display: grid;
-                    width: 115%;
-                    grid-template-columns: 25% 75%;
-                    // align-items: center;
-                    // justify-items: center;
-                    background-color: $green-color;
-
-                    height: 8rem;
-                    border-radius: 20px;
-                    img{
-                        align-self: center;
-                        justify-self: center;
-                    }
-                    p{  
-                        font-weight: 400;
-                        width: 90%;
-                        align-self: center;
-                        font-size: 14px;
-                        color: #BEC3AB;
-                        strong{
-                            font-weight: 500;
-                            color: $creamy-color;
-                        }
-                    }
+            .parametersAndImageContainer{
+                // display: flex;
+                // img{
+                //     display: none;
+                // }
+                #responsiveImageCardParameter{
+                    display: none;
                 }
+                .cardsParametersContainer{
+                    display: flex;
+                    flex-direction: column;
+                    // max-width: 600px;
+                    align-items: center;
+                    gap: 2vh;
+
+                        .cardParameter{
+                            // view-timeline-name: --reveal;
+                            // animation-name: show;
+                            // animation-fill-mode: both;
+                            // animation-timeline: --reveal;
+                            // animation-range: entry 1% cover 20%;
+        
+                            display: grid;
+                            width: 115%;
+                            grid-template-columns: 25% 75%;
+                            // align-items: center;
+                            // justify-items: center;
+                            background-color: $green-color;
+                            
+                            height: 8rem;
+                            border-radius: 20px;
+                            transition: .5s;
+                            &:hover{
+                              background-color: #213c2b;
+                              transform: translateX(5%)
+                            }
+                            img{
+                                align-self: center;
+                                justify-self: center;
+                            }
+                            p{  
+                                font-weight: 400;
+                                width: 90%;
+                                align-self: center;
+                                font-size: 14px;
+                                color: #BEC3AB;
+                                strong{
+                                    font-weight: 500;
+                                    color: $creamy-color;
+                                }
+                            }
+                        }
+            }
+
             }
         }
     }
@@ -702,13 +741,18 @@ main{
     margin-bottom: 5vh;
     position: relative;
     z-index: 1;
+    .allStepsAndImage{
+        img{
+            display: none;
+        }
+    }
 
 .steps-title{
     margin-bottom: 2.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    h2{
+    h3{
         width: 80%;
         font-size: 18px;
 
@@ -796,6 +840,9 @@ main{
       }
 
     }
+    #last-step-content {
+    min-height: auto;
+    }
 
 
 
@@ -873,6 +920,9 @@ main{
         font-weight: 500;
         font-family: $font-family;
         transition: max-height 0.5s ease, padding 0.5s ease;
+        p{
+            font-weight: 400;
+        }
       }
   
       &.open {
