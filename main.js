@@ -306,7 +306,7 @@ form.addEventListener('submit', async (e) => {
         const result = await response.json();
 
         // Mostrar un mensaje al usuario
-        alertCustomize("Recibido! Pronto tendras novedades.", "bottom","#2C503A" )
+        alertCustomize("Recibido! Pronto tendrás novedades.", "bottom","#2C503A" )
 
         // Resetear el campo de entrada
         emailInput.value = ""; 
@@ -324,7 +324,7 @@ form.addEventListener('submit', async (e) => {
         console.error('Error:', error);
         // alertCustomize("Recibimos tu email exitosamentre.", "bottom","#2C503A" )
 
-       alertCustomize("Algo salio mal, intenta nuevamente.", "bottom","#601A1A" )
+       alertCustomize("Algo salió mal, intenta nuevamente.", "bottom","#601A1A" )
     }
 });
 
