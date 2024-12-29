@@ -18,6 +18,9 @@ $transition-speed: 0.3s; // Velocidad de la animación
 
 button{
     cursor: pointer;
+    &:focus{
+        outline: none;
+    } 
 }
 
 
@@ -682,7 +685,7 @@ main{
                             transition: .5s;
                             &:hover{
                               background-color: #213c2b;
-                              transform: translateX(5%)
+
                             }
                             img{
                                 align-self: center;
@@ -705,27 +708,42 @@ main{
             }
         }
     }
+    .FAQAndFinalPopup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
     .againPopUpEmailFinal{
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin-block: 5vh;
+        background-image: url(../assets/svg/backgroundLastPopup.svg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        width: 85%;
+        height: 30vh;
+        border: solid 1px #999483;
+        margin-block: 0;
         p{
             text-align: center;
             font-size: 14px;
-            font-weight: 500;
-            width: 80%;
+            font-weight: 400;
+            width: 60%;
 
         }
         button{
-            background-color: $green-color;
-            color: $creamy-color;
+            background-color:#F4EDD4;
+            color: #7C7B67;
             font-family: $font-family;
-            width: 85%;
+            width: 60%;
             font-size: 14px;
-            border: solid 1px $green-border-color;
+            border: solid 1px #7C7B67;
             border-radius: 15px;
             padding-block: 1.25rem;
 

@@ -65,6 +65,8 @@ const buttonPorQueGrow = document.getElementById('buttonPorQueGrow');
 const buttonFAQ = document.getElementById('buttonFAQ');
 const navbarButtonComoFunciona = document.querySelector('.navbarButtonComoFunciona');
 const navbarButtonFAQ = document.querySelector('.navbarButtonFAQ');
+const secondaryButtonHero = document.querySelector('.secondaryButtonHero');
+
 
 
 // Función de Toggle para abrir/cerrar el menú hamburguesa
@@ -179,7 +181,12 @@ navbarButtonFAQ.addEventListener("click", ()=>{
     scrollFromTo(".FAQSection")
 
 })
-navbarButtonComoFunciona
+secondaryButtonHero.addEventListener("click", ()=>{
+
+    scrollFromTo(".welcomeSection")
+
+})
+
 
 buttonBurgerMenu.addEventListener("click", () => {
     controlShowBurgerMenu()
@@ -214,7 +221,23 @@ function showPopUpEmail(){
     }, 0);  // Añadir clases de animación de forma inmediata
 }
 
-// Mostrar el pop-up si toca el botón
+
+let ejecutado = false;
+
+window.addEventListener('scroll', function() {
+    // Calculamos el porcentaje de scroll
+    const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+
+    // Si el scroll es mayor o igual al 50% y la función no se ha ejecutado
+    if (scrollPercentage >= 0.7 && !ejecutado) {
+        // Llama a la función
+        showPopUpEmail();
+        
+        // Establece la bandera para indicar que la función ya se ejecutó
+        ejecutado = true;
+    }
+});
+
 
 majorButtonHero.addEventListener("click", () => {
     showPopUpEmail();

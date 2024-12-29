@@ -1,6 +1,9 @@
 button {
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
 
 * {
   margin: 0;
@@ -570,7 +573,6 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter:hover {
   background-color: #213c2b;
-  transform: translateX(5%);
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter img {
   align-self: center;
@@ -587,27 +589,41 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
   font-weight: 500;
   color: #FCF5DB;
 }
+main .FAQAndFinalPopup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
 main .againPopUpEmailFinal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-block: 5vh;
+  background-image: url(../assets/svg/backgroundLastPopup.svg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  width: 85%;
+  height: 30vh;
+  border: solid 1px #999483;
+  margin-block: 0;
 }
 main .againPopUpEmailFinal p {
   text-align: center;
   font-size: 14px;
-  font-weight: 500;
-  width: 80%;
+  font-weight: 400;
+  width: 60%;
 }
 main .againPopUpEmailFinal button {
-  background-color: #2C503A;
-  color: #FCF5DB;
+  background-color: #F4EDD4;
+  color: #7C7B67;
   font-family: "Poppins", sans-serif;
-  width: 85%;
+  width: 60%;
   font-size: 14px;
-  border: solid 1px #1C3325;
+  border: solid 1px #7C7B67;
   border-radius: 15px;
   padding-block: 1.25rem;
 }
@@ -1389,6 +1405,9 @@ footer .footerEndPage .developedByText {
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 55%;
   }
+  body main .FAQSection .againPopUpEmailFinal {
+    width: 70%;
+  }
   body main .welcomeSection h3 {
     width: 70%;
   }
@@ -1415,6 +1434,9 @@ footer .footerEndPage .developedByText {
   }
   body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter {
     width: 100%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter:hover {
+    transform: translateX(5%);
   }
   header {
     height: 7vh;
@@ -1539,6 +1561,43 @@ footer .footerEndPage .developedByText {
   /* Monitores grandes */
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 30%;
+  }
+  body main .FAQSection .FAQAndFinalPopup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    width: 70%;
+  }
+  body main .FAQSection .FAQAndFinalPopup .pregFrecContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+  }
+  body main .FAQSection .FAQAndFinalPopup .pregFrecContainer .accordion {
+    width: 100%;
+  }
+  body main .FAQSection .FAQAndFinalPopup .pregFrecContainer .accordion .accordion-item {
+    margin-bottom: 0;
+  }
+  body main .FAQSection .FAQAndFinalPopup .againPopUpEmailFinal {
+    background-image: url(../assets/svg/backgroundLastPopup.svg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    width: 50%;
+    flex-grow: 1;
+    height: auto;
+    border: solid 1px #999483;
+    margin-block: 0;
+  }
+  body main .FAQSection .FAQAndFinalPopup .againPopUpEmailFinal button {
+    width: 60%;
+    background-color: #FCF5DB;
+    color: #7C7B67;
+    border: solid 1px #7C7B67;
   }
   body main .welcomeSection .chatBotPresentation {
     width: 25%;

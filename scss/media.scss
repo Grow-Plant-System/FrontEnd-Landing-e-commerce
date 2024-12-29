@@ -35,6 +35,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         }
     }
       main{
+        .FAQSection{
+          .againPopUpEmailFinal{
+            width: 70%;
+          }
+        }
         .welcomeSection{
           h3{
             width: 70%;
@@ -67,6 +72,10 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               .cardsParametersContainer {
                 .cardParameter {
                   width: 100%;
+                  &:hover{
+
+                    transform: translateX(5%)
+                  }
                 }
               }
             }
@@ -282,6 +291,45 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
     
     
     main{
+      .FAQSection{
+        .FAQAndFinalPopup{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: stretch;
+          gap: 15px;
+          width: 70%;
+          .pregFrecContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 50%;
+            .accordion {
+              width: 100%;
+              .accordion-item{
+                margin-bottom: 0;
+              }
+            }
+          }
+          .againPopUpEmailFinal{
+            background-image: url(../assets/svg/backgroundLastPopup.svg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            width: 50%;
+            flex-grow:1 ;
+            height: auto;
+            border: solid 1px #999483;
+            margin-block: 0;
+            button{
+              width: 60%;
+              background-color: $creamy-color;
+              color: #7C7B67;
+              border: solid 1px #7C7B67;
+            }
+          }
+        }
+      }
       .welcomeSection{
         .chatBotPresentation{
           width: 25%;
