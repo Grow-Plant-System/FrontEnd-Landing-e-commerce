@@ -741,12 +741,17 @@ main{
             background-color:#F4EDD4;
             color: #7C7B67;
             font-family: $font-family;
-            width: 60%;
+            width: 70%;
             font-size: 14px;
             border: solid 1px #7C7B67;
             border-radius: 15px;
             padding-block: 1.25rem;
-
+            transition: all .5s;
+            &:hover{
+                color: #5c4d4d;
+                background-color:#e4dec7;
+                border: solid 1px #5c5c4d;
+            }
         }
     }
 }
@@ -893,6 +898,10 @@ main{
       border-radius: 15px;
       margin-bottom: 15px;
       overflow: hidden;
+      transition: all .5s;
+      &:hover{
+        background-color:#e4dec780;
+    }
   
       .accordion-header {
         background: transparent;

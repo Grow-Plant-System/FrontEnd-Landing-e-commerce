@@ -621,11 +621,17 @@ main .againPopUpEmailFinal button {
   background-color: #F4EDD4;
   color: #7C7B67;
   font-family: "Poppins", sans-serif;
-  width: 60%;
+  width: 70%;
   font-size: 14px;
   border: solid 1px #7C7B67;
   border-radius: 15px;
   padding-block: 1.25rem;
+  transition: all 0.5s;
+}
+main .againPopUpEmailFinal button:hover {
+  color: #5c4d4d;
+  background-color: #e4dec7;
+  border: solid 1px #5c5c4d;
 }
 
 .steps {
@@ -742,6 +748,10 @@ main .againPopUpEmailFinal button {
   border-radius: 15px;
   margin-bottom: 15px;
   overflow: hidden;
+  transition: all 0.5s;
+}
+.FAQSection .accordion .accordion-item:hover {
+  background-color: rgba(228, 222, 199, 0.5019607843);
 }
 .FAQSection .accordion .accordion-item .accordion-header {
   background: transparent;
@@ -1598,6 +1608,11 @@ footer .footerEndPage .developedByText {
     background-color: #FCF5DB;
     color: #7C7B67;
     border: solid 1px #7C7B67;
+  }
+  body main .FAQSection .FAQAndFinalPopup .againPopUpEmailFinal button:hover {
+    color: #5c4d4d;
+    background-color: rgba(228, 222, 199, 0.5019607843);
+    border: solid 1px #5c5c4d;
   }
   body main .welcomeSection .chatBotPresentation {
     width: 25%;

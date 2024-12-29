@@ -326,6 +326,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               background-color: $creamy-color;
               color: #7C7B67;
               border: solid 1px #7C7B67;
+              &:hover{
+                color: #5c4d4d;
+                background-color:#e4dec780;
+                border: solid 1px #5c5c4d;
+            }
             }
           }
         }
