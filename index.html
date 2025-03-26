@@ -99,8 +99,12 @@
     <section class="popupHomeEmailBackground">
         <!-- <div class="popupHomeEmailContainer"> -->
             <div class="popupHomeEmail">
-                <h3>Grou aún esta en preventa</h3>
-                <p>Queda menos de lo que esperas! Se uno de los primeros en enterarte sobre el lanzamiento.</p>
+                <h3>Acceso exclusivo</h3>
+                <p>Por primera vez en Argentina, un sistema integral que revoluciona el cuidado de tus plantas. Formá parte de una familia que crea un mundo nuevo donde la tecnología y la naturaleza se encuentran.
+                </p>
+                <p>
+                    E-book gratis, descuentos, beneficios únicos, sé el primero en enterarte de todo. <strong>Solo para miembros</strong>.
+                </p>
                 <form id="emailSignupForm">
                     <input 
                         type="email" 
@@ -127,15 +131,15 @@
             </div>
             <div class="heroContent">
 
-                <h1 class="titleHero" data-animation="focusIn">Tu planta, con voz propia.</h1>
-                <span class="separatorHero" data-animation="scaleInSeparator"></span>
+                <h1 class="titleHero" data-animation="focusIn"><strong>Tu planta</strong>, con voz propia.</h1>
+                <!-- <span class="separatorHero" data-animation="scaleInSeparator"></span> -->
                 <h3 class="subtitleHero" data-animation="swingIn"
                 >
                     Descubrí <strong>Grou</strong>, el sistema inteligente que traduce sus necesidades.
                 </h3>
                 <div class="buttonsContainerHero">
-                    <button class="majorButtonHero" data-animation="fadeIn">Reserva el tuyo</button>
-                    <button class="secondaryButtonHero" data-animation="fadeIn">Ver más</button>
+                    <button class="majorButtonHero" data-animation="fadeIn">Unirme ahora</button>
+                    <!-- <button class="secondaryButtonHero" data-animation="fadeIn">Ver más</button> -->
                 </div>
 
             </div>
@@ -144,18 +148,24 @@
             </div>
         </section>
         <section class="welcomeSection">
-                <h3 class="welcomeSectionTitle" data-animation="slideInNotBlur">¿Con ganas de conocer Grou?</h3>
+            <div class="welcomeSection-textAndButton">
+                <h3 class="welcomeSectionTitle" data-animation="slideInNotBlur">Escucha a tu planta antes de que sea tarde</h3>
                 <p data-animation="slideInNotBlur"="">
-                    Grou combina un dispositivo con sensores de última generación y una app con inteligencia artificial para guiarte en el cuidado de tus plantas de forma simple y personalizada. Lo que antes era un desafío frustrante, ahora es una experiencia placentera y sin preocupaciones.
-                    <br>
-                    Pronto, entender a tus plantas será tan fácil como mirar tu teléfono. <strong>Con Grou, cada hoja y cada flor crecerán sanas mientras tú podrás disfrutar de la tranquilidad de verlas prosperar.</strong>
-                    </p>    
+                    Con Grou, Notificaciones inteligentes, consejos personalizados y cero dramas botánicos.
+                </p>  
+                <button data-animation="fadeIn" class="welcomeSection-button wsDesktop">Tomar control</button>  
+            </div>
+            <div class="welcomeSection-image" data-animation="focusIn">
+                <img src="assets/mockupPhone.png" alt="">
+                <button data-animation="fadeIn"  class="welcomeSection-button  wsMobile">Tomar control</button>  
+
+            </div>
         </section>
 
         <section class="listenGrowContainer">
             <div class="listenGrowContent">
                 <h3 class="title-listenGrowContent" data-animation="slideInNotBlur">
-                    Tus plantas hablan, Grou escucha.
+                    Tus plantas hablan,<br> Grou escucha.
                 </h3>
                 <p class="subtitle-listenGrowContent" data-animation="slideInNotBlur">
                     Gracias a nuestros sensores inteligentes, Grou mide los parámetros esenciales para la salud de tus plantas.
@@ -197,9 +207,9 @@
         </section>
         <section class="welcomeSection">
             <h3 class="welcomeSectionTitle" data-animation="focusIn">¿Qué necesita tu planta? Pregúntale.</h3>
-                    <p data-animation="fadeIn">
+                    <p class="welcomeSectionSubtitle" data-animation="fadeIn">
                     Con nuestra app móvil, puedes chatear directamente con tus plantas (sí, literalmente).
-                    <br>
+                    <br><br>
                     La inteligencia artificial de Grou interpreta los datos en tiempo real y te da respuestas claras y personalizadas para su perfecto cuidado.                    </p>
                         <!-- <div class="image-container">
                             <img src="assets/mockupiphone-chat.webp" class="" data-animation="slide-in-blurred-left" alt="">
@@ -222,33 +232,16 @@
                             </div>
                         </div>
                 </section>
-        <section class="welcomeSection">
-            <h3 class="welcomeSectionTitle" data-animation="focusIn">También podes enviar imágenes y audios</h3>
-                <p data-animation="fadeIn">
-                    ¿Tu planta tiene manchas extrañas o simplemente necesitas un consejo rápido? Con nuestra app, puedes enviar imágenes para un diagnóstico visual o grabar audios con tus preguntas.
-                </p>
-                    <!-- <img src="assets/mockupiphone-chat.webp" data-animation="slide-in-blurred-left" alt=""> -->
-                <div class="chatBotPresentation">
-                    <div class="chatBotPresentation-message1" id="CBPMSJ1" data-animation="slideInRight">
-                        <div>
-                            <div></div>
-                            <p>
-                                ¿Está sana mi planta?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="chatBotPresentation-message2" data-animation="slideInNotBlur">
-                        <div>
-                            <p>
-                                ¡Está en buen camino! La temperatura es ideal, pero la humedad podría mejorar. Un poco de agua y estará perfecta. 🌱✨    
-                            </p>
-                        </div>
-                    </div>
-                    <div class="chatBotPresentation-message3">
-                        <img id="audioAnimation" src="assets/audioAnimationSVGs/audioAnimation0001.svg" alt="Animación de Audio" data-animation="slideInRight" >
-                    </div>
-                </div>
-                </section>
+        <section class="welcomeSection communitySection"> 
+            <h3>Descubrí un mundo que pocos conocen </h3>
+            <p>Armamos una comunidad para cuidar plantas y entender mejor nuestro entorno. Cada planta cuenta una historia, y juntos estamos aprendiendo a escucharlas.</p>
+            <div class="welcomeSection-image">
+                <img src="./assets/mockupPhone2.png" alt="">
+            </div>
+            <p>Si te importa el planeta y querés hacer la diferencia, este es tu lugar.</p>
+            <button class="welcomeSection-button">Unirme</button>
+
+        </section>
         <section class="steps">
             <div class="steps-title" data-animation="focusIn">
                 <h3>Cuidar tus plantas nunca fue tan simple</h3>
@@ -433,7 +426,7 @@
                         </a>
                     </li>
                     <li class="iconSocialMedia">
-                        <a href="www.tiktok.com/@grou.ai?lang=es">
+                        <a href="https://www.tiktok.com/@grou.ai">
                             <img src="assets/svg/footer/tiktokLogo.svg" alt="">
                         </a>
                     </li>
@@ -442,8 +435,10 @@
             <div class="exploreFooter">
                 <h3>CONTACTO</h3>
                 <ul>
-                    <li><a href="mailto:grou.ai.soporte@gmail.com?subject=Consulta%20de%20Contacto&body=Hola%20equipo%20de%20Grou,%0A%0AQuisiera%20ponerme%20en%20contacto%20para%20consultar%20sobre:%20[Especificar%20tema].%0A%0AQuedo%20atento%20a%20su%20respuesta.%0A%0AAtentamente,%0A[Tu%20nombre]%0A[Tu%20tel%C3%A9fono%20opcional]">grou.ai.soporte@gmail.com
-                    </a>                  </li>
+                    <li><a href="mailto:grou.ai.contacto@gmail.com?subject=Consulta%20de%20Contacto&body=Hola%20equipo%20de%20Grou,%0A%0AQuisiera%20ponerme%20en%20contacto%20para%20consultar%20sobre:%20[Especificar%20tema].%0A%0AQuedo%20atento%20a%20su%20respuesta.%0A%0AAtentamente,%0A[Tu%20nombre]%0A[Tu%20tel%C3%A9fono%20opcional]">grou.ai.contacto@gmail.com                    </a>                  </li>
+
+                    <li><a href="mailto:grou.ai.soporte@gmail.com?subject=Consulta%20de%20Contacto&body=Hola%20equipo%20de%20Grou,%0A%0AQuisiera%20ponerme%20en%20contacto%20para%20consultar%20sobre:%20[Especificar%20tema].%0A%0AQuedo%20atento%20a%20su%20respuesta.%0A%0AAtentamente,%0A[Tu%20nombre]%0A[Tu%20tel%C3%A9fono%20opcional]">grou.ai.soporte@gmail.com                    </a>                  </li>
+
                 </ul>
             </div>
             <div class="exploreFooter">

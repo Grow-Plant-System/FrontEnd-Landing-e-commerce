@@ -3,16 +3,23 @@ let navbarHeight = navbar.offsetHeight;
 
 
 function handleScroll() {
-    if (window.scrollY > 0) {
-        navbar.style.transform = 'translateY(0)';
-        document.querySelector('.plantHero2').classList.add('fadeIn')
-    } else {
-        navbar.style.transform = 'translateY(-100%)';
-    }
+    // if (window.scrollY > 0) {
+    //     navbar.style.transform = 'translateY(0)';
+    //     document.querySelector('.plantHero2').classList.add('fadeIn')
+    // } else {
+    //     navbar.style.transform = 'translateY(-100%)';
+    // }
+
 }
 
 
-window.addEventListener('scroll', handleScroll);
+// window.addEventListener('load', handleScroll);
+setTimeout(() => {
+        navbar.style.transform = 'translateY(0)';
+        document.querySelector('.plantHero2').classList.add('fadeIn')
+
+
+}, 300);
 
 
 // Configuración del Intersection Observer

@@ -38,7 +38,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #FCF5DB;
-  height: 9vh;
+  height: 73px;
   width: 100%;
   position: fixed;
   transform: translateY(-100%); /* Oculta la `navbar` por defecto */
@@ -258,11 +258,14 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 .popupHomeEmailBackground .popupHomeEmail h3 {
   font-size: 16px;
   width: 80%;
-  font-weight: 700;
+  font-weight: 600;
 }
 .popupHomeEmailBackground .popupHomeEmail p {
   font-size: 14px;
   width: 80%;
+}
+.popupHomeEmailBackground .popupHomeEmail p strong {
+  font-weight: 600;
 }
 .popupHomeEmailBackground .popupHomeEmail form {
   display: flex;
@@ -331,39 +334,52 @@ main .heroContainer {
   width: 100%;
 }
 main .heroContainer .plantHero1 {
-  height: 15vh;
+  height: 30%;
   width: 100%;
-  background-image: url(../assets/svg/hero/laurelHero.svg);
+  background-image: url(../assets/svg/heroMarron.svg);
   background-repeat: no-repeat;
   background-position: left;
-  left: -25%;
   position: relative;
   background-size: contain;
+  top: 70px;
   animation-delay: 1s;
 }
 main .heroContainer .plantHero2 {
-  height: 15vh;
+  height: 30%;
   opacity: 0;
   width: 100%;
-  background-image: url(../assets/svg/hero/laurelHeroInvert.svg);
+  background-image: url(../assets/svg/hero/HEroBottom.svg);
   background-repeat: no-repeat;
   background-position: right;
-  left: 25%;
   position: relative;
   background-size: contain;
 }
 main .heroContainer .heroContent {
   width: 80%;
+  position: relative;
+  top: 30px;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5vh;
 }
 main .heroContainer .heroContent h1 {
-  font-weight: 800;
+  width: 100%;
+  font-weight: 600;
+  line-height: 1;
   font-size: 36px;
-  margin-bottom: 20px;
   animation-delay: 0.2s;
+  text-align: center;
+}
+main .heroContainer .heroContent h1 strong {
+  font-weight: 700;
 }
 main .heroContainer .heroContent span {
   display: block;
   background-color: #2C503A;
+  border: 2px solid #1C3325;
   height: 0.3rem;
   width: 5.5rem;
   animation-delay: 0.5s;
@@ -375,8 +391,8 @@ main .heroContainer .heroContent span:hover {
 main .heroContainer .heroContent h3 {
   font-weight: 500;
   font-size: 16px;
-  margin-block: 20px;
   animation-delay: 1s;
+  text-align: center;
 }
 main .heroContainer .heroContent h3 strong {
   font-weight: 600;
@@ -384,7 +400,7 @@ main .heroContainer .heroContent h3 strong {
 main .heroContainer .heroContent .buttonsContainerHero {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 10px;
 }
 main .heroContainer .heroContent .buttonsContainerHero button {
@@ -408,27 +424,66 @@ main .heroContainer .heroContent .buttonsContainerHero .majorButtonHero {
 main .heroContainer .heroContent .buttonsContainerHero .majorButtonHero:hover {
   background-color: #213c2b;
 }
-main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero {
-  font-weight: 400;
-  color: #6C695E;
-  border: solid 1px #6C695E;
-  animation-delay: 2s;
-  transition: 0.5s;
-}
-main .heroContainer .heroContent .buttonsContainerHero .secondaryButtonHero:hover {
-  background-color: rgba(234, 227, 202, 0.8235294118);
-}
 main .welcomeSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5vh;
+  margin-block: 10vh;
   width: 100%;
+}
+main .welcomeSection .welcomeSectionTitle {
+  text-align: center;
+}
+main .welcomeSection .welcomeSectionSubtitle {
+  text-align: center;
+  margin-block: 2.5vh;
+}
+main .welcomeSection .welcomeSection-button {
+  width: 11.5rem;
+  border: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 18px;
+  padding-block: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #FCF5DB;
+  background-color: #2C503A;
+  border: solid px #1C3325;
+  animation-delay: 0.5s;
+  transition: 0.5s;
+}
+main .welcomeSection .welcomeSection-button:hover {
+  background-color: #213c2b;
+}
+main .welcomeSection .wsDesktop {
+  display: none;
+}
+main .welcomeSection .welcomeSection-textAndButton {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .welcomeSection .welcomeSection-textAndButton p {
+  margin-block: 2.5vh;
+}
+main .welcomeSection .welcomeSection-image {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .welcomeSection .welcomeSection-image img {
+  width: 70%;
+  margin-bottom: 2.5vh;
 }
 main .welcomeSection h3 {
   width: 80%;
-  margin-bottom: 2.5vh;
 }
 main .welcomeSection p {
   width: 80%;
@@ -543,15 +598,16 @@ main .listenGrowContainer .listenGrowContent {
   width: 80%;
 }
 main .listenGrowContainer .listenGrowContent .title-listenGrowContent {
-  width: 80%;
   font-size: 18px;
   margin-bottom: 2.5vh;
+  text-align: center;
 }
 main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
   font-size: 14px;
   color: #888474;
   margin-bottom: 3vh;
   font-weight: 400;
+  text-align: center;
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer #responsiveImageCardParameter {
   display: none;
@@ -566,7 +622,8 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
   display: grid;
   width: 115%;
   grid-template-columns: 25% 75%;
-  background-color: #2C503A;
+  background-color: #EDE7CE;
+  border: 1px solid #BCBAB3;
   height: 8rem;
   border-radius: 20px;
   transition: 0.5s;
@@ -583,11 +640,11 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
   width: 90%;
   align-self: center;
   font-size: 14px;
-  color: #BEC3AB;
+  color: #888474;
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter p strong {
   font-weight: 500;
-  color: #FCF5DB;
+  color: #565348;
 }
 main .FAQAndFinalPopup {
   display: flex;
@@ -634,6 +691,20 @@ main .againPopUpEmailFinal button:hover {
   border: solid 1px #5c5c4d;
 }
 
+.communitySection h3 {
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+.communitySection p {
+  text-align: center;
+}
+.communitySection div img {
+  margin-top: 2.5vh;
+}
+.communitySection button {
+  margin-top: 2.5vh;
+}
+
 .steps {
   width: 100%;
   display: flex;
@@ -649,6 +720,7 @@ main .againPopUpEmailFinal button:hover {
   margin-bottom: 2.5vh;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 .steps .steps-title h3 {
@@ -738,6 +810,7 @@ main .againPopUpEmailFinal button:hover {
   width: 80%;
   font-size: 18px;
   margin-bottom: 2.5vh;
+  text-align: center;
 }
 .FAQSection .accordion {
   width: 85%;
