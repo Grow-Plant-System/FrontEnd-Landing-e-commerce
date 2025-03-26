@@ -168,6 +168,9 @@ const popupModal = document.querySelector('.popupHomeEmail');
 const majorButtonHero = document.querySelector('.majorButtonHero');
 const navbarButtonPreventa = document.querySelector('.navbarButtonPreventa');
 const buttonOpenPopupEmail = document.querySelector('.buttonOpenPopupEmail');
+const wsDesktop = document.querySelector('.wsDesktop');
+const wsMobile = document.querySelector('.wsMobile');
+const communityButton = document.querySelector('.communityButton');
 const closePopup = document.querySelector('.btnCloseEmail');
 const form = document.getElementById('emailSignupForm');
 const emailInput = form.querySelector('input[name="email"]'); // Campo de email
@@ -211,11 +214,19 @@ majorButtonHero.addEventListener("click", () => {
     showPopUpEmail();
     
 });
-// buttonOpenPopupEmail.addEventListener("click", () => {
-//     showPopUpEmail();
+wsDesktop.addEventListener("click", () => {
+    showPopUpEmail();
     
-// });
+});
 navbarButtonPreventa.addEventListener("click", () => {
+    showPopUpEmail();
+    
+});
+wsMobile.addEventListener("click", () => {
+    showPopUpEmail();
+    
+});
+communityButton.addEventListener("click", () => {
     showPopUpEmail();
     
 });
