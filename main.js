@@ -190,21 +190,21 @@ function showPopUpEmail(){
 }
 
 
-let ejecutado = false;
+// let ejecutado = false;
 
-window.addEventListener('scroll', function() {
-    // Calculamos el porcentaje de scroll
-    const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+// window.addEventListener('scroll', function() {
+//     // Calculamos el porcentaje de scroll
+//     const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
 
-    // Si el scroll es mayor o igual al 50% y la función no se ha ejecutado
-    if (scrollPercentage >= 0.7 && !ejecutado) {
-        // Llama a la función
-        showPopUpEmail();
+//     // Si el scroll es mayor o igual al 50% y la función no se ha ejecutado
+//     if (scrollPercentage >= 0.7 && !ejecutado) {
+//         // Llama a la función
+//         showPopUpEmail();
         
-        // Establece la bandera para indicar que la función ya se ejecutó
-        ejecutado = true;
-    }
-});
+//         // Establece la bandera para indicar que la función ya se ejecutó
+//         ejecutado = true;
+//     }
+// });
 
 
 majorButtonHero.addEventListener("click", () => {
