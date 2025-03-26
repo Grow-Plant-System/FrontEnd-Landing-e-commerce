@@ -1,3 +1,7 @@
+:root {
+  --vh: 1vh;
+}
+
 button {
   cursor: pointer;
 }
@@ -176,7 +180,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1vh;
+  gap: calc(var(--vh) * 1 * 1);
   margin-block: 1.7rem;
   width: 80%;
 }
@@ -259,7 +263,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh) * 1 * 100);
   transition: all 0.5s;
   z-index: 3;
   opacity: 0;
@@ -352,7 +356,7 @@ main .heroContainer {
   align-items: center;
   gap: 7.5%;
   overflow-x: hidden;
-  height: 100vh;
+  height: calc(var(--vh) * 1 * 100);
   flex-direction: column;
   width: 100%;
 }
@@ -386,7 +390,7 @@ main .heroContainer .heroContent {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 4.5vh;
+  gap: calc(var(--vh) * 1 * 4.5);
 }
 main .heroContainer .heroContent h1 {
   width: 100%;
@@ -452,7 +456,7 @@ main .welcomeSection {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-block: 10vh;
+  margin-block: calc(var(--vh) * 1 * 10);
   width: 100%;
 }
 main .welcomeSection .welcomeSectionTitle {
@@ -522,7 +526,7 @@ main .welcomeSection .chatBotPresentation {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: calc(var(--vh) * 1 * 2);
 }
 main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 {
   display: flex;
@@ -533,7 +537,7 @@ main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  gap: 2vh;
+  gap: calc(var(--vh) * 1 * 2);
   align-items: center;
   background-color: #E0DBC6;
   border: 1px solid #CAC4AF;
@@ -560,7 +564,7 @@ main .welcomeSection .chatBotPresentation .chatBotPresentation-message1 div div 
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 30vh;
+  height: calc(var(--vh) * 1 * 30);
 }
 main .welcomeSection .chatBotPresentation .chatBotPresentation-message2 {
   display: flex;
@@ -612,7 +616,7 @@ main .listenGrowContainer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5vh;
+  margin-bottom: calc(var(--vh) * 1 * 5);
   width: 100%;
 }
 main .listenGrowContainer .listenGrowContent {
@@ -628,7 +632,7 @@ main .listenGrowContainer .listenGrowContent .title-listenGrowContent {
 main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
   font-size: 14px;
   color: #888474;
-  margin-bottom: 3vh;
+  margin-bottom: calc(var(--vh) * 1 * 3);
   font-weight: 400;
   text-align: center;
 }
@@ -639,7 +643,7 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2vh;
+  gap: calc(var(--vh) * 1 * 2);
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter {
   display: grid;
@@ -674,7 +678,7 @@ main .FAQAndFinalPopup {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-bottom: calc(var(--vh) * 1 * 5);
 }
 main .againPopUpEmailFinal {
   display: flex;
@@ -687,7 +691,7 @@ main .againPopUpEmailFinal {
   background-position: center;
   border-radius: 15px;
   width: 85%;
-  height: 30vh;
+  height: calc(var(--vh) * 1 * 20);
   border: solid 1px #999483;
   margin-block: 0;
 }
@@ -732,7 +736,7 @@ main .againPopUpEmailFinal button:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5vh;
+  margin-bottom: calc(var(--vh) * 1 * 5);
   position: relative;
   z-index: 1;
 }
@@ -794,7 +798,7 @@ main .againPopUpEmailFinal button:hover {
 .steps .step .step-content {
   display: flex;
   justify-content: center;
-  min-height: 10vh;
+  min-height: calc(var(--vh) * 1 * 10);
   gap: 1rem;
 }
 .steps .step .step-content div {
@@ -878,7 +882,7 @@ main .againPopUpEmailFinal button:hover {
   color: #565348 !important;
 }
 .FAQSection .accordion .accordion-item .accordion-content {
-  max-height: 0vh;
+  max-height: calc(var(--vh) * 1 * 0);
   overflow: hidden;
   padding: 0 20px;
   color: #999483;
@@ -897,7 +901,7 @@ main .againPopUpEmailFinal button:hover {
   transform: rotate(-180deg);
 }
 .FAQSection .accordion .accordion-item.open .accordion-content {
-  max-height: 80vh;
+  max-height: calc(var(--vh) * 1 * 80);
   padding-bottom: 15px;
 }
 
@@ -1415,6 +1419,10 @@ main .againPopUpEmailFinal button:hover {
   animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+:root {
+  --vh: 1vh;
+}
+
 footer {
   background-color: #E3DCC5;
   border-top: 1px solid #C1BBA7;
@@ -1427,9 +1435,9 @@ footer .footerContent {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding-block: 4vh;
+  padding-block: calc(var(--vh) * 4);
   width: 80%;
-  gap: 4vh;
+  gap: calc(var(--vh) * 4);
 }
 footer .footerContent h3 {
   font-weight: 700;
@@ -1500,6 +1508,10 @@ footer .footerEndPage .developedByText {
   color: #84827C;
 }
 
+:root {
+  --vh: 1vh;
+}
+
 @media (min-width: 768px) {
   h3 {
     font-size: 18px !important;
@@ -1545,7 +1557,7 @@ footer .footerEndPage .developedByText {
     transform: translateX(5%);
   }
   header {
-    height: 7vh;
+    height: calc(var(--vh) * 1 * 7);
   }
   header .navbar {
     width: 90%;
@@ -1573,10 +1585,8 @@ footer .footerEndPage .developedByText {
     transform: translateY(50%) rotate(-45deg);
   }
   .fullMenuHamburguerWithOverlay .optionsNavbar {
-    padding-top: 7vh;
-  }
-  .fullMenuHamburguerWithOverlay .optionsNavbar ul {
-    width: 70%;
+    height: calc(var(--vh) * 1 * 7) ul;
+    height-width: 70%;
   }
   .steps .steps-title h3 {
     width: 70%;
@@ -1640,7 +1650,7 @@ footer .footerEndPage .developedByText {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     border-radius: 15px;
-    padding-block: 1vh;
+    padding-block: calc(var(--vh) * 1 * 1);
     padding-inline: 1.5rem;
     border: 1px solid #1C3325;
     transition: 0.5s;

@@ -1,4 +1,9 @@
+function setScreenHeight() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
 
+window.addEventListener('resize', setScreenHeight);
+setScreenHeight();
 
   
 function scrollFromTo(seccionDestino){ //boton se pasa con ".pepito" si es clase y "#pepito" si es id 

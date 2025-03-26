@@ -1,3 +1,8 @@
+:root {
+  --vh: 1vh;
+}
+$vh: calc(var(--vh) * 1);
+
 $font-family: 'Poppins', sans-serif;
 $creamy-color: #FCF5DB ; 
 $green-color: #2C503A; 
@@ -91,7 +96,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
 
 
     header{
-      height: 7vh;
+      height: calc($vh * 7);
       .navbar{  
           width: 90%;
       }
@@ -139,7 +144,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
   }
   .fullMenuHamburguerWithOverlay{
     .optionsNavbar{
-      padding-top: 7vh;
+      height: calc($vh * 7)
       ul{
         width: 70%;
       }
@@ -234,7 +239,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               font-size: 14px;
 
               border-radius: 15px;
-              padding-block: 1vh;
+              padding-block: calc($vh * 1);
               padding-inline: 1.5rem;
               border: 1px solid $green-border-color;
               transition: .5s;
