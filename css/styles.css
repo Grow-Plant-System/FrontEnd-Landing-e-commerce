@@ -26,6 +26,9 @@ body {
   color: #565348;
   transition: all 1s;
   overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rotateTransition {
@@ -37,13 +40,19 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #FCF5DB;
-  height: 73px;
-  width: 100%;
+  position: relative;
+  background: rgba(252, 245, 219, 0.71); /* Color con 41% de opacidad */
+  backdrop-filter: blur(8px); /* Aplica el desenfoque */
+  -webkit-backdrop-filter: blur(8px); /* Compatibilidad con Safari */
+  height: 70px;
+  margin-top: 15px;
+  width: 92vw;
+  border-radius: 15px;
   position: fixed;
-  transform: translateY(-100%); /* Oculta la `navbar` por defecto */
-  transition: all 0.5s ease;
-  border-bottom: solid 1px #DDDCC3;
+  transform: translateY(-90px); /* Oculta la `navbar` por defecto */
+  transition: background 0.3s cubic-bezier(0.65, 0, 0.35, 1), transform 0.5s ease-in-out 1.5s;
+  transition-delay: transform 0.5s;
+  border: solid 1px #DDDCC3;
   z-index: 3;
 }
 header .navbar {
@@ -54,13 +63,14 @@ header .navbar {
   justify-content: space-between;
 }
 header .navbar .logoHeader {
-  height: 100%;
+  height: 90%;
   cursor: pointer;
 }
 header .navbar .navbarItems {
   display: none;
 }
 header .navbar .buttonBurgerMenu {
+  background-color: #1C3325;
   height: 100%;
   background: none;
   border: none;
@@ -73,6 +83,15 @@ header .navbar .buttonBurgerMenu {
 }
 header .navbar .buttonBurgerMenu:focus {
   outline: none;
+}
+header .navbar .buttonBurgerMenu .buttonBurgerMenu-icon {
+  background-image: url(../assets/svg/hamburguerMenu.svg);
+  height: 40%;
+  transition: all 0.3s;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 header .navbar .buttonBurgerMenu .burger {
   width: 100%;
@@ -125,6 +144,8 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 .fullMenuHamburguerWithOverlay {
   position: fixed;
   opacity: 0;
+  padding-top: 15px;
+  padding-inline: 15px;
   transition: all 0.2s;
   visibility: hidden;
   height: 100%;
@@ -138,8 +159,10 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   transform: translateY(0%) !important;
 }
 .fullMenuHamburguerWithOverlay .optionsNavbar {
+  border-radius: 15px;
   transform: translateY(-100%);
-  padding-top: 8vh;
+  padding-top: 0vh;
+  margin-top: 85px;
   background-color: #FCF5DB;
   width: 100%;
   display: flex;
@@ -334,14 +357,14 @@ main .heroContainer {
   width: 100%;
 }
 main .heroContainer .plantHero1 {
-  height: 30%;
+  height: 40%;
   width: 100%;
   background-image: url(../assets/svg/heroMarron.svg);
   background-repeat: no-repeat;
   background-position: left;
   position: relative;
   background-size: contain;
-  top: 70px;
+  opacity: 0.5;
   animation-delay: 1s;
 }
 main .heroContainer .plantHero2 {
@@ -437,7 +460,7 @@ main .welcomeSection .welcomeSectionTitle {
 }
 main .welcomeSection .welcomeSectionSubtitle {
   text-align: center;
-  margin-block: 2.5vh;
+  margin-block: 20px;
 }
 main .welcomeSection .welcomeSection-button {
   width: 11.5rem;
@@ -469,7 +492,7 @@ main .welcomeSection .welcomeSection-textAndButton {
   justify-content: center;
 }
 main .welcomeSection .welcomeSection-textAndButton p {
-  margin-block: 2.5vh;
+  margin-block: 20px;
 }
 main .welcomeSection .welcomeSection-image {
   width: 100%;
@@ -480,7 +503,7 @@ main .welcomeSection .welcomeSection-image {
 }
 main .welcomeSection .welcomeSection-image img {
   width: 70%;
-  margin-bottom: 2.5vh;
+  margin-bottom: 20px;
 }
 main .welcomeSection h3 {
   width: 80%;
@@ -496,7 +519,7 @@ main .welcomeSection p strong {
 }
 main .welcomeSection .chatBotPresentation {
   width: 80%;
-  margin-top: 2.5vh;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -599,7 +622,7 @@ main .listenGrowContainer .listenGrowContent {
 }
 main .listenGrowContainer .listenGrowContent .title-listenGrowContent {
   font-size: 18px;
-  margin-bottom: 2.5vh;
+  margin-bottom: 20px;
   text-align: center;
 }
 main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
@@ -629,7 +652,7 @@ main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cards
   transition: 0.5s;
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter:hover {
-  background-color: #213c2b;
+  background-color: #D5D0B9;
 }
 main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter img {
   align-self: center;
@@ -693,16 +716,16 @@ main .againPopUpEmailFinal button:hover {
 
 .communitySection h3 {
   text-align: center;
-  margin-bottom: 2.5vh;
+  margin-bottom: 20px;
 }
 .communitySection p {
   text-align: center;
 }
 .communitySection div img {
-  margin-top: 2.5vh;
+  margin-top: 20px;
 }
 .communitySection button {
-  margin-top: 2.5vh;
+  margin-top: 20px;
 }
 
 .steps {
@@ -717,7 +740,7 @@ main .againPopUpEmailFinal button:hover {
   display: none;
 }
 .steps .steps-title {
-  margin-bottom: 2.5vh;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -809,7 +832,7 @@ main .againPopUpEmailFinal button:hover {
 .FAQSection h2 {
   width: 80%;
   font-size: 18px;
-  margin-bottom: 2.5vh;
+  margin-bottom: 20px;
   text-align: center;
 }
 .FAQSection .accordion {

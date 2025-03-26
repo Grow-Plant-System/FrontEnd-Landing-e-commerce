@@ -16,6 +16,8 @@ $middle-line-width: 80%; // Ancho de la línea del medio
 $line-spacing: 6px; // Espaciado entre líneas
 $transition-speed: 0.3s; // Velocidad de la animación
 
+//2.5vh ya no va
+$spacing: 20px;
 button{
     cursor: pointer;
     &:focus{
@@ -47,6 +49,9 @@ body {
   color: $font-color;
   transition: all 1s;
   overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 .rotateTransition{
@@ -57,13 +62,23 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $creamy-color;
-    height: 73px;
-    width: 100%;
+    // background-color: $creamy-color;
+    position: relative;
+    background: rgba(252, 245, 219, 0.71); /* Color con 41% de opacidad */
+    backdrop-filter: blur(8px); /* Aplica el desenfoque */
+    -webkit-backdrop-filter: blur(8px); /* Compatibilidad con Safari */
+    height: 70px;
+    margin-top:15px;
+    width: 92vw;
+    border-radius: 15px;
+    // margin-inline: 10px;
     position: fixed;
-    transform: translateY(-100%); /* Oculta la `navbar` por defecto */
-    transition: all 0.5s ease;
-    border-bottom: solid 1px #DDDCC3 ;
+    transform: translateY(-90px); /* Oculta la `navbar` por defecto */
+    transition:  background .3s cubic-bezier(0.65, 0, 0.35, 1),
+                    transform 0.5s ease-in-out 1.5s; ;
+    transition-delay: transform  .5s;
+    // transition-delay:background 0s;
+    border: solid 1px #DDDCC3 ;
     z-index: 3;
     // -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
     // animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
@@ -77,7 +92,7 @@ header{
         
 
         .logoHeader{
-            height: 100%;
+            height: 90%;
             cursor: pointer;
         }
         .navbarItems{
@@ -85,6 +100,7 @@ header{
 
         }
         .buttonBurgerMenu{
+            background-color: #1C3325;
             height: 100%;
             background: none;
             border: none;
@@ -97,6 +113,16 @@ header{
             &:focus{
                 outline: none;
             } 
+            .buttonBurgerMenu-icon{
+                background-image: url(../assets/svg/hamburguerMenu.svg);
+                height: 40%;
+                transition: all .3s;
+                width: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
             .burger {
                 width: 100%;
                 height: 80%;
@@ -167,6 +193,8 @@ header{
     // display: none;
     position: fixed;
     opacity: 0;
+    padding-top: 15px;
+    padding-inline: 15px;
     transition: all .2s;
     visibility: hidden;
     height: 100%;
@@ -179,8 +207,11 @@ header{
         transform: translateY(0%) !important;
     }
     .optionsNavbar{
+        border-radius: 15px;
+
         transform: translateY(-100%);
-        padding-top: 8vh;
+        padding-top: 0vh;
+        margin-top: 85px;
         background-color: $creamy-color;
         width: 100%;
         display: flex;
@@ -400,15 +431,16 @@ main{
         flex-direction: column;
         width: 100%;
         .plantHero1{
-            height: 30%;
+            height: 40%;
             width: 100%;
+
             background-image: url(../assets/svg/heroMarron.svg);
             background-repeat: no-repeat;
             background-position: left;
             position: relative;
             background-size: contain;
-            top: 70px;
-            // opacity: 0.5;
+            // top: 70px;
+            opacity: 0.5;
             animation-delay: 1s;
         }
         .plantHero2{
@@ -520,7 +552,7 @@ main{
         }
         .welcomeSectionSubtitle{
             text-align: center;
-            margin-block: 2.5vh;
+            margin-block: $spacing;
         }
         .welcomeSection-button{
             width: 11.5rem;
@@ -556,7 +588,7 @@ main{
             align-items: center;
             justify-content: center;
             p{
-                margin-block: 2.5vh;
+                margin-block: $spacing;
 
             }
             
@@ -569,7 +601,7 @@ main{
             justify-content: center;
             img{
                 width: 70%;
-                margin-bottom: 2.5vh;
+                margin-bottom: $spacing;
             }
         }
         h3{
@@ -589,7 +621,7 @@ main{
             }
             .chatBotPresentation{
                 width: 80%;
-                margin-top: 2.5vh;
+                margin-top: $spacing;
                 display: flex;
                 flex-direction: column;
                 gap: 2vh;
@@ -705,7 +737,7 @@ main{
             .title-listenGrowContent{
 
                 font-size: 18px;    
-                margin-bottom: 2.5vh;
+                margin-bottom: $spacing;
                 text-align: center;
 
             }
@@ -750,7 +782,7 @@ main{
                             border-radius: 20px;
                             transition: .5s;
                             &:hover{
-                              background-color: #213c2b;
+                              background-color: #D5D0B9;
 
                             }
                             img{
@@ -825,7 +857,7 @@ main{
 .communitySection{
     h3{
         text-align: center;
-        margin-bottom: 2.5vh;
+        margin-bottom: $spacing;
     }
     p{
         text-align: center;
@@ -833,11 +865,11 @@ main{
     }
     div{
         img{
-            margin-top: 2.5vh;
+            margin-top: $spacing;
         }
     }
     button{
-        margin-top: 2.5vh;
+        margin-top: $spacing;
 
     }
 }
@@ -856,7 +888,7 @@ main{
     }
 
 .steps-title{
-    margin-bottom: 2.5vh;
+    margin-bottom: $spacing;
     display: flex;
     justify-content: center;
     text-align: center ;
@@ -973,7 +1005,7 @@ main{
     h2{
         width: 80%;
         font-size: 18px;
-        margin-bottom: 2.5vh;
+        margin-bottom: $spacing;
         text-align: center;
     }
 .accordion {

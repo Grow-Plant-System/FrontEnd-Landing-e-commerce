@@ -28,6 +28,7 @@ const fullMenuHamburguerWithOverlay = document.querySelector('.fullMenuHamburgue
 const optionsNavbar = document.querySelector('.optionsNavbar');
 const body = document.body;
 const burgerButton = document.getElementById('burgerButton');
+const buttonBurgerMenuIcon = document.querySelector('.buttonBurgerMenu-icon');
 const buyButtonMenu = document.getElementById('buyButtonMenu');
 const buttonPrecios = document.getElementById('buttonPrecios');
 const buttonPorQueGrow = document.getElementById('buttonPorQueGrow');
@@ -49,7 +50,8 @@ function openBurgerMenu(){
     fullMenuHamburguerWithOverlay.style.opacity = "1";
     fullMenuHamburguerWithOverlay.style.visibility = "visible";
     optionsNavbar.style.transform = "translateY(0%)";
-
+    header.style.background ="rgba(252, 245, 219, 1)"
+    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/closeMenu.svg)"
     body.style.overflow = "hidden"; // Bloquea el scroll
     menuOnOff = true;
 }
@@ -58,6 +60,9 @@ function closeBurgerMenu(){
     optionsNavbar.style.transform = "translateY(-100%)";
     fullMenuHamburguerWithOverlay.style.opacity = "0";
     fullMenuHamburguerWithOverlay.style.visibility = "hidden";
+    header.style.background ="rgba(252, 245, 219, 0.71)"
+    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/hamburguerMenu.svg)"
+
 
     body.style.overflow = "hidden auto"; // Restaura el scroll
     menuOnOff = false;
@@ -206,10 +211,10 @@ majorButtonHero.addEventListener("click", () => {
     showPopUpEmail();
     
 });
-buttonOpenPopupEmail.addEventListener("click", () => {
-    showPopUpEmail();
+// buttonOpenPopupEmail.addEventListener("click", () => {
+//     showPopUpEmail();
     
-});
+// });
 navbarButtonPreventa.addEventListener("click", () => {
     showPopUpEmail();
     

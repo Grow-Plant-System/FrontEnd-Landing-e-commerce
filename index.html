@@ -15,6 +15,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPY1PKHKV6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CPY1PKHKV6');
+    </script>
 </head>
 <body >
 
@@ -35,16 +44,16 @@
                     </button>
                 </li>
             </ul>
-            <button class="buttonBurgerMenu" >
+            <button class="buttonBurgerMenu"  id="burgerButton">
                 <!-- boton con un background image -->
-                 <!-- <div class="buttonBurgerMenu-icon">
+                 <div class="buttonBurgerMenu-icon">
 
-                 </div> -->
-                 <div id="burgerButton" class="burger">
+                 </div>
+                 <!-- <div id="burgerButton" class="burger">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> -->
             </button>
 
         </nav>
@@ -233,13 +242,13 @@
                         </div>
                 </section>
         <section class="welcomeSection communitySection"> 
-            <h3>Descubrí un mundo que pocos conocen </h3>
-            <p>Armamos una comunidad para cuidar plantas y entender mejor nuestro entorno. Cada planta cuenta una historia, y juntos estamos aprendiendo a escucharlas.</p>
-            <div class="welcomeSection-image">
+            <h3 data-animation="fadeIn">Descubrí un mundo que pocos conocen </h3>
+            <p data-animation="showIn">Armamos una comunidad para cuidar plantas y entender mejor nuestro entorno. Cada planta cuenta una historia, y juntos estamos aprendiendo a escucharlas.</p>
+            <div class="welcomeSection-image" data-animation="focusIn">
                 <img src="./assets/mockupPhone2.png" alt="">
             </div>
-            <p>Si te importa el planeta y querés hacer la diferencia, este es tu lugar.</p>
-            <button class="welcomeSection-button">Unirme</button>
+            <p data-animation="showIn">Si te importa el planeta y querés hacer la diferencia, este es tu lugar.</p>
+            <button class="welcomeSection-button" data-animation="fadeIn">Unirme</button>
 
         </section>
         <section class="steps">
@@ -400,10 +409,10 @@
         </div>
     </div>  
     </div>
-    <section class="againPopUpEmailFinal" data-animation="slideInRight">
+    <!-- <section class="againPopUpEmailFinal" data-animation="slideInRight">
         <p class="againPopUpEmailFinal-text" data-animation="focusIn">Prepárate para cambiar la forma en que cuidas tus plantas.</p>
         <button class="buttonOpenPopupEmail" data-animation="showIn">Sé el primero en descubrir Grou</button>
-    </section>
+    </section> -->
             </div>
 
         </section>
