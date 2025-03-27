@@ -259,18 +259,27 @@ closePopup.addEventListener('click', () => {
 });
 
 
-
-
-
+let btnSubmitEmail = document.querySelector('.btnSubmitEmail'); // Usar la referencia del botón fuera del evento
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); 
 
     const email = emailInput.value;
+    
+    // Deshabilitar el botón
+    btnSubmitEmail.disabled = true;
+    btnSubmitEmail.style.pointerEvents = 'none'; // Evitar clics adicionales
+    btnSubmitEmail.innerHTML = 'Cargando...'; // Cambiar el texto del botón (opcional)
+    btnSubmitEmail.classList.add('loading'); // Añadir clase de loading (opcional)
 
     // Validar el email
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alertCustomize("Por favor, ingresa un email valido.", "bottom","#601A1A" )
+        alertCustomize("Por favor, ingresa un email valido.", "bottom","#601A1A" );
+        
+        // Habilitar de nuevo el botón si hay un error
+        btnSubmitEmail.disabled = false;
+        btnSubmitEmail.style.pointerEvents = 'auto';
+        btnSubmitEmail.innerHTML = 'Enviar'; // Restaurar texto original
 
         return;
     }
@@ -290,7 +299,7 @@ form.addEventListener('submit', async (e) => {
         const result = await response.json();
 
         // Mostrar un mensaje al usuario
-        alertCustomize("Recibido! Pronto tendrás novedades.", "bottom","#2C503A" )
+        alertCustomize("Recibido! Pronto tendrás novedades.", "bottom","#2C503A" );
 
         // Resetear el campo de entrada
         emailInput.value = ""; 
@@ -306,11 +315,18 @@ form.addEventListener('submit', async (e) => {
         localStorage.setItem('popupDismissed', true);
     } catch (error) {
         console.error('Error:', error);
-        // alertCustomize("Recibimos tu email exitosamentre.", "bottom","#2C503A" )
+        alertCustomize("Algo salió mal, intenta nuevamente.", "bottom","#601A1A" );
+    } finally {
+        // Habilitar el botón después de la respuesta
+        btnSubmitEmail.disabled = false;
+        btnSubmitEmail.style.pointerEvents = 'auto';
+        btnSubmitEmail.innerHTML = 'Enviar'; // Restaurar texto original
 
-       alertCustomize("Algo salió mal, intenta nuevamente.", "bottom","#601A1A" )
+        // Opcional: eliminar la clase de loading si usaste un spinner
+        btnSubmitEmail.classList.remove('loading');
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const accordionHeaders = document.querySelectorAll(".accordion-header");
