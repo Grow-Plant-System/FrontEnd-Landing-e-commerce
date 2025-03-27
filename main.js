@@ -306,11 +306,16 @@ form.addEventListener('submit', async (e) => {
 
         // Ocultar el pop-up
         popup.classList.remove('show');
-        document.body.style.overflow = "auto";
-
+        popupModal.classList.remove('showModalTranslate');
+        document.body.style.overflow = "auto";  // Restaura el scroll
+        document.body.style.overflowX = "hidden";  // Restaura el scroll
+    
+        // Usar transitionend para asegurar que el display: none se aplique después de la animación
         popup.addEventListener("transitionend", () => {
-            popup.style.display = "none";
-        });
+            popup.style.display = "none";  // Oculta el popup al finalizar la animación
+            hasShownPopup = false;  // Permite que el popup se muestre de nuevo
+            emailInput.value = ""
+        }, { once: true });  // Solo ejecutamos una vez el evento para evitar múltiples disparos
 
         localStorage.setItem('popupDismissed', true);
     } catch (error) {
