@@ -244,23 +244,25 @@ buyButtonMenu.addEventListener("click",()=>{
 
 
 // Cerrar el pop-up (botón "Cerrar")
-closePopup.addEventListener('click', () => {
+function closePopupFunction() {
     popup.classList.remove('show');
     popupModal.classList.remove('showModalTranslate');
-    document.body.style.overflow = "auto";  // Restaura el scroll
-    document.body.style.overflowX = "hidden";  // Restaura el scroll
+    document.body.style.overflow = "auto";  
+    document.body.style.overflowX = "hidden";
 
-    // Usar transitionend para asegurar que el display: none se aplique después de la animación
     popup.addEventListener("transitionend", () => {
-        popup.style.display = "none";  // Oculta el popup al finalizar la animación
-        hasShownPopup = false;  // Permite que el popup se muestre de nuevo
-        emailInput.value = ""
-    }, { once: true });  // Solo ejecutamos una vez el evento para evitar múltiples disparos
-});
+        popup.style.display = "none";  
+        hasShownPopup = false;  
+        emailInput.value = "";
+    }, { once: true });
+}
 
+// Evento para cerrar con el botón de cerrar
+closePopup.addEventListener('click', closePopupFunction);
 
 let btnSubmitEmail = document.querySelector('.btnSubmitEmail'); // Usar la referencia del botón fuera del evento
 
+// Evento para cerrar después del submit
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); 
 
@@ -268,24 +270,22 @@ form.addEventListener('submit', async (e) => {
     
     // Deshabilitar el botón
     btnSubmitEmail.disabled = true;
-    btnSubmitEmail.style.pointerEvents = 'none'; // Evitar clics adicionales
-    btnSubmitEmail.innerHTML = 'Cargando...'; // Cambiar el texto del botón (opcional)
-    btnSubmitEmail.classList.add('loading'); // Añadir clase de loading (opcional)
+    btnSubmitEmail.style.pointerEvents = 'none';
+    btnSubmitEmail.innerHTML = 'Cargando...';
+    btnSubmitEmail.classList.add('loading');
 
     // Validar el email
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alertCustomize("Por favor, ingresa un email valido.", "bottom","#601A1A" );
-        
-        // Habilitar de nuevo el botón si hay un error
+        alertCustomize("Por favor, ingresa un email válido.", "bottom","#601A1A" );
+
         btnSubmitEmail.disabled = false;
         btnSubmitEmail.style.pointerEvents = 'auto';
-        btnSubmitEmail.innerHTML = 'Enviar'; // Restaurar texto original
+        btnSubmitEmail.innerHTML = 'Enviar';
 
         return;
     }
 
     try {
-        // Hacer una solicitud al backend
         const response = await fetch("https://backend-landing-e-commerce-production.up.railway.app/api/emails", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -296,42 +296,23 @@ form.addEventListener('submit', async (e) => {
             throw new Error('Error en la solicitud');
         }
 
-        const result = await response.json();
-
-        // Mostrar un mensaje al usuario
         alertCustomize("Recibido! Pronto tendrás novedades.", "bottom","#2C503A" );
-
-        // Resetear el campo de entrada
         emailInput.value = ""; 
 
-        // Ocultar el pop-up
-        popup.classList.remove('show');
-        popupModal.classList.remove('showModalTranslate');
-        document.body.style.overflow = "auto";  // Restaura el scroll
-        document.body.style.overflowX = "hidden";  // Restaura el scroll
-    
-        // Usar transitionend para asegurar que el display: none se aplique después de la animación
-        popup.addEventListener("transitionend", () => {
-            popup.style.display = "none";  // Oculta el popup al finalizar la animación
-            hasShownPopup = false;  // Permite que el popup se muestre de nuevo
-            emailInput.value = ""
-        }, { once: true });  // Solo ejecutamos una vez el evento para evitar múltiples disparos
+        // Usar la función para cerrar correctamente el pop-up
+        closePopupFunction();
 
         localStorage.setItem('popupDismissed', true);
     } catch (error) {
         console.error('Error:', error);
         alertCustomize("Algo salió mal, intenta nuevamente.", "bottom","#601A1A" );
     } finally {
-        // Habilitar el botón después de la respuesta
         btnSubmitEmail.disabled = false;
         btnSubmitEmail.style.pointerEvents = 'auto';
-        btnSubmitEmail.innerHTML = 'Enviar'; // Restaurar texto original
-
-        // Opcional: eliminar la clase de loading si usaste un spinner
+        btnSubmitEmail.innerHTML = 'Enviar';
         btnSubmitEmail.classList.remove('loading');
     }
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const accordionHeaders = document.querySelectorAll(".accordion-header");
