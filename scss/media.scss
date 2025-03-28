@@ -96,11 +96,30 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
 
 
     header{
-      height: calc($vh * 7);
+      height: 80px;
       .navbar{  
           width: 90%;
       }
     }
+    body{
+    main {
+      .listenGrowContainer {
+        .listenGrowContent {
+          align-items: center;
+          .subtitle-listenGrowContent{
+            width: 75%;
+          }
+          .parametersAndImageContainer {
+            .cardsParametersContainer {
+              .cardParameter {
+                width: 75%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
     .buttonBurgerMenu{
     .burger {
 
@@ -152,13 +171,13 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
   }
   .steps{
     .steps-title{
-      h3{
+      h4{
         width: 70%;
       }
     }
     .step{
       .step-number-title{
-        h3{
+        h4{
           width: 65%;
         }
         p{
@@ -201,12 +220,13 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
     }
   }
     header{
-
+      width: 72.5%;
       .navbar{
+
         .navbarItems{
           display: flex;
           align-items: center;
-          gap: 4rem;
+          gap: 2rem;
           font-weight: 400;
 
 
@@ -231,6 +251,8 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
             font-size: 14px;
             width: auto;
             cursor: pointer;
+            font-weight: 500;
+            color: #565348;
             button{
               cursor: pointer;
               background-color: $green-color;
@@ -246,7 +268,6 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               &:hover{
                 background-color: #213c2b;
                 border: 1px solid #16281d;
-
               }
             }
           }
@@ -263,10 +284,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
 
       .heroContainer{
         .plantHero1{
-          left: -5%;
+          height: 60%;
         }
         .plantHero2{
-          left: 5%;
+          height: 60%;
+
         }
         .heroContent{
           .buttonsContainerHero{
@@ -278,7 +300,23 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
 
 
 
-
+      .welcomeSection{
+        .welcomeSection-image{
+          img{
+            width: 35%;
+          }
+        }
+      }
+      .steps{
+        display: flex;
+        align-items: center;
+        .steps-title{
+          width: 100%;
+        }
+        .allStepsAndImage{
+          width: 85%;
+        }
+      }
     }
   }
   
@@ -289,12 +327,78 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
       
         .popupHomeEmailBackground{
           .popupHomeEmail{
-              width: 30%;
+              width: 35%;
           }
       }
     
     
     main{
+      .sectionSmartphone1{
+        flex-direction: row;
+        gap: 4rem;
+        .welcomeSection-textAndButton{
+          justify-content: end;
+          width: 30%;
+          align-items: end;
+          h3{
+            width: 100%;
+            text-align: end;
+          }
+          p{
+            width: 100%;
+            text-align: end;
+          }
+          .wsDesktop{
+            display: block;
+          }
+        }
+        .welcomeSection-image{
+          width: 25%;
+          img{
+            width: 100%;
+          }
+            .wsMobile{
+              display: none;
+          }
+        }
+        
+      }
+      .communitySection{
+        display: flex;
+        flex-direction: row;
+        .welcomeSection-image{
+          display: flex;
+          flex-direction: row;
+          gap: 4rem;
+          img{
+            width: 25%;
+          }
+          div{
+            width: 30%;
+            h3{
+              text-align: left;
+              width: 100%;
+
+            }
+            p{
+              text-align: left;
+              width: 100%;
+
+            }
+
+          }
+          
+        }
+        .communitySection-mobile{
+          display: none;
+        }
+        div{
+
+          .communitySection-desktop{
+            display: block;
+          }
+        }
+      }
       .FAQSection{
         .FAQAndFinalPopup{
           display: flex;
@@ -348,16 +452,16 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         .parametersAndImageContainer{
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           .cardsParametersContainer{
-            width: 50%;
+            width: 80%;
           }
           #responsiveImageCardParameter{
             display: block;
             mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
             -webkit-mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
     
-            max-width: 40%;
+            max-width: 60%;
           }
         }
       }
@@ -367,11 +471,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
     .steps{
       align-items: center;
       .steps-title{
-        width: 70%;
-        justify-content: start;
+        width: 100%;
+        justify-content: center;
       }
       .allStepsAndImage{
-        width: 70%;
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -384,7 +488,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               .step-content{
                 justify-content: start;
                 p{
-                  width: 80%;
+                  width: 100%;
                 }
               }
             }

@@ -725,6 +725,15 @@ main .againPopUpEmailFinal button:hover {
 .communitySection p {
   text-align: center;
 }
+.communitySection div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.communitySection div .communitySection-desktop {
+  display: none;
+}
 .communitySection div img {
   margin-top: 20px;
 }
@@ -791,7 +800,8 @@ main .againPopUpEmailFinal button:hover {
   font-weight: 500;
   font-size: 14px;
 }
-.steps .step .step-number-title h3 {
+.steps .step .step-number-title h4 {
+  font-weight: 600;
   font-size: 16px;
   width: 70%;
 }
@@ -1557,10 +1567,19 @@ footer .footerEndPage .developedByText {
     transform: translateX(5%);
   }
   header {
-    height: calc(var(--vh) * 1 * 7);
+    height: 80px;
   }
   header .navbar {
     width: 90%;
+  }
+  body main .listenGrowContainer .listenGrowContent {
+    align-items: center;
+  }
+  body main .listenGrowContainer .listenGrowContent .subtitle-listenGrowContent {
+    width: 75%;
+  }
+  body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer .cardParameter {
+    width: 75%;
   }
   .buttonBurgerMenu .burger span:nth-child(2) {
     width: 80%;
@@ -1588,10 +1607,10 @@ footer .footerEndPage .developedByText {
     height: calc(var(--vh) * 1 * 7) ul;
     height-width: 70%;
   }
-  .steps .steps-title h3 {
+  .steps .steps-title h4 {
     width: 70%;
   }
-  .steps .step .step-number-title h3 {
+  .steps .step .step-number-title h4 {
     width: 65%;
   }
   .steps .step .step-number-title p {
@@ -1618,10 +1637,13 @@ footer .footerEndPage .developedByText {
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 40%;
   }
+  header {
+    width: 72.5%;
+  }
   header .navbar .navbarItems {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     font-weight: 400;
   }
   header .navbar .navbarItems .navbarButtonComoFunciona {
@@ -1642,6 +1664,8 @@ footer .footerEndPage .developedByText {
     font-size: 14px;
     width: auto;
     cursor: pointer;
+    font-weight: 500;
+    color: #565348;
   }
   header .navbar .navbarItems li button {
     cursor: pointer;
@@ -1663,20 +1687,91 @@ footer .footerEndPage .developedByText {
     display: none;
   }
   main .heroContainer .plantHero1 {
-    left: -5%;
+    height: 60%;
   }
   main .heroContainer .plantHero2 {
-    left: 5%;
+    height: 60%;
   }
   main .heroContainer .heroContent .buttonsContainerHero {
     flex-direction: row;
     gap: 20px;
   }
+  main .welcomeSection .welcomeSection-image img {
+    width: 35%;
+  }
+  main .steps {
+    display: flex;
+    align-items: center;
+  }
+  main .steps .steps-title {
+    width: 100%;
+  }
+  main .steps .allStepsAndImage {
+    width: 85%;
+  }
 }
 @media (min-width: 1440px) {
   /* Monitores grandes */
   body .popupHomeEmailBackground .popupHomeEmail {
+    width: 35%;
+  }
+  body main .sectionSmartphone1 {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  body main .sectionSmartphone1 .welcomeSection-textAndButton {
+    justify-content: end;
     width: 30%;
+    align-items: end;
+  }
+  body main .sectionSmartphone1 .welcomeSection-textAndButton h3 {
+    width: 100%;
+    text-align: end;
+  }
+  body main .sectionSmartphone1 .welcomeSection-textAndButton p {
+    width: 100%;
+    text-align: end;
+  }
+  body main .sectionSmartphone1 .welcomeSection-textAndButton .wsDesktop {
+    display: block;
+  }
+  body main .sectionSmartphone1 .welcomeSection-image {
+    width: 25%;
+  }
+  body main .sectionSmartphone1 .welcomeSection-image img {
+    width: 100%;
+  }
+  body main .sectionSmartphone1 .welcomeSection-image .wsMobile {
+    display: none;
+  }
+  body main .communitySection {
+    display: flex;
+    flex-direction: row;
+  }
+  body main .communitySection .welcomeSection-image {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  body main .communitySection .welcomeSection-image img {
+    width: 25%;
+  }
+  body main .communitySection .welcomeSection-image div {
+    width: 30%;
+  }
+  body main .communitySection .welcomeSection-image div h3 {
+    text-align: left;
+    width: 100%;
+  }
+  body main .communitySection .welcomeSection-image div p {
+    text-align: left;
+    width: 100%;
+  }
+  body main .communitySection .communitySection-mobile {
+    display: none;
+  }
+  body main .communitySection div .communitySection-desktop {
+    display: block;
   }
   body main .FAQSection .FAQAndFinalPopup {
     display: flex;
@@ -1726,26 +1821,26 @@ footer .footerEndPage .developedByText {
   body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer .cardsParametersContainer {
-    width: 50%;
+    width: 80%;
   }
   body main .listenGrowContainer .listenGrowContent .parametersAndImageContainer #responsiveImageCardParameter {
     display: block;
     mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 5%, black 15%, black 100%);
-    max-width: 40%;
+    max-width: 60%;
   }
   body main .steps {
     align-items: center;
   }
   body main .steps .steps-title {
-    width: 70%;
-    justify-content: start;
+    width: 100%;
+    justify-content: center;
   }
   body main .steps .allStepsAndImage {
-    width: 70%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1757,7 +1852,7 @@ footer .footerEndPage .developedByText {
     justify-content: start;
   }
   body main .steps .allStepsAndImage .allSteps .step-container .step .step-content p {
-    width: 80%;
+    width: 100%;
   }
   body main .steps .allStepsAndImage img {
     display: block;
