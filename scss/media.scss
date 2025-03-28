@@ -395,6 +395,9 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
             width: 25%;
           }
           div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             width: 30%;
             h3{
               text-align: left;
