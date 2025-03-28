@@ -1,6 +1,14 @@
 const navbar = document.querySelector('header');
 let navbarHeight = navbar.offsetHeight;
 
+document.addEventListener("DOMContentLoaded", function () {
+    const heroElements = document.querySelectorAll(".heroContainer [data-animation]");
+    
+    heroElements.forEach(el => {
+      el.style.opacity = "1";
+      el.style.visibility = "visible";
+    });
+  });
 
 function handleScroll() {
     // if (window.scrollY > 0) {

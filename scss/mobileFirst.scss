@@ -24,6 +24,14 @@ $transition-speed: 0.3s; // Velocidad de la animación
 
 //2.5vh ya no va
 $spacing: 20px;
+
+
+.heroContainer [data-animation] {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
 button{
     cursor: pointer;
     &:focus{

@@ -2,6 +2,11 @@
   --vh: 1vh;
 }
 
+.heroContainer [data-animation] {
+  opacity: 0;
+  visibility: hidden;
+}
+
 button {
   cursor: pointer;
 }
@@ -1735,6 +1740,12 @@ footer .footerEndPage .developedByText {
 }
 @media (min-width: 1440px) {
   /* Monitores grandes */
+  header {
+    width: 65%;
+  }
+  header .navbar {
+    width: 95%;
+  }
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 35%;
   }
