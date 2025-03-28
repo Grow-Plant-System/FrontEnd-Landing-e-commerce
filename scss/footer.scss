@@ -18,6 +18,11 @@ footer{
         padding-block: calc(var(--vh) * 4);
         width: 80%;
         gap: calc(var(--vh) * 4);
+        .footerLinks{
+            display: flex;
+                flex-direction: column;
+                gap: 4vh;
+        }
         h3{
             font-weight: 700;
         }

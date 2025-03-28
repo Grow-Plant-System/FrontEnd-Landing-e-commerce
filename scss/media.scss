@@ -308,6 +308,10 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         }
       }
       .steps{
+        background-image: url(../assets/svg/backgroundSteps1.svg) , url(../assets/svg/backgroundSteps2.svg);
+        background-size:  50% contain,   00% contain;
+        background-position: left top, right bottom;
+        background-repeat: no-repeat;
         display: flex;
         align-items: center;
         .steps-title{
@@ -315,6 +319,23 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         }
         .allStepsAndImage{
           width: 85%;
+        }
+      }
+    }
+    footer{
+      .footerContent{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-block: calc(var(--vh) * 4);
+        width: 80%;
+        gap: calc(var(--vh) * 4);
+        .footerLinks{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            gap: 7rem;
         }
       }
     }
@@ -504,6 +525,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
       }
     }
     }
+
   }
 }
 
