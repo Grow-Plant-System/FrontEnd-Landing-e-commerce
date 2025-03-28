@@ -7,10 +7,11 @@ setScreenHeight();
 
 //ocultar hero antes del load:
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[data-animation]").forEach(el => {
-      el.style.opacity = "1";
-      el.style.visibility = "visible";
-    });
+    const hero = document.querySelector(".heroContainer");
+    if (hero) {
+      hero.style.opacity = "1";
+      hero.style.visibility = "visible";
+    }
   });
   
 

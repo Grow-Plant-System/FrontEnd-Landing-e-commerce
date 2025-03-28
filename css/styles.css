@@ -2,12 +2,6 @@
   --vh: 1vh;
 }
 
-[data-animation] {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-}
-
 button {
   cursor: pointer;
 }
@@ -360,6 +354,8 @@ main .heroContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
   gap: 7.5%;
   overflow-x: hidden;
   height: calc(var(--vh) * 1 * 100);

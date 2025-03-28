@@ -25,16 +25,7 @@ $transition-speed: 0.3s; // Velocidad de la animación
 //2.5vh ya no va
 $spacing: 20px;
 
-@mixin hidden-before-load {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-  }
-  
-  [data-animation] {
-    @include hidden-before-load;
-  }
-  
+
 
 
 button{
@@ -443,7 +434,8 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-
+        opacity: 0;
+        visibility: hidden;
         gap: 7.5%;
         overflow-x: hidden;
         height: calc($vh * 100);
