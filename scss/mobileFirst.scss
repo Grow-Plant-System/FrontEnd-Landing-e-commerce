@@ -24,10 +24,6 @@ $transition-speed: 0.3s; // Velocidad de la animación
 
 //2.5vh ya no va
 $spacing: 20px;
-
-
-
-
 button{
     cursor: pointer;
     &:focus{
@@ -434,8 +430,7 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0;
-        visibility: hidden;
+
         gap: 7.5%;
         overflow-x: hidden;
         height: calc($vh * 100);

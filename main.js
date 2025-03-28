@@ -5,16 +5,6 @@ function setScreenHeight() {
 window.addEventListener('resize', setScreenHeight);
 setScreenHeight();
 
-//ocultar hero antes del load:
-document.addEventListener("DOMContentLoaded", () => {
-    const hero = document.querySelector(".heroContainer");
-    if (hero) {
-      hero.style.opacity = "1";
-      hero.style.visibility = "visible";
-    }
-  });
-  
-
   
 function scrollFromTo(seccionDestino){ //boton se pasa con ".pepito" si es clase y "#pepito" si es id 
 //scroll del ver mas

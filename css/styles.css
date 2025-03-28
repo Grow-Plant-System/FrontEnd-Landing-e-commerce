@@ -354,8 +354,6 @@ main .heroContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  visibility: hidden;
   gap: 7.5%;
   overflow-x: hidden;
   height: calc(var(--vh) * 1 * 100);
