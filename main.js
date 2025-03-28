@@ -45,6 +45,10 @@ const navbarButtonFAQ = document.querySelector('.navbarButtonFAQ');
 
 // Función de Toggle para abrir/cerrar el menú hamburguesa
 
+//--Precargo la imagen de la cruz para que no tarde en cargar:
+const closeMenuImage = new Image();
+closeMenuImage.src = '../assets/svg/closeMenu.svg';
+
 
 let menuOnOff = false; // Estado del menú
 let isAnimating = false; // Prevención de clics múltiples
@@ -67,8 +71,6 @@ function closeBurgerMenu(){
     fullMenuHamburguerWithOverlay.style.visibility = "hidden";
     header.style.background ="rgba(252, 245, 219, 0.71)"
     buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/hamburguerMenu.svg)"
-
-
     body.style.overflow = "hidden auto"; // Restaura el scroll
     menuOnOff = false;
 }
