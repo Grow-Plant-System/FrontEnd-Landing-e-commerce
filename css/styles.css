@@ -1742,16 +1742,18 @@ footer .footerEndPage .developedByText {
   main .steps .allStepsAndImage {
     width: 85%;
   }
+  main .FAQSection .accordion {
+    width: 50%;
+  }
   footer .footerContent {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: start;
+    justify-content: center;
     padding-block: calc(var(--vh) * 4);
-    width: 80%;
-    gap: calc(var(--vh) * 4);
+    gap: 7rem;
   }
   footer .footerContent .footerLinks {
-    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 7rem;
