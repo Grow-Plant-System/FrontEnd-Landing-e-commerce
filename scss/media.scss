@@ -354,11 +354,13 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         .popupHomeEmailBackground{
           .popupHomeEmail{
               width: 35%;
+              max-width: 30rem;
           }
       }
     
     
     main{
+      width: 100%;
       .sectionSmartphone1{
         flex-direction: row;
         gap: 4rem;
@@ -454,6 +456,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
             background-position: center;
             border-radius: 15px;
             width: 50%;
+
             flex-grow:1 ;
             height: auto;
             border: solid 1px #999483;

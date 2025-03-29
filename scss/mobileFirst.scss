@@ -56,6 +56,29 @@ button{
   }
 
 //code
+html {
+    // Estilos para WebKit (Chrome, Safari, Brave, etc.)
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #E3DCC5;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #B6B09E;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: #a39e8f;
+    }
+  
+    // Estilos para Firefox
+    scrollbar-color: #B6B09E #E3DCC5;
+    scrollbar-width: thin;
+  }
 
 body {
   background-color: $creamy-color;
@@ -354,6 +377,7 @@ header{
             border: 1px solid #CAC4AF;
             border-radius: 30px;
             width: 90%;
+            max-width: 450px;
             transition: all .5s;
             transform: translateY(-25%);
             padding-block: 3rem;
@@ -434,6 +458,7 @@ header{
 main{
     position: relative;
     z-index: 1;
+    
     .heroContainer{
         display: flex;
         justify-content: center;
