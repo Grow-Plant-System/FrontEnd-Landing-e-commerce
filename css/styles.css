@@ -29,6 +29,10 @@ ul, ol {
   list-style: none;
 }
 
+h3 {
+  font-weight: 600;
+}
+
 html {
   scrollbar-color: #B6B09E #E3DCC5;
   scrollbar-width: thin;
@@ -80,7 +84,7 @@ header {
   transition: background 0.3s cubic-bezier(0.65, 0, 0.35, 1), transform 0.5s ease-in-out 1.5s;
   transition-delay: transform 0.5s;
   border: solid 1px #DDDCC3;
-  z-index: 3;
+  z-index: 4;
 }
 header .navbar {
   height: 50%;
@@ -177,7 +181,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   visibility: hidden;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: auto;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.5);
@@ -288,7 +292,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   width: 100%;
   height: calc(var(--vh) * 1 * 100);
   transition: all 0.5s;
-  z-index: 3;
+  z-index: 4;
   opacity: 0;
 }
 .popupHomeEmailBackground .popupHomeEmail {
@@ -307,6 +311,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   align-items: center;
 }
 .popupHomeEmailBackground .popupHomeEmail h3 {
+  font-weight: 600;
   font-size: 16px;
   width: 80%;
   font-weight: 600;
@@ -368,6 +373,231 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   border-radius: 13px;
   border: solid 1.5px #C3C1B8;
   padding-block: 1rem;
+}
+
+.showTeamSection {
+  overflow-y: scroll !important;
+  transform: translateX(0) !important;
+}
+
+.sectionTeamContainer {
+  scrollbar-color: #B6B09E #E3DCC5;
+  scrollbar-width: thin;
+  background-color: #FCF5DB;
+  height: calc(var(--vh) * 1 * 100);
+  width: 100%;
+  overflow-y: hidden;
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  position: fixed;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+.sectionTeamContainer::-webkit-scrollbar {
+  width: 8px;
+}
+.sectionTeamContainer::-webkit-scrollbar-track {
+  background: #E3DCC5;
+}
+.sectionTeamContainer::-webkit-scrollbar-thumb {
+  background: #B6B09E;
+  border-radius: 10px;
+}
+.sectionTeamContainer::-webkit-scrollbar-thumb:hover {
+  background: #a39e8f;
+}
+.sectionTeamContainer .sectionTeamContent {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-image: url(../assets/members/background1.svg), url(../assets/members/background2.svg);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+}
+.sectionTeamContainer .sectionTeamContent .ourTeamContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTeamContainer .sectionTeamContent .ourTeamContainer h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.sectionTeamContainer .sectionTeamContent .ourTeamContainer .ourTeamText {
+  margin-bottom: 0;
+}
+.sectionTeamContainer .sectionTeamContent .ourTeamContainer p {
+  text-align: center;
+  color: #888474;
+  width: 85%;
+  margin-bottom: 1rem;
+}
+.sectionTeamContainer .sectionTeamContent .teamMembersDesktop {
+  display: none;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer {
+  margin-block: 2.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .sectionTeamContainer .sectionTeamContent .carouselContainer {
+    display: none;
+  }
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section {
+  flex-basis: 33.3333%;
+  width: 33.3333%;
+  flex-shrink: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #BCBAB3;
+  background: white;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  max-width: 300px;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberImage {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberImage#membImg1 {
+  background-image: url(../assets/members/perfa.jpg);
+  background-size: contain;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberImage#membImg2 {
+  background-image: url(../assets/members/pedro.jpg);
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberImage#membImg3 {
+  background-image: url(../assets/members/juan.jpeg);
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  background: #F2EBD2;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer p {
+  font-size: 14px;
+  width: 100%;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #565348;
+  margin: 0;
+  max-width: 70%;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer a img {
+  width: 21px;
+  height: 21px;
+  transition: all 0.3s ease;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .arrow {
+  position: absolute;
+  top: 10px;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .prev {
+  left: 0;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .next {
+  right: 0;
+}
+.sectionTeamContainer .membersContainer {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .sectionTeamContainer .membersContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0;
+  }
+  .sectionTeamContainer .membersContainer .swiper {
+    display: none !important;
+  }
+}
+.sectionTeamContainer .membersContainer .swiper {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.sectionTeamContainer .membersContainer .swiper-wrapper {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  backface-visibility: hidden;
+  gap: 10px;
+  margin: 0 5px;
+}
+.sectionTeamContainer .membersContainer .swiper .swiper-slide {
+  flex: 0 0 auto;
+  width: 290px !important;
+  margin: 0 5px;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+}
+.sectionTeamContainer .membersContainer .swiper .swiper-slide:not(.active) {
+  opacity: 0.7;
+  transform: perspective(800px) rotateY(15deg) scale(0.95);
+}
+.sectionTeamContainer .membersContainer .swiper .swiper-slide.active {
+  z-index: 2;
+  opacity: 1;
+  transform: perspective(800px) rotateY(0) scale(1);
+}
+@media (hover: hover) {
+  .sectionTeamContainer .membersContainer .swiper .swiper-slide:hover .member {
+    transform: translateY(-5px);
+  }
+}
+@keyframes carouselLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 30px));
+  }
 }
 
 main {
@@ -534,6 +764,7 @@ main .welcomeSection .welcomeSection-image img {
   margin-bottom: 20px;
 }
 main .welcomeSection h3 {
+  font-weight: 600;
   width: 80%;
 }
 main .welcomeSection p {
@@ -743,6 +974,7 @@ main .againPopUpEmailFinal button:hover {
 }
 
 .communitySection h3 {
+  font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -784,6 +1016,7 @@ main .againPopUpEmailFinal button:hover {
   align-items: center;
 }
 .steps .steps-title h3 {
+  font-weight: 600;
   width: 80%;
   font-size: 18px;
 }
@@ -867,7 +1100,7 @@ main .againPopUpEmailFinal button:hover {
   justify-content: center;
   align-items: center;
 }
-.FAQSection h2 {
+.FAQSection h3 {
   width: 80%;
   font-size: 18px;
   margin-bottom: 20px;
@@ -1562,6 +1795,72 @@ footer .footerEndPage .developedByText {
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 55%;
   }
+  body .sectionTeamContainer .sectionTeamContent .ourTeamContainer p {
+    width: 70%;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop {
+    margin-block: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #BCBAB3;
+    background: white;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberImage {
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberImage#membImg1 {
+    background-image: url(../assets/members/perfa.jpg);
+    background-size: contain;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberImage#membImg2 {
+    background-image: url(../assets/members/pedro.jpg);
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberImage#membImg3 {
+    background-image: url(../assets/members/juan.jpeg);
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    background: #F2EBD2;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer p {
+    width: 100%;
+    font-size: 14px !important;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #564848;
+    margin: 0;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer a img {
+    width: 22px;
+    height: 22px;
+    transition: all 0.3s ease;
+  }
   body main .FAQSection .againPopUpEmailFinal {
     width: 70%;
   }
@@ -1665,6 +1964,21 @@ footer .footerEndPage .developedByText {
   /* Laptops */
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 40%;
+  }
+  body .sectionTeamContainer .sectionTeamContent .ourTeamContainer {
+    margin-top: 2rem;
+  }
+  body .sectionTeamContainer .sectionTeamContent .ourTeamContainer p {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop {
+    margin-block: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
   }
   header {
     width: 72.5%;

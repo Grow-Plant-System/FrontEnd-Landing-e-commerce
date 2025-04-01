@@ -54,6 +54,9 @@ button{
   ul, ol {
     list-style: none;
   }
+  h3{
+    font-weight: 600;
+  }
 
 //code
 html {
@@ -116,7 +119,7 @@ header{
     transition-delay: transform  .5s;
     // transition-delay:background 0s;
     border: solid 1px #DDDCC3 ;
-    z-index: 3;
+    z-index: 4;
     // -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
     // animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
 
@@ -236,7 +239,7 @@ header{
     visibility: hidden;
     height: 100%;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     pointer-events: auto;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
@@ -370,7 +373,7 @@ header{
     height: calc($vh * 100);
 
     transition: all .5s;
-    z-index: 3;
+    z-index: 4;
     opacity: 0;
         .popupHomeEmail{
             background-color: $creamy-color;
@@ -387,6 +390,7 @@ header{
             gap: 1rem;
             align-items:center ;
             h3{
+                font-weight: 600;
                 font-size: 16px;
                 width: 80%;
 
@@ -454,6 +458,298 @@ header{
     }
 }
 
+.showTeamSection{
+    overflow-y: scroll !important;
+    transform: translateX(0) !important;
+}
+.sectionTeamContainer{
+    // Estilos para WebKit (Chrome, Safari, Brave, etc.)
+    &::-webkit-scrollbar {
+        width: 8px;
+        }
+    
+        &::-webkit-scrollbar-track {
+        background: #E3DCC5;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+        background: #B6B09E;
+        border-radius: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb:hover {
+        background: #a39e8f;
+        }
+    
+        // Estilos para Firefox
+        scrollbar-color: #B6B09E #E3DCC5;
+        scrollbar-width: thin;
+    background-color: #FCF5DB;
+    height: calc($vh *100);
+    width:100%;
+    overflow-y: hidden;
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100%);
+    position: fixed;
+    z-index: 2;
+    margin-bottom: 50px;
+    .sectionTeamContent{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        background-image: url(../assets/members/background1.svg), url(../assets/members/background2.svg);
+        background-repeat: no-repeat;
+        background-position: top right, bottom left;
+        .ourTeamContainer{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 2rem;
+            }
+            .ourTeamText{
+                margin-bottom: 0;
+    
+            }
+            p{
+                text-align: center;
+                color: #888474;
+                width: 85%;
+                margin-bottom: 1rem;
+            }
+            // p:nth-child(3) {
+            //     margin-top: 0.5rem;
+    
+            // }
+            // p:nth-child(4) {
+            //     color: #565348d7;
+            //     font-style: italic;
+            //     font-weight: 500;
+            //     margin-top: 1rem;
+    
+    
+            // }
+    
+        }
+        .teamMembersDesktop{
+            display: none;
+
+        }
+        .carouselContainer{
+            margin-block: 2.5rem;
+            width: 100%;
+
+            // border: #2C503A solid 3px;
+            overflow: hidden;
+            // margin-left: 100px;
+            @media (min-width: 768px) {
+                display: none;
+            }
+            .carousel{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                .slider{
+                    // pointer-events: none;
+                    display: flex;
+                    height: 100%;
+                    width: 300%;
+                    // border: solid 3px salmon; 
+                    flex-shrink: 0;
+                    transition: all .5s ;
+                    section{
+                        flex-basis: 33.3333%;
+                        width: 33.3333%;
+                        flex-shrink: 0;
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .member {
+                            display: flex;
+                            flex-direction: column;
+                            width: 80%;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            border: 1px solid #BCBAB3;
+                            background: white;
+
+                            transition: transform 0.3s ease;
+                            flex-shrink: 0;
+                            max-width: 300px;
+                            .memberImage {  
+                                aspect-ratio: 1/1;
+                                width: 100%;
+                                background: {
+                                    position: center;
+                                    repeat: no-repeat;
+                                    size: cover;
+                                }
+                                
+                                &#membImg1 {
+                                    background-image: url(../assets/members/perfa.jpg);
+                                    background-size: contain;
+                                }
+                                
+                                &#membImg2 {
+                                    background-image: url(../assets/members/pedro.jpg);
+                                }
+                                
+                                &#membImg3 {
+                                    background-image: url(../assets/members/juan.jpeg);
+                                }
+                            }
+                
+                            .memberNameContainer {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 0 20px;
+                                height: 70px;
+                                background: #F2EBD2;
+                                
+                                p {
+                                    font-size: 14px;
+                                    width: 100%;
+                                    font-weight: 500;    
+                                    white-space: nowrap;
+                                    color: #565348;
+                                    margin: 0;
+                                    max-width: 70%;
+                                    // overflow: hidden;
+                                    // text-overflow: ellipsis;
+                                }
+                                a{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+    
+                                    img {
+                                        width: 21px;
+                                        height: 21px;
+                                        transition: all 0.3s ease;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .arrow {
+                    position: absolute;
+                    top: 10px;
+                }
+                .prev{
+                    left: 0;
+                }
+                .next{
+                    
+                    right:0;
+                }
+            }
+    
+        }
+    }
+
+    // Estilos para móviles
+
+    .membersContainer {
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
+        
+        // Desktop: Grid de 3 columnas
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0;
+            
+            .swiper {
+                display: none !important;
+            }
+        }
+    
+        // Mobile: Carrusel
+        .swiper {
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 15px 0;
+            
+            &-wrapper {
+                display: flex;
+                width: max-content;
+                will-change: transform;
+                backface-visibility: hidden;
+                transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+                backface-visibility: hidden;
+                gap: 10px; // o el valor que quieras
+                margin: 0 5px; // compensación para centrado visual
+            }
+    
+            .swiper-slide {
+                flex: 0 0 auto;
+                width: calc(300px - 10px) !important; // Restamos el gap
+                margin: 0 5px; // Mitad del gap a cada lado
+                opacity: 1 !important;
+                transform: none !important;
+                transition: 
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s ease;
+                 &:not(.active) {
+            opacity: 0.7;
+            transform: perspective(800px) rotateY(15deg) scale(0.95);
+        }
+        
+        &.active {
+            z-index: 2;
+            opacity: 1;
+            transform: perspective(800px) rotateY(0) scale(1);
+        }
+                
+                // Efecto hover solo en desktop (aunque se oculta)
+                @media (hover: hover) {
+                    &:hover .member {
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+    
+            
+        }
+    }
+    
+    // Animación suave para el carrusel
+    @keyframes carouselLoop {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-100% - 30px)); } // Ajustar según margen
+    }
+}
+
+// // Estilos para mobile
+// @media (max-width: 767px) {
+//     .membersCarousel {
+//         cursor: grab;
+//         &:active {
+//             cursor: grabbing;
+//         }
+//         &:hover {
+//             animation-play-state: paused;
+//         }
+        
+//         &.grabbing {
+//             cursor: grabbing;
+//             animation-play-state: paused;
+//         }
+//     }
+// }
 
 main{
     position: relative;
@@ -644,6 +940,8 @@ main{
             }
         }
         h3{
+            font-weight: 600;
+
             width: 80%;
 
         }
@@ -896,6 +1194,8 @@ main{
 .communitySection{
 
     h3{
+        font-weight: 600;
+
         text-align: center;
         margin-bottom: $spacing;
     }
@@ -941,6 +1241,7 @@ main{
     text-align: center ;
     align-items: center;
     h3{
+        font-weight: 600;
         width: 80%;
         font-size: 18px;
 
@@ -1049,7 +1350,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h2{
+    h3{
         width: 80%;
         font-size: 18px;
         margin-bottom: $spacing;

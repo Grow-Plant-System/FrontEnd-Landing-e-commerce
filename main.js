@@ -41,6 +41,8 @@ const buttonFAQ = document.getElementById('buttonFAQ');
 const navbarButtonComoFunciona = document.querySelector('.navbarButtonComoFunciona');
 const navbarButtonFAQ = document.querySelector('.navbarButtonFAQ');
 
+const logoHeader = document.querySelector('.logoHeader')
+
 
 
 // Función de Toggle para abrir/cerrar el menú hamburguesa
@@ -89,6 +91,44 @@ function controlShowBurgerMenu(){
         closeBurgerMenu()
     }
 }
+
+//control seccion equipo 
+const buttomTeamMobile = document.querySelector('#buttomTeam');
+const sectionTeamContainer = document.querySelector('.sectionTeamContainer');
+
+
+function openTeamSection(){
+    controlShowBurgerMenu()
+    body.style.overflow = "hidden"; // Bloquea el scroll
+    sectionTeamContainer.classList.add('showTeamSection')
+}
+function closeTeamSection(){
+    controlShowBurgerMenu()
+    body.style.overflow = "scroll"; // Restaura el scroll
+    sectionTeamContainer.classList.remove('showTeamSection')
+}
+
+function controlShowTeamSection(){
+    if (!sectionTeamContainer.classList.contains('showTeamSection')){
+        openTeamSection()
+    }else{
+        closeTeamSection()
+    }
+    // if (!menuOnOff) {
+    //     openBurgerMenu()
+    // } else {
+    //     closeBurgerMenu()
+    // }
+}
+
+buttomTeamMobile.addEventListener('click',()=>{
+    if (!sectionTeamContainer.classList.contains('showTeamSection')){
+        openTeamSection()
+    }else{
+        closeBurgerMenu()
+    }
+})
+//
 
 function darkenColor(hexColor, percentage) {
     // Asegúrate de que el color esté en el formato correcto
@@ -141,29 +181,47 @@ function alertCustomize(texto, gravedad = "bottom", relleno) {
     }, 3000);
 }
 
+
+logoHeader.addEventListener('click',()=>{
+    if(sectionTeamContainer.classList.contains('showTeamSection')){
+        body.style.overflow = "scroll"; // Restaura el scroll
+        sectionTeamContainer.classList.remove('showTeamSection')
+    }
+})
 buttonPorQueGrow.addEventListener("click", ()=>{
+    if(sectionTeamContainer.classList.contains('showTeamSection')){
+        closeTeamSection()
+    }
     controlShowBurgerMenu()
     scrollFromTo(".listenGrowContainer")
 
 })
 navbarButtonComoFunciona.addEventListener("click", ()=>{
-
+    if(sectionTeamContainer.classList.contains('showTeamSection')){
+        closeTeamSection()
+    }
     scrollFromTo(".listenGrowContainer")
 
 })
 buttonFAQ.addEventListener("click", ()=>{
+    if(sectionTeamContainer.classList.contains('showTeamSection')){
+        closeTeamSection()
+    }
     controlShowBurgerMenu()
     scrollFromTo(".FAQSection")
 
 })
 navbarButtonFAQ.addEventListener("click", ()=>{
-
+    if(sectionTeamContainer.classList.contains('showTeamSection')){
+        closeTeamSection()
+    }
     scrollFromTo(".FAQSection")
 
 })
 
 
 buttonBurgerMenu.addEventListener("click", () => {
+    
     controlShowBurgerMenu()
 });
 // buttonPrecios.addEventListener("click",()=>{
@@ -338,11 +396,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
-  
+//carousel
+const slider= document.querySelector('.slider')
+
+const prev= document.querySelector('.prev')
+
+const next= document.querySelector('.next')
+
+// Cambios en el JavaScript
+let currentIndex = 0;
 
 
+// Modificar el setInterval
+setInterval(() => {
+    slider.style.transform = `translate(-${33.3333}%)`; // Cambiado de 20% a 33.333%
+}, 3000);
 
-
-  
-
+// Ajustar el transitionend
+slider.addEventListener('transitionend', () => {
+    slider.appendChild(slider.firstElementChild);
+    slider.style.transition = 'none';
+    slider.style.transform = 'translate(0)';
+    
+    setTimeout(() => {
+        slider.style.transition = 'all .5s';
+        currentIndex = 0; // Reiniciar índice después de la transición
+    });
+});

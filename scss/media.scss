@@ -38,6 +38,94 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         .popupHomeEmail{
             width: 55%;
         }
+      }
+      .sectionTeamContainer{
+
+        .sectionTeamContent{
+          .ourTeamContainer{
+            p{
+              width: 70%;
+            }
+          }
+          
+          .teamMembersDesktop{
+            margin-block: 2.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            .member {
+              display: flex;
+              flex-direction: column;
+              width: 30%;
+              border-radius: 20px;
+              overflow: hidden;
+              border: 1px solid #BCBAB3;
+              background: white;
+              transition: transform 0.3s ease;
+              flex-shrink: 0;
+              max-width: 300px;
+              .memberImage {  
+                  aspect-ratio: 1/1;
+                  width: 100%;
+
+                  background: {
+                      position: center;
+                      repeat: no-repeat;
+                      size: cover;
+                  }
+                  
+                  &#membImg1 {
+                      background-image: url(../assets/members/perfa.jpg);
+                      background-size: contain;
+                  }
+                  
+                  &#membImg2 {
+                      background-image: url(../assets/members/pedro.jpg);
+                  }
+                  
+                  &#membImg3 {
+                      background-image: url(../assets/members/juan.jpeg);
+                  }
+              }
+  
+              .memberNameContainer {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0 20px;
+                  height: 70px;
+                  background: #F2EBD2;
+                  p {
+                      width: 100% ;
+                      font-size: 14px !important;
+                      font-weight: 500;    
+                      white-space: nowrap;
+                      color: #564848;
+                      margin: 0;
+                      // max-width: 70%;
+                      // overflow: hidden;
+                      // text-overflow: ellipsis;
+                  }
+                  a{
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+
+                      img {
+                          width: 22px;
+                          height: 22px;
+                          transition: all 0.3s ease;
+                          
+                      }
+                  }
+              }
+          
+          }
+        }
+      }
     }
       main{
         .FAQSection{
@@ -217,6 +305,28 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
         .popupHomeEmail{
             width: 40%;
         }
+    }
+    .sectionTeamContainer{
+
+      .sectionTeamContent{
+        .ourTeamContainer{
+          margin-top: 2rem;
+          p{
+            width: 60%;
+            margin-bottom: 2rem;
+          }
+        }
+        
+        .teamMembersDesktop{
+          margin-block: 2.5rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+          width: 100%;
+        }
+      }
     }
   }
     header{
