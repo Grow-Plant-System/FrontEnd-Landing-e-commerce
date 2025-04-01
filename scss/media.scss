@@ -29,9 +29,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
     h3{
       font-size: 18px !important;
     }
-    p,button,li,a,input{
+    p,a,input{
       font-size: 16px !important;
     }
+    li,button
+    {font-size: 16px;}
     /* Tabletas */
     body{
       .popupHomeEmailBackground{
@@ -357,6 +359,14 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
           .navbarButtonPreventa{
             
           }
+          .navbarButtomTeam{
+                        color: #565348;
+            opacity: 0.7;
+            transition: all .5s;
+            &:hover{
+              opacity: 1;
+            }
+          }
           li{
             font-size: 14px;
             width: auto;
@@ -463,6 +473,15 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
       width: 65%;
       .navbar{
         width: 95%;
+        .navbarItems{
+          li{
+            font-size: 16px;
+            button{
+              font-size: 16px;
+            }
+          }
+
+        }
       }
     }
     body{

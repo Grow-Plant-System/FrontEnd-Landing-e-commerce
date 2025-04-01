@@ -43,93 +43,6 @@ const navbarButtonFAQ = document.querySelector('.navbarButtonFAQ');
 
 const logoHeader = document.querySelector('.logoHeader')
 
-
-
-// Función de Toggle para abrir/cerrar el menú hamburguesa
-
-//--Precargo la imagen de la cruz para que no tarde en cargar:
-const closeMenuImage = new Image();
-closeMenuImage.src = '../assets/svg/closeMenu.svg';
-
-
-let menuOnOff = false; // Estado del menú
-let isAnimating = false; // Prevención de clics múltiples
-const COOLDOWN_TIME = 500; // Tiempo de cooldown reducido a 500 ms
-
-function openBurgerMenu(){
-    burgerButton.classList.add('open');
-    fullMenuHamburguerWithOverlay.style.opacity = "1";
-    fullMenuHamburguerWithOverlay.style.visibility = "visible";
-    optionsNavbar.style.transform = "translateY(0%)";
-    header.style.background ="rgba(252, 245, 219, 1)"
-    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/closeMenu.svg)"
-    body.style.overflow = "hidden"; // Bloquea el scroll
-    menuOnOff = true;
-}
-function closeBurgerMenu(){
-    burgerButton.classList.remove('open');
-    optionsNavbar.style.transform = "translateY(-100%)";
-    fullMenuHamburguerWithOverlay.style.opacity = "0";
-    fullMenuHamburguerWithOverlay.style.visibility = "hidden";
-    header.style.background ="rgba(252, 245, 219, 0.71)"
-    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/hamburguerMenu.svg)"
-    body.style.overflow = "hidden auto"; // Restaura el scroll
-    menuOnOff = false;
-}
-
-function controlShowBurgerMenu(){
-    if (isAnimating) return; // Bloquea clics durante la animación
-
-    isAnimating = true; // Bloquea hasta que termine la animación
-    setTimeout(() => {
-        isAnimating = false; // Permite nuevos clics después del cooldown
-    }, COOLDOWN_TIME);
-
-    if (!menuOnOff) {
-        openBurgerMenu()
-    } else {
-        closeBurgerMenu()
-    }
-}
-
-//control seccion equipo 
-const buttomTeamMobile = document.querySelector('#buttomTeam');
-const sectionTeamContainer = document.querySelector('.sectionTeamContainer');
-
-
-function openTeamSection(){
-    controlShowBurgerMenu()
-    body.style.overflow = "hidden"; // Bloquea el scroll
-    sectionTeamContainer.classList.add('showTeamSection')
-}
-function closeTeamSection(){
-    controlShowBurgerMenu()
-    body.style.overflow = "scroll"; // Restaura el scroll
-    sectionTeamContainer.classList.remove('showTeamSection')
-}
-
-function controlShowTeamSection(){
-    if (!sectionTeamContainer.classList.contains('showTeamSection')){
-        openTeamSection()
-    }else{
-        closeTeamSection()
-    }
-    // if (!menuOnOff) {
-    //     openBurgerMenu()
-    // } else {
-    //     closeBurgerMenu()
-    // }
-}
-
-buttomTeamMobile.addEventListener('click',()=>{
-    if (!sectionTeamContainer.classList.contains('showTeamSection')){
-        openTeamSection()
-    }else{
-        closeBurgerMenu()
-    }
-})
-//
-
 function darkenColor(hexColor, percentage) {
     // Asegúrate de que el color esté en el formato correcto
     if (hexColor.startsWith("#")) hexColor = hexColor.slice(1);
@@ -181,10 +94,106 @@ function alertCustomize(texto, gravedad = "bottom", relleno) {
     }, 3000);
 }
 
+// Función de Toggle para abrir/cerrar el menú hamburguesa
+
+//--Precargo la imagen de la cruz para que no tarde en cargar:
+const closeMenuImage = new Image();
+closeMenuImage.src = '../assets/svg/closeMenu.svg';
+
+
+let menuOnOff = false; // Estado del menú
+let isAnimating = false; // Prevención de clics múltiples
+const COOLDOWN_TIME = 500; // Tiempo de cooldown reducido a 500 ms
+
+function openBurgerMenu(){
+    burgerButton.classList.add('open');
+    fullMenuHamburguerWithOverlay.style.opacity = "1";
+    fullMenuHamburguerWithOverlay.style.visibility = "visible";
+    optionsNavbar.style.transform = "translateY(0%)";
+    header.style.background ="rgba(252, 245, 219, 1)"
+    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/closeMenu.svg)"
+    body.style.overflow = "hidden"; // Bloquea el scroll
+    menuOnOff = true;
+}
+function closeBurgerMenu(){
+    burgerButton.classList.remove('open');
+    optionsNavbar.style.transform = "translateY(-100%)";
+    fullMenuHamburguerWithOverlay.style.opacity = "0";
+    fullMenuHamburguerWithOverlay.style.visibility = "hidden";
+    header.style.background ="rgba(252, 245, 219, 0.71)"
+    buttonBurgerMenuIcon.style.backgroundImage = "url(../assets/svg/hamburguerMenu.svg)"
+    body.style.overflow = "hidden auto"; // Restaura el scroll
+    menuOnOff = false;
+}
+
+function controlShowBurgerMenu(){
+    if (isAnimating) return; // Bloquea clics durante la animación
+
+    isAnimating = true; // Bloquea hasta que termine la animación
+    setTimeout(() => {
+        isAnimating = false; // Permite nuevos clics después del cooldown
+    }, COOLDOWN_TIME);
+
+    if (!menuOnOff) {
+        openBurgerMenu()
+    } else {
+        closeBurgerMenu()
+    }
+}
+
+//control seccion equipo 
+const buttomTeamMobile = document.querySelector('#buttomTeam');
+const navbarButtomTeam = document.querySelector('.navbarButtomTeam');
+const sectionTeamContainer = document.querySelector('.sectionTeamContainer');
+
+
+function openTeamSection(){
+    // controlShowBurgerMenu()
+    body.style.overflow = "hidden"; // Bloquea el scroll
+    sectionTeamContainer.classList.add('showTeamSection')
+}
+function closeTeamSection(){
+    // controlShowBurgerMenu()
+    body.style.overflow = "hidden scroll"; // Restaura el scroll
+    sectionTeamContainer.classList.remove('showTeamSection')
+}
+
+function controlShowTeamSection(){
+    if (!sectionTeamContainer.classList.contains('showTeamSection')){
+        openTeamSection()
+    }else{
+        closeTeamSection()
+    }
+    // if (!menuOnOff) {
+    //     openBurgerMenu()
+    // } else {
+    //     closeBurgerMenu()
+    // }
+}
+
+buttomTeamMobile.addEventListener('click',()=>{
+    if (!sectionTeamContainer.classList.contains('showTeamSection')){
+        openTeamSection()
+        controlShowBurgerMenu()
+    }else{
+        closeBurgerMenu()
+    }
+
+})
+navbarButtomTeam.addEventListener('click',()=>{
+    if (!sectionTeamContainer.classList.contains('showTeamSection')){
+        body.style.overflow = "hidden"; // Bloquea el scroll
+        sectionTeamContainer.classList.add('showTeamSection')
+    }
+})
+//
+
+
+
 
 logoHeader.addEventListener('click',()=>{
     if(sectionTeamContainer.classList.contains('showTeamSection')){
-        body.style.overflow = "scroll"; // Restaura el scroll
+        body.style.overflow = "hidden scroll ";
         sectionTeamContainer.classList.remove('showTeamSection')
     }
 })

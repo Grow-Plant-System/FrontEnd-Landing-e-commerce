@@ -430,6 +430,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
   margin-bottom: 0;
 }
 .sectionTeamContainer .sectionTeamContent .ourTeamContainer p {
+  font-size: 14px;
   text-align: center;
   color: #888474;
   width: 85%;
@@ -1788,8 +1789,11 @@ footer .footerEndPage .developedByText {
   h3 {
     font-size: 18px !important;
   }
-  p, button, li, a, input {
+  p, a, input {
     font-size: 16px !important;
+  }
+  li, button {
+    font-size: 16px;
   }
   /* Tabletas */
   body .popupHomeEmailBackground .popupHomeEmail {
@@ -2003,6 +2007,14 @@ footer .footerEndPage .developedByText {
   header .navbar .navbarItems .navbarButtonFAQ:hover {
     opacity: 1;
   }
+  header .navbar .navbarItems .navbarButtomTeam {
+    color: #565348;
+    opacity: 0.7;
+    transition: all 0.5s;
+  }
+  header .navbar .navbarItems .navbarButtomTeam:hover {
+    opacity: 1;
+  }
   header .navbar .navbarItems li {
     font-size: 14px;
     width: auto;
@@ -2080,6 +2092,12 @@ footer .footerEndPage .developedByText {
   }
   header .navbar {
     width: 95%;
+  }
+  header .navbar .navbarItems li {
+    font-size: 16px;
+  }
+  header .navbar .navbarItems li button {
+    font-size: 16px;
   }
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 35%;
