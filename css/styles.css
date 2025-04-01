@@ -500,6 +500,7 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 }
 .sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberImage#membImg3 {
   background-image: url(../assets/members/juan.jpeg);
+  background-size: contain;
 }
 .sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer {
   display: flex;
@@ -526,7 +527,11 @@ header .navbar .buttonBurgerMenu .burger.open span:nth-child(3) {
 .sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer a img {
   width: 21px;
   height: 21px;
+  opacity: 0.7;
   transition: all 0.3s ease;
+}
+.sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .slider section .member .memberNameContainer a img:hover {
+  opacity: 1;
 }
 .sectionTeamContainer .sectionTeamContent .carouselContainer .carousel .arrow {
   position: absolute;
@@ -1822,6 +1827,9 @@ footer .footerEndPage .developedByText {
     flex-shrink: 0;
     max-width: 300px;
   }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member:hover {
+    transform: scale(1.05);
+  }
   body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberImage {
     aspect-ratio: 1/1;
     width: 100%;
@@ -1854,6 +1862,7 @@ footer .footerEndPage .developedByText {
     white-space: nowrap;
     color: #564848;
     margin: 0;
+    cursor: default;
   }
   body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer a {
     display: flex;
@@ -1863,7 +1872,11 @@ footer .footerEndPage .developedByText {
   body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer a img {
     width: 22px;
     height: 22px;
-    transition: all 0.3s ease;
+    opacity: 0.7;
+    transition: all 0.5s ease;
+  }
+  body .sectionTeamContainer .sectionTeamContent .teamMembersDesktop .member .memberNameContainer a img:hover {
+    opacity: 1;
   }
   body main .FAQSection .againPopUpEmailFinal {
     width: 70%;
@@ -1968,6 +1981,9 @@ footer .footerEndPage .developedByText {
   /* Laptops */
   body .popupHomeEmailBackground .popupHomeEmail {
     width: 40%;
+  }
+  body .sectionTeamContainer .sectionTeamContent {
+    background-size: 40vh;
   }
   body .sectionTeamContainer .sectionTeamContent .ourTeamContainer {
     margin-top: 2rem;

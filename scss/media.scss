@@ -69,6 +69,9 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
               transition: transform 0.3s ease;
               flex-shrink: 0;
               max-width: 300px;
+              &:hover{
+                transform: scale(1.05);
+              }
               .memberImage {  
                   aspect-ratio: 1/1;
                   width: 100%;
@@ -107,6 +110,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
                       white-space: nowrap;
                       color: #564848;
                       margin: 0;
+                      cursor:default;
                       // max-width: 70%;
                       // overflow: hidden;
                       // text-overflow: ellipsis;
@@ -119,7 +123,11 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
                       img {
                           width: 22px;
                           height: 22px;
-                          transition: all 0.3s ease;
+                          opacity: 0.7;
+                          transition: all 0.5s ease;
+                          &:hover{
+                              opacity: 1;
+                          }
                           
                       }
                   }
@@ -311,6 +319,7 @@ $texto-elementos: p,button, span, h1, h2, h3, h4, h5, h6, a, li, blockquote;
     .sectionTeamContainer{
 
       .sectionTeamContent{
+        background-size: 40vh;
         .ourTeamContainer{
           margin-top: 2rem;
           p{
